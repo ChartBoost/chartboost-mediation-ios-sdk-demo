@@ -24,8 +24,8 @@ class BannerAdViewController: UIViewController {
     /// demo, which only uses the fixed `standard` size.
     @IBOutlet private var bannerContainer: UIView!
 
-    /// An instance of the `BannerAdController` that is configured to use the placement "CBBanner"
-    lazy var controller = BannerAdController(placementName: "CBBanner", activityDelegate: self)
+    /// An instance of the `BannerAdController` that is configured to use the placement "AllNetworkBanner"
+    lazy var controller = BannerAdController(placementName: "AllNetworkBanner", activityDelegate: self)
 
     /// The handler for when the load button is pushed.  Pushing it results in the banner ad being loaded.
     /// After it has successfully loaded, it can then be shown.
