@@ -62,7 +62,7 @@ class ChartboostMediationController: NSObject {
 
     /// A property that can be used to define and update if the CCPA-applicable user has granted consent to the collection of Personally Identifiable Information.
     /// For more information about CCPA, see: https://answers.chartboost.com/en-us/articles/115001490031
-    var ccpa: Bool = false {
+    var ccpa: Bool = true {
         didSet {
             // When the property is modified, the SDK needs to be notified of the changes.
             update(ccpa: ccpa)
