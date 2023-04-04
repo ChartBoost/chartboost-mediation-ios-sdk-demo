@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Banner-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Banner" title="Banner" id="Y6W-OH-hqX" customClass="BannerAdViewController" customModule="HeliumDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7lM-BA-fgY">
+                                <rect key="frame" x="32" y="96" width="350" height="750"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="6je-P3-iv5">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="86"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrV-UW-qoa" userLabel="spacer">
+                                        <rect key="frame" x="0.0" y="102" width="350" height="16"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="xzd-cm-aTB"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A banner advertisement must first be loaded." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xX-pc-VAc">
+                                        <rect key="frame" x="0.0" y="134" width="350" height="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eid-VV-iRP">
+                                        <rect key="frame" x="0.0" y="167" width="350" height="64"/>
+                                        <color key="backgroundColor" red="0.4823529412" green="0.74509803919999995" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="LAX-ss-evP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Load"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loadButtonPushed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Y1C-Da-Oba"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-down" translatesAutoresizingMaskIntoConstraints="NO" id="7L9-gM-dVk">
+                                        <rect key="frame" x="0.0" y="247" width="350" height="43"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After it has been successfully loaded it can then be shown by adding it anywhere in the view hierarchy." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYz-6q-qvZ">
+                                        <rect key="frame" x="0.0" y="306" width="350" height="36"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJN-QZ-zsJ">
+                                        <rect key="frame" x="0.0" y="358" width="350" height="64"/>
+                                        <color key="backgroundColor" red="0.4823529412" green="0.74509803919999995" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="YOl-iO-B3C"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Show"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="showButtonPushed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YVg-tF-7eY"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RJ-vy-q8G" userLabel="spacer">
+                                        <rect key="frame" x="0.0" y="438" width="350" height="246"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lp5-Bd-j18" userLabel="BannerRegion">
+                                        <rect key="frame" x="0.0" y="700" width="350" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPd-NU-Wjc" userLabel="BannerContainer">
+                                                <rect key="frame" x="15" y="0.0" width="320" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="320" id="GNJ-5d-ByS"/>
+                                                    <constraint firstAttribute="height" constant="50" id="g9Q-fq-NtA"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="lPd-NU-Wjc" firstAttribute="centerY" secondItem="Lp5-Bd-j18" secondAttribute="centerY" id="GWP-Ub-h65"/>
+                                            <constraint firstAttribute="height" constant="50" id="VzH-28-Pna"/>
+                                            <constraint firstItem="lPd-NU-Wjc" firstAttribute="centerX" secondItem="Lp5-Bd-j18" secondAttribute="centerX" id="tdv-BK-1YB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7lM-BA-fgY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="CZp-Dx-FLf"/>
+                            <constraint firstItem="7lM-BA-fgY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="FYP-pb-4bN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7lM-BA-fgY" secondAttribute="bottom" constant="16" id="NHJ-CB-3Lb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7lM-BA-fgY" secondAttribute="trailing" constant="32" id="eZz-mB-GxU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Banner" id="aRV-nI-4Qs"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="bannerContainer" destination="lPd-NU-Wjc" id="gHt-AK-lHw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Banner" width="86" height="86"/>
+        <image name="arrow-down" width="43" height="43"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
