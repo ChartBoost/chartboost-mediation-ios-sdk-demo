@@ -62,7 +62,7 @@ class ChartboostMediationController: NSObject {
 
     /// A property that can be used to define and update if the CCPA-applicable user has granted consent to the collection of Personally Identifiable Information.
     /// For more information about CCPA, see: https://answers.chartboost.com/en-us/articles/115001490031
-    var ccpa: Bool = true {
+    var ccpa: Bool? {
         didSet {
             // When the property is modified, the SDK needs to be notified of the changes.
             update(ccpa: ccpa)
@@ -112,7 +112,10 @@ class ChartboostMediationController: NSObject {
         chartboostMediation.setSubjectToCoppa(coppa)
     }
 
-    private func update(ccpa: Bool) {
+    private func update(ccpa: Bool?) {
+        guard let ccpa = ccpa else {
+            return
+        }
         chartboostMediation.setCCPAConsent(ccpa)
     }
 
