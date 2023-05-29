@@ -12,7 +12,7 @@
 
 import Foundation
 
-/// An extenstion that is relevant for this demo only. It is not applicable to anything specific to the Chartboost Mediation SDK.
+/// An extension that is relevant for this demo only. It is not applicable to anything specific to the Chartboost Mediation SDK.
 extension Collection {
 
     /// Convert self to a JSON String.

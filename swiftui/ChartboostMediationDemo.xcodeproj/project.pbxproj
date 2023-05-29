@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F2B0841095D4D40883BB4D0 /* Pods_ChartboostMediationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4BA50B0885969AB837FF29 /* Pods_ChartboostMediationDemo.framework */; };
+		E66C9FFA2A24EA9000315DC4 /* ChartboostMediationDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66C9FF92A24EA9000315DC4 /* ChartboostMediationDemoApp.swift */; };
+		E66C9FFE2A24EA9100315DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66C9FFD2A24EA9100315DC4 /* Assets.xcassets */; };
+		E66CA0012A24EA9100315DC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66CA0002A24EA9100315DC4 /* Preview Assets.xcassets */; };
+		E66CA0082A24EBA000315DC4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66CA0072A24EB9F00315DC4 /* Launch Screen.storyboard */; };
+		E66CA00D2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA00C2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift */; };
+		E66CA00F2A24ECC200315DC4 /* ChartboostMediationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA00E2A24ECC200315DC4 /* ChartboostMediationController.swift */; };
+		E66CA0122A24ED0C00315DC4 /* Collection+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0112A24ED0C00315DC4 /* Collection+Extras.swift */; };
+		E66CA0142A24ED7500315DC4 /* AdTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0132A24ED7500315DC4 /* AdTypeSelectionView.swift */; };
+		E66CA0162A24F8CC00315DC4 /* UInt64+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0152A24F8CC00315DC4 /* UInt64+Extras.swift */; };
+		E66CA01B2A24FA2D00315DC4 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA01A2A24FA2D00315DC4 /* BannerAdView.swift */; };
+		E66CA01D2A24FA5400315DC4 /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA01C2A24FA5400315DC4 /* InterstitialAdView.swift */; };
+		E66CA01F2A24FA6F00315DC4 /* RewardedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA01E2A24FA6F00315DC4 /* RewardedAdView.swift */; };
+		E66CA0212A24FACD00315DC4 /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0202A24FACD00315DC4 /* AdType.swift */; };
+		E66CA0232A24FC8400315DC4 /* InterstitialAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0222A24FC8400315DC4 /* InterstitialAdController.swift */; };
+		E66CA0252A24FD1700315DC4 /* ActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0242A24FD1700315DC4 /* ActivityState.swift */; };
+		E66CA0272A2500C500315DC4 /* BusyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0262A2500C500315DC4 /* BusyModifier.swift */; };
+		E66CA0292A2503C700315DC4 /* RewardedAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0282A2503C700315DC4 /* RewardedAdController.swift */; };
+		E66CA02B2A25056700315DC4 /* BannerAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA02A2A25056700315DC4 /* BannerAdController.swift */; };
+		E66CA02D2A250E6900315DC4 /* AdAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA02C2A250E6900315DC4 /* AdAnchor.swift */; };
+		E66CA02F2A2516CD00315DC4 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA02E2A2516CD00315DC4 /* Banner.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		191C655036FEA5200B0F9B9F /* Pods-ChartboostMediationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartboostMediationDemo.release.xcconfig"; path = "Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo.release.xcconfig"; sourceTree = "<group>"; };
+		AD4BA50B0885969AB837FF29 /* Pods_ChartboostMediationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartboostMediationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66C9FF62A24EA9000315DC4 /* ChartboostMediationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartboostMediationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66C9FF92A24EA9000315DC4 /* ChartboostMediationDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartboostMediationDemoApp.swift; sourceTree = "<group>"; };
+		E66C9FFD2A24EA9100315DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E66CA0002A24EA9100315DC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E66CA0072A24EB9F00315DC4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E66CA00C2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartboostMediationInititializationView.swift; sourceTree = "<group>"; };
+		E66CA00E2A24ECC200315DC4 /* ChartboostMediationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartboostMediationController.swift; sourceTree = "<group>"; };
+		E66CA0112A24ED0C00315DC4 /* Collection+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extras.swift"; sourceTree = "<group>"; };
+		E66CA0132A24ED7500315DC4 /* AdTypeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTypeSelectionView.swift; sourceTree = "<group>"; };
+		E66CA0152A24F8CC00315DC4 /* UInt64+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt64+Extras.swift"; sourceTree = "<group>"; };
+		E66CA01A2A24FA2D00315DC4 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		E66CA01C2A24FA5400315DC4 /* InterstitialAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdView.swift; sourceTree = "<group>"; };
+		E66CA01E2A24FA6F00315DC4 /* RewardedAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdView.swift; sourceTree = "<group>"; };
+		E66CA0202A24FACD00315DC4 /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
+		E66CA0222A24FC8400315DC4 /* InterstitialAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdController.swift; sourceTree = "<group>"; };
+		E66CA0242A24FD1700315DC4 /* ActivityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityState.swift; sourceTree = "<group>"; };
+		E66CA0262A2500C500315DC4 /* BusyModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyModifier.swift; sourceTree = "<group>"; };
+		E66CA0282A2503C700315DC4 /* RewardedAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdController.swift; sourceTree = "<group>"; };
+		E66CA02A2A25056700315DC4 /* BannerAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdController.swift; sourceTree = "<group>"; };
+		E66CA02C2A250E6900315DC4 /* AdAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdAnchor.swift; sourceTree = "<group>"; };
+		E66CA02E2A2516CD00315DC4 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		F5F9FF2D7E80AE570E45E905 /* Pods-ChartboostMediationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartboostMediationDemo.debug.xcconfig"; path = "Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E66C9FF32A24EA9000315DC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F2B0841095D4D40883BB4D0 /* Pods_ChartboostMediationDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17A0AF2CD5D69A54F0B3EBB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD4BA50B0885969AB837FF29 /* Pods_ChartboostMediationDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA1D0EBA659F7F5F9891F16F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5F9FF2D7E80AE570E45E905 /* Pods-ChartboostMediationDemo.debug.xcconfig */,
+				191C655036FEA5200B0F9B9F /* Pods-ChartboostMediationDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E66C9FED2A24EA9000315DC4 = {
+			isa = PBXGroup;
+			children = (
+				E66C9FF82A24EA9000315DC4 /* ChartboostMediationDemo */,
+				E66C9FF72A24EA9000315DC4 /* Products */,
+				BA1D0EBA659F7F5F9891F16F /* Pods */,
+				17A0AF2CD5D69A54F0B3EBB2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E66C9FF72A24EA9000315DC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E66C9FF62A24EA9000315DC4 /* ChartboostMediationDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E66C9FF82A24EA9000315DC4 /* ChartboostMediationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E66CA0092A24EBCB00315DC4 /* Ads */,
+				E66CA0102A24ECF400315DC4 /* Utility */,
+				E66C9FF92A24EA9000315DC4 /* ChartboostMediationDemoApp.swift */,
+				E66CA0072A24EB9F00315DC4 /* Launch Screen.storyboard */,
+				E66C9FFF2A24EA9100315DC4 /* Preview Content */,
+				E66CA00B2A24EC1E00315DC4 /* Supporting Files */,
+			);
+			path = ChartboostMediationDemo;
+			sourceTree = "<group>";
+		};
+		E66C9FFF2A24EA9100315DC4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E66CA0002A24EA9100315DC4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E66CA0092A24EBCB00315DC4 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				E66CA02C2A250E6900315DC4 /* AdAnchor.swift */,
+				E66CA0202A24FACD00315DC4 /* AdType.swift */,
+				E66CA0132A24ED7500315DC4 /* AdTypeSelectionView.swift */,
+				E66CA00E2A24ECC200315DC4 /* ChartboostMediationController.swift */,
+				E66CA00C2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift */,
+				E66CA0172A24FA0100315DC4 /* Banner */,
+				E66CA0182A24FA0E00315DC4 /* Interstitial */,
+				E66CA0192A24FA1700315DC4 /* Rewarded */,
+			);
+			path = Ads;
+			sourceTree = "<group>";
+		};
+		E66CA00B2A24EC1E00315DC4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E66C9FFD2A24EA9100315DC4 /* Assets.xcassets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E66CA0102A24ECF400315DC4 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E66CA0242A24FD1700315DC4 /* ActivityState.swift */,
+				E66CA0262A2500C500315DC4 /* BusyModifier.swift */,
+				E66CA0112A24ED0C00315DC4 /* Collection+Extras.swift */,
+				E66CA0152A24F8CC00315DC4 /* UInt64+Extras.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		E66CA0172A24FA0100315DC4 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				E66CA02E2A2516CD00315DC4 /* Banner.swift */,
+				E66CA02A2A25056700315DC4 /* BannerAdController.swift */,
+				E66CA01A2A24FA2D00315DC4 /* BannerAdView.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		E66CA0182A24FA0E00315DC4 /* Interstitial */ = {
+			isa = PBXGroup;
+			children = (
+				E66CA0222A24FC8400315DC4 /* InterstitialAdController.swift */,
+				E66CA01C2A24FA5400315DC4 /* InterstitialAdView.swift */,
+			);
+			path = Interstitial;
+			sourceTree = "<group>";
+		};
+		E66CA0192A24FA1700315DC4 /* Rewarded */ = {
+			isa = PBXGroup;
+			children = (
+				E66CA0282A2503C700315DC4 /* RewardedAdController.swift */,
+				E66CA01E2A24FA6F00315DC4 /* RewardedAdView.swift */,
+			);
+			path = Rewarded;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E66C9FF52A24EA9000315DC4 /* ChartboostMediationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E66CA0042A24EA9100315DC4 /* Build configuration list for PBXNativeTarget "ChartboostMediationDemo" */;
+			buildPhases = (
+				E1A33697F685BB4A0F02704E /* [CP] Check Pods Manifest.lock */,
+				E66C9FF22A24EA9000315DC4 /* Sources */,
+				E66C9FF32A24EA9000315DC4 /* Frameworks */,
+				E66C9FF42A24EA9000315DC4 /* Resources */,
+				72A94EE9DEF0022B145EAEB6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChartboostMediationDemo;
+			productName = ChartboostMediationDemo;
+			productReference = E66C9FF62A24EA9000315DC4 /* ChartboostMediationDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E66C9FEE2A24EA9000315DC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					E66C9FF52A24EA9000315DC4 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = E66C9FF12A24EA9000315DC4 /* Build configuration list for PBXProject "ChartboostMediationDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E66C9FED2A24EA9000315DC4;
+			productRefGroup = E66C9FF72A24EA9000315DC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E66C9FF52A24EA9000315DC4 /* ChartboostMediationDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E66C9FF42A24EA9000315DC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66CA0082A24EBA000315DC4 /* Launch Screen.storyboard in Resources */,
+				E66CA0012A24EA9100315DC4 /* Preview Assets.xcassets in Resources */,
+				E66C9FFE2A24EA9100315DC4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72A94EE9DEF0022B145EAEB6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1A33697F685BB4A0F02704E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChartboostMediationDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E66C9FF22A24EA9000315DC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66CA0292A2503C700315DC4 /* RewardedAdController.swift in Sources */,
+				E66CA0162A24F8CC00315DC4 /* UInt64+Extras.swift in Sources */,
+				E66CA0122A24ED0C00315DC4 /* Collection+Extras.swift in Sources */,
+				E66CA0272A2500C500315DC4 /* BusyModifier.swift in Sources */,
+				E66CA0142A24ED7500315DC4 /* AdTypeSelectionView.swift in Sources */,
+				E66CA02B2A25056700315DC4 /* BannerAdController.swift in Sources */,
+				E66CA02D2A250E6900315DC4 /* AdAnchor.swift in Sources */,
+				E66CA01B2A24FA2D00315DC4 /* BannerAdView.swift in Sources */,
+				E66CA0252A24FD1700315DC4 /* ActivityState.swift in Sources */,
+				E66CA0232A24FC8400315DC4 /* InterstitialAdController.swift in Sources */,
+				E66CA01F2A24FA6F00315DC4 /* RewardedAdView.swift in Sources */,
+				E66CA00D2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift in Sources */,
+				E66CA0212A24FACD00315DC4 /* AdType.swift in Sources */,
+				E66C9FFA2A24EA9000315DC4 /* ChartboostMediationDemoApp.swift in Sources */,
+				E66CA02F2A2516CD00315DC4 /* Banner.swift in Sources */,
+				E66CA00F2A24ECC200315DC4 /* ChartboostMediationController.swift in Sources */,
+				E66CA01D2A24FA5400315DC4 /* InterstitialAdView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E66CA0022A24EA9100315DC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E66CA0032A24EA9100315DC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E66CA0052A24EA9100315DC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5F9FF2D7E80AE570E45E905 /* Pods-ChartboostMediationDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChartboostMediationDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = F38H382JLK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Helium;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chartboost.apollo.swiftui;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E66CA0062A24EA9100315DC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 191C655036FEA5200B0F9B9F /* Pods-ChartboostMediationDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChartboostMediationDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = F38H382JLK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Helium;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chartboost.apollo.swiftui;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E66C9FF12A24EA9000315DC4 /* Build configuration list for PBXProject "ChartboostMediationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E66CA0022A24EA9100315DC4 /* Debug */,
+				E66CA0032A24EA9100315DC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E66CA0042A24EA9100315DC4 /* Build configuration list for PBXNativeTarget "ChartboostMediationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E66CA0052A24EA9100315DC4 /* Debug */,
+				E66CA0062A24EA9100315DC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E66C9FEE2A24EA9000315DC4 /* Project object */;
+}
