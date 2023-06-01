@@ -18,7 +18,6 @@ struct RewardedAdView: View {
     @StateObject private var controller = RewardedAdController(placementName: "AllNetworkRewarded")
     @State private var isBusy = false
     @State private var failureMessage: String?
-    @State private var anchor: UIViewController?
 
     var body: some View {
         VStack {
@@ -41,7 +40,7 @@ struct RewardedAdView: View {
             .buttonStyle(.borderedProminent)
             .padding(.horizontal, 32)
 
-            if let anchor = anchor {
+            if let topViewController = UIApplication.topViewController {
                 Image("arrow-down")
 
                 Text("After it has been successfully loaded it can then be shown.")
@@ -49,7 +48,7 @@ struct RewardedAdView: View {
                     .padding(.horizontal, 32)
 
                 Button {
-                    controller.show(with: anchor)
+                    controller.show(with: topViewController)
                 } label: {
                     Text("Show")
                         .font(.title2)
@@ -70,7 +69,6 @@ struct RewardedAdView: View {
             
             Spacer()
         }
-        .adAnchor { anchor = $0 }
         .busy($isBusy)
         .onChange(of: controller.activityState) { newState in
             switch newState {

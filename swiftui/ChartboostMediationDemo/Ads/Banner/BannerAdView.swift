@@ -18,20 +18,19 @@ struct BannerAdView: View {
     @StateObject private var controller = BannerAdController(placementName: "AllNetworkBanner")
     @State private var isBusy = false
     @State private var failureMessage: String?
-    @State private var anchor: UIViewController?
 
     var body: some View {
         VStack {
             Image("Banner")
                 .padding(.vertical, 32)
 
-            if let anchor = anchor {
+            if let topViewController = UIApplication.topViewController {
                 Text("A banner advertisement must first be loaded.")
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 32)
 
                 Button {
-                    controller.load(with: anchor)
+                    controller.load(with: topViewController)
                 } label: {
                     Text("Load")
                         .font(.title2)
@@ -80,7 +79,6 @@ struct BannerAdView: View {
 
             Spacer()
         }
-        .adAnchor { anchor = $0 }
         .busy($isBusy)
         .onChange(of: controller.activityState) { newState in
             switch newState {

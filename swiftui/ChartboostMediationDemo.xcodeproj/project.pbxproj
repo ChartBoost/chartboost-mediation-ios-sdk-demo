@@ -26,8 +26,8 @@
 		E66CA0272A2500C500315DC4 /* BusyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0262A2500C500315DC4 /* BusyModifier.swift */; };
 		E66CA0292A2503C700315DC4 /* RewardedAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0282A2503C700315DC4 /* RewardedAdController.swift */; };
 		E66CA02B2A25056700315DC4 /* BannerAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA02A2A25056700315DC4 /* BannerAdController.swift */; };
-		E66CA02D2A250E6900315DC4 /* AdAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA02C2A250E6900315DC4 /* AdAnchor.swift */; };
 		E66CA02F2A2516CD00315DC4 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA02E2A2516CD00315DC4 /* Banner.swift */; };
+		E686E8922A28FCAF0045BC43 /* Application+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686E8912A28FCAF0045BC43 /* Application+Extras.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +52,8 @@
 		E66CA0262A2500C500315DC4 /* BusyModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyModifier.swift; sourceTree = "<group>"; };
 		E66CA0282A2503C700315DC4 /* RewardedAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdController.swift; sourceTree = "<group>"; };
 		E66CA02A2A25056700315DC4 /* BannerAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdController.swift; sourceTree = "<group>"; };
-		E66CA02C2A250E6900315DC4 /* AdAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdAnchor.swift; sourceTree = "<group>"; };
 		E66CA02E2A2516CD00315DC4 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		E686E8912A28FCAF0045BC43 /* Application+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Extras.swift"; sourceTree = "<group>"; };
 		F5F9FF2D7E80AE570E45E905 /* Pods-ChartboostMediationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartboostMediationDemo.debug.xcconfig"; path = "Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,9 +128,9 @@
 		E66CA0092A24EBCB00315DC4 /* Ads */ = {
 			isa = PBXGroup;
 			children = (
-				E66CA02C2A250E6900315DC4 /* AdAnchor.swift */,
 				E66CA0202A24FACD00315DC4 /* AdType.swift */,
 				E66CA0132A24ED7500315DC4 /* AdTypeSelectionView.swift */,
+				E686E8912A28FCAF0045BC43 /* Application+Extras.swift */,
 				E66CA00E2A24ECC200315DC4 /* ChartboostMediationController.swift */,
 				E66CA00C2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift */,
 				E66CA0172A24FA0100315DC4 /* Banner */,
@@ -308,11 +308,11 @@
 				E66CA0272A2500C500315DC4 /* BusyModifier.swift in Sources */,
 				E66CA0142A24ED7500315DC4 /* AdTypeSelectionView.swift in Sources */,
 				E66CA02B2A25056700315DC4 /* BannerAdController.swift in Sources */,
-				E66CA02D2A250E6900315DC4 /* AdAnchor.swift in Sources */,
 				E66CA01B2A24FA2D00315DC4 /* BannerAdView.swift in Sources */,
 				E66CA0252A24FD1700315DC4 /* ActivityState.swift in Sources */,
 				E66CA0232A24FC8400315DC4 /* InterstitialAdController.swift in Sources */,
 				E66CA01F2A24FA6F00315DC4 /* RewardedAdView.swift in Sources */,
+				E686E8922A28FCAF0045BC43 /* Application+Extras.swift in Sources */,
 				E66CA00D2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift in Sources */,
 				E66CA0212A24FACD00315DC4 /* AdType.swift in Sources */,
 				E66C9FFA2A24EA9000315DC4 /* ChartboostMediationDemoApp.swift in Sources */,
