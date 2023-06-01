@@ -319,6 +319,7 @@
 				DA93B6A9182B31BC00C21472 /* Sources */,
 				DA93B6AA182B31BC00C21472 /* Frameworks */,
 				DA93B6AB182B31BC00C21472 /* Resources */,
+				279E3C6BDC962CDC3721CBAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -381,6 +382,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		279E3C6BDC962CDC3721CBAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D7E24C2AC03240BAA57EBA47 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
