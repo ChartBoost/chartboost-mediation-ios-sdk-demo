@@ -63,7 +63,7 @@ class InterstitialAdController: NSObject, ObservableObject {
                 guard let self = self else { return }
                 if let ad = result.ad {
                     ad.delegate = self
-                    self.fullscreenAd = result.ad
+                    self.fullscreenAd = ad
 
                     log(action: "load", placementName: placementName, error: result.error)
                     // Notify the demo UI
