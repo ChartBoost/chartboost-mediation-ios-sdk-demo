@@ -76,7 +76,7 @@ struct RewardedAdView: View {
                 isBusy = true
             case .failed(let message, let error):
                 isBusy = false
-                failureMessage = "\(message): \(error.localizedDescription)"
+                failureMessage = "\(message): \(error?.localizedDescription ?? "")"
             default:
                 isBusy = false
             }

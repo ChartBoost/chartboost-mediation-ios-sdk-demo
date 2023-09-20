@@ -21,10 +21,6 @@ struct InterstitialAdView: View {
 
     var body: some View {
         VStack {
-            HStack {
-                Toggle("Use Fullscreen API", isOn: $controller.fullscreenAPI)
-                    .padding(.horizontal)
-            }
             Image("Interstitial")
                 .padding(.vertical, 32)
 
@@ -80,7 +76,7 @@ struct InterstitialAdView: View {
                 isBusy = true
             case .failed(let message, let error):
                 isBusy = false
-                failureMessage = "\(message): \(error.localizedDescription)"
+                failureMessage = "\(message): \(error?.localizedDescription ?? "")"
             default:
                 isBusy = false
             }

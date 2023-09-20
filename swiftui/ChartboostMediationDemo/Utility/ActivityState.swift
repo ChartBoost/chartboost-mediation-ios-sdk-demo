@@ -14,7 +14,7 @@
 enum ActivityState {
     case idle
     case running
-    case failed(message: String, error: Error)
+    case failed(message: String, error: Error?)
 }
 
 extension ActivityState: Equatable {
