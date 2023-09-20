@@ -32,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		191C655036FEA5200B0F9B9F /* Pods-ChartboostMediationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartboostMediationDemo.release.xcconfig"; path = "Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9AB7AD6A2ABBB4A50036B3EB /* FullscreenAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenAdController.swift; sourceTree = "<group>"; };
+		9AB7AD6B2ABBB4C90036B3EB /* FullscreenAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenAdView.swift; sourceTree = "<group>"; };
 		AD4BA50B0885969AB837FF29 /* Pods_ChartboostMediationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartboostMediationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66C9FF62A24EA9000315DC4 /* ChartboostMediationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartboostMediationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66C9FF92A24EA9000315DC4 /* ChartboostMediationDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartboostMediationDemoApp.swift; sourceTree = "<group>"; };
@@ -75,6 +77,15 @@
 				AD4BA50B0885969AB837FF29 /* Pods_ChartboostMediationDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AB7AD692ABBB48A0036B3EB /* Fullscreen */ = {
+			isa = PBXGroup;
+			children = (
+				9AB7AD6A2ABBB4A50036B3EB /* FullscreenAdController.swift */,
+				9AB7AD6B2ABBB4C90036B3EB /* FullscreenAdView.swift */,
+			);
+			path = Fullscreen;
 			sourceTree = "<group>";
 		};
 		BA1D0EBA659F7F5F9891F16F /* Pods */ = {
@@ -134,6 +145,7 @@
 				E66CA00E2A24ECC200315DC4 /* ChartboostMediationController.swift */,
 				E66CA00C2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift */,
 				E66CA0172A24FA0100315DC4 /* Banner */,
+				9AB7AD692ABBB48A0036B3EB /* Fullscreen */,
 				E66CA0182A24FA0E00315DC4 /* Interstitial */,
 				E66CA0192A24FA1700315DC4 /* Rewarded */,
 			);
