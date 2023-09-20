@@ -23,8 +23,14 @@ class InterstitialAdController: NSObject, ObservableObject {
     /// The placement that is controller is for.
     private let placementName: String
 
-    /// An instance of the interstitial ad that this class controls the lifecycle of.
+    /// An instance of the interstitial ad that this class controls the lifecycle of when using the deprecated API.
     private var interstitialAd: HeliumInterstitialAd?
+
+    /// An instance of the fullscreen ad that this class controls the lifecycle of when using the new API.
+    private var fullscreenAd: ChartboostMediationFullscreenAd?
+
+    /// When `true`, controller will use the new fullscreen API instead of deprecated methods.
+    var fullscreenAPI: Bool = true
 
     /// A state for demo purposes only so that long activity processes can be communicated to a view.
     @Published private(set) var activityState: ActivityState = .idle
@@ -44,47 +50,105 @@ class InterstitialAdController: NSObject, ObservableObject {
             return
         }
 
-        // Create an interstitial ad from the Chartboost Mediation ad provider.
-        guard let interstitialAd = chartboostMediation.interstitialAdProvider(with: self, andPlacementName: placementName) else {
-            // It could fail if the placement name is invalid.
-            print("[Error] failed to create interstitial advertisement for placement '\(placementName)'")
-            return
-        }
-        self.interstitialAd = interstitialAd
-
         // Notify the demo UI
         activityState = .running
 
-        // Associate any provided keywords with the advertisement before it is loaded.
-        interstitialAd.keywords = keywords
+        if fullscreenAPI {
+            // loadFullscreenAd expects keywords to be `[String : String]` instead of `HeliumKeywords?`.
+            let keywords = keywords?.dictionary ?? [:]
+            let request = ChartboostMediationAdLoadRequest(placement: placementName, keywords: keywords)
+            // Load the fullscreen ad, which will make a request to the network. Upon completion, a
+            // ChartboostMediationFullscreenAdLoadResult will be passed to the completion block.
+            chartboostMediation.loadFullscreenAd(with: request) { [weak self] result in
+                guard let self = self else { return }
+                if let ad = result.ad {
+                    ad.delegate = self
+                    self.fullscreenAd = result.ad
 
-        // Load the interstitial ad, which will make a request to the network. Upon completion, the
-        // delegate method `heliumInterstitialAd(withPlacementName:didLoadWithError:)` will be called.
-        interstitialAd.load()
+                    log(action: "load", placementName: placementName, error: result.error)
+                    // Notify the demo UI
+                    activityState = .idle
+                } else {
+                    fullscreenAd = nil
+                    self.log(action: "Load error", placementName: placementName, error: result.error)
+
+                    // `.failed` requires a non-optional error type
+                    let error = result.error ?? NSError(domain: "com.chartboost.mediation.demo", code: 0)
+                    // Notify the demo UI
+                    activityState = .failed(message: "Failed to load the interstitial advertisement.", error: error)
+                }
+            }
+        } else {
+            // Create an interstitial ad using the deprecated Chartboost Mediation ad provider.
+            self.interstitialAd = chartboostMediation.interstitialAdProvider(with: self, andPlacementName: placementName)
+            guard let interstitialAd = interstitialAd else {
+                // Ad creation could have failed if the placement name is invalid.
+                print("[Error] failed to create interstitial advertisement for placement '\(placementName)'")
+                return
+            }
+            // Associate any provided keywords with the advertisement before it is loaded.
+            interstitialAd.keywords = keywords
+            // Load the interstitial ad, which will make a request to the network. Upon completion, the
+            // delegate method `heliumInterstitialAd(withPlacementName:didLoadWithError:)` will be called.
+            interstitialAd.load()
+        }
     }
 
     /// Show the interstitial ad if it has been loaded and is ready to show.
     /// - Parameter viewController: The view controller to present the interstitial over.
     func show(with viewController: UIViewController) {
-        // Attempt to show an ad only if it has been loaded.
-        guard let interstitialAd = interstitialAd else {
-            print("[Error] cannot show an interstitial advertisement that has not yet been loaded")
-            return
+
+        if fullscreenAPI {
+            // Attempt to show a fullscreen ad only if it has been loaded.
+            guard let fullscreenAd = fullscreenAd else {
+                print("[Error] cannot show a fullscreen advertisement that has not yet been loaded")
+                return
+            }
+
+            // ChartboostMediationFullscreenAd does not have an equivalent to HeliumInterstitialAd's readyToShow().
+
+            // Notify the demo UI.
+            activityState = .running
+
+            // Show the ad using the specified view controller.  Upon completion, instead of using a delegate
+            // method a ChartboostMediationAdShowResult will be passed to the completion block.
+            self.fullscreenAd?.show(with: viewController, completion: { [weak self] result in
+                guard let self = self else { return }
+                self.log(action: "show", placementName: self.placementName, error: result.error)
+
+                // For simplicity, an ad that has failed to show will be destroyed.
+                if let error = result.error {
+                    self.fullscreenAd = nil
+
+                    // Notify the demo UI
+                    self.activityState = .failed(message: "Failed to show the fullscreen advertisement.", error: error)
+                }
+                else {
+                    // Notify the demo UI
+                    self.activityState = .idle
+                }
+            })
+        } else {
+            // Attempt to show an interstitial ad only if it has been loaded.
+            guard let interstitialAd = interstitialAd else {
+                print("[Error] cannot show an interstitial advertisement that has not yet been loaded")
+                return
+            }
+
+            // Attempt to show an ad only if it is ready to show. It will not be ready yet if any of the
+            // network requests have not yet completed.
+            guard interstitialAd.readyToShow() else {
+                print("[Warning] not ready to show interstitial advertisement for placement '\(placementName)'")
+                return
+            }
+
+            // Notify the demo UI
+            activityState = .running
+
+            // Show the ad using the specified view controller.  Upon completion, the delegate meethod
+            // `heliumInterstitialAd(withPlacementName:didShowWithError:)` will be called.
+            interstitialAd.show(with: viewController)
         }
-
-        // Attempt to show an ad only if it is ready to show. It will not be ready yet if any of the
-        // network requests have not yet completed.
-        guard interstitialAd.readyToShow() else {
-            print("[Warning] not ready to show interstitial advertisement for placement '\(placementName)'")
-            return
-        }
-
-        // Notify the demo UI
-        activityState = .running
-
-        // Show the ad using the specified view controller.  Upon completion, the delegate meethod
-        // `heliumInterstitialAd(withPlacementName:didShowWithError:)` will be called.
-        interstitialAd.show(with: viewController)
     }
 }
 
@@ -160,5 +224,33 @@ private extension InterstitialAdController {
         else {
             print("[Success] did \(action) interstitial advertisement for placement '\(placementName)'")
         }
+    }
+}
+
+/// Implementation of the Chartboost Mediation fullscreen ad delegate.
+extension InterstitialAdController: ChartboostMediationFullscreenAdDelegate {
+    func didRecordImpression(ad: ChartboostMediationFullscreenAd) {
+        log(action: "Did record impression", placementName: placementName, error: nil)
+    }
+
+    func didClick(ad: ChartboostMediationFullscreenAd) {
+        log(action: "Did click", placementName: placementName, error: nil)
+    }
+
+    func didReward(ad: ChartboostMediationFullscreenAd) {
+        log(action: "Did get reward", placementName: placementName, error: nil)
+    }
+
+    func didClose(ad: ChartboostMediationFullscreenAd, error: ChartboostMediationError?) {
+        if let error = error {
+            log(action: "Close error", placementName: placementName, error: error)
+        }
+        else {
+            log(action: "Did close", placementName: placementName, error: nil)
+        }
+    }
+
+    func didExpire(ad: ChartboostMediationFullscreenAd) {
+        log(action: "Did expire", placementName: placementName, error: nil)
     }
 }
