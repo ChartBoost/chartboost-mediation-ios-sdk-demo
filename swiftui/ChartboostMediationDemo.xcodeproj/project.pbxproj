@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A100C072ABCEBC300A7E6E1 /* FullscreenAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7AD6B2ABBB4C90036B3EB /* FullscreenAdView.swift */; };
+		9A100C082ABCEBC300A7E6E1 /* FullscreenAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7AD6A2ABBB4A50036B3EB /* FullscreenAdController.swift */; };
 		9F2B0841095D4D40883BB4D0 /* Pods_ChartboostMediationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4BA50B0885969AB837FF29 /* Pods_ChartboostMediationDemo.framework */; };
 		E66C9FFA2A24EA9000315DC4 /* ChartboostMediationDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66C9FF92A24EA9000315DC4 /* ChartboostMediationDemoApp.swift */; };
 		E66C9FFE2A24EA9100315DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66C9FFD2A24EA9100315DC4 /* Assets.xcassets */; };
@@ -324,6 +326,8 @@
 				E66CA0252A24FD1700315DC4 /* ActivityState.swift in Sources */,
 				E66CA0232A24FC8400315DC4 /* InterstitialAdController.swift in Sources */,
 				E66CA01F2A24FA6F00315DC4 /* RewardedAdView.swift in Sources */,
+				9A100C082ABCEBC300A7E6E1 /* FullscreenAdController.swift in Sources */,
+				9A100C072ABCEBC300A7E6E1 /* FullscreenAdView.swift in Sources */,
 				E686E8922A28FCAF0045BC43 /* Application+Extras.swift in Sources */,
 				E66CA00D2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift in Sources */,
 				E66CA0212A24FACD00315DC4 /* AdType.swift in Sources */,

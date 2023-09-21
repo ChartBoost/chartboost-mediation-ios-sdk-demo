@@ -15,6 +15,7 @@ import SwiftUI
 /// A view that lists the different Chartboost Mediation SDK advertisement types. Selecting one will
 /// navigate to a view that can be used to load and show that type of advertisement.
 struct AdTypeSelectionView: View {
+    @State private var useFullscreenApi = true
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
@@ -28,10 +29,14 @@ struct AdTypeSelectionView: View {
                             .padding(.vertical, 8)
                         Spacer()
                     }
-
+                    HStack {
+                        Toggle("Use Fullscreen API", isOn: $useFullscreenApi)
+                            .padding(.horizontal)
+                            .tint(.accentColor)
+                    }
                     List {
                         ForEach(AdType.allCases, id: \.self) { adType in
-                            NavigationLink(destination: adType.destination) {
+                            NavigationLink(destination: adView(forAdType: adType)) {
                                 HStack {
                                     adType.icon
                                     Text(adType.title)
@@ -46,27 +51,30 @@ struct AdTypeSelectionView: View {
             }
         }
     }
-}
 
-extension AdType {
-    @ViewBuilder var destination: some View {
-        GeometryReader { geometry in
-            ScrollView {
-                Group {
-                    switch self {
-                    case .banner:
-                        BannerAdView()
-                    case .interstitial:
-                        InterstitialAdView()
-                    case .rewarded:
-                        RewardedAdView()
+    func adView(forAdType adType: AdType) -> some View {
+        let adView = GeometryReader { geometry in
+                ScrollView {
+                    Group {
+                        switch (adType, useFullscreenApi) {
+                        case (.banner, _):
+                            BannerAdView()
+                        case (.interstitial, false):
+                            InterstitialAdView()
+                        case (.interstitial, true):
+                            FullscreenAdView()
+                        case (.rewarded, false):
+                            RewardedAdView()
+                        case (.rewarded, true):
+                            FullscreenAdView()
+                        }
                     }
+                    .frame(minHeight: geometry.size.height)
                 }
-                .frame(minHeight: geometry.size.height)
             }
-        }
-        .navigationTitle(title)
-        .navigationBarTitleDisplayMode(.inline)
-        .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
+            .navigationTitle(adType.title)
+            .navigationBarTitleDisplayMode(.inline)
+            .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
+        return adView
     }
 }

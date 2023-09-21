@@ -39,7 +39,7 @@ class FullscreenAdController: NSObject, ObservableObject {
     /// - Parameter keywords: Optional keywords that can be associated with the advertisement placement.
     func load(keywords: HeliumKeywords? = nil) {
         // Attempt to load the ad only if it has not already been created and requested to load.
-        guard interstitialAd == nil else {
+        guard fullscreenAd == nil else {
             print("[Warning] interstitial advertisement has already been loaded")
             return
         }
@@ -111,7 +111,7 @@ class FullscreenAdController: NSObject, ObservableObject {
 // MARK: - Lifecycle Delegate
 
 /// Implementation of the Chartboost Mediation fullscreen ad delegate.
-extension InterstitialAdController: ChartboostMediationFullscreenAdDelegate {
+extension FullscreenAdController: ChartboostMediationFullscreenAdDelegate {
     func didRecordImpression(ad: ChartboostMediationFullscreenAd) {
         log(action: "Did record impression", placementName: placementName, error: nil)
     }
@@ -140,7 +140,7 @@ extension InterstitialAdController: ChartboostMediationFullscreenAdDelegate {
 
 // MARK: - Utility
 
-private extension InterstitialAdController {
+private extension FullscreenAdController {
     /// Log lifecycle information to the console for the interstitial advertisement.
     /// - Parameter action: What action is being logged
     /// - Parameter placementName: The placement name for the interstitial advertisement
