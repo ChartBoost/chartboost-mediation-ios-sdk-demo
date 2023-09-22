@@ -15,7 +15,7 @@ import SwiftUI
 
 /// A view that demonstrates the loading and showing of a Chartboost Mediation SDK interstitial advertisement.
 struct InterstitialAdView: View {
-    @StateObject private var controller = InterstitialAdController(placementName: "AllNetworkInterstitial")
+    @StateObject private var controller: InterstitialAdController
     @State private var isBusy = false
     @State private var failureMessage: String?
 
@@ -81,5 +81,9 @@ struct InterstitialAdView: View {
                 isBusy = false
             }
         }
+    }
+
+    init(placementName: String) {
+        self._controller = StateObject(wrappedValue: InterstitialAdController(placementName: placementName))
     }
 }

@@ -15,7 +15,7 @@ import SwiftUI
 
 /// A view that demonstrates the loading and showing of a Chartboost Mediation SDK rewarded advertisement.
 struct RewardedAdView: View {
-    @StateObject private var controller = RewardedAdController(placementName: "AllNetworkRewarded")
+    @StateObject private var controller: RewardedAdController
     @State private var isBusy = false
     @State private var failureMessage: String?
 
@@ -81,5 +81,9 @@ struct RewardedAdView: View {
                 isBusy = false
             }
         }
+    }
+
+    init(placementName: String) {
+        self._controller = StateObject(wrappedValue: RewardedAdController(placementName: placementName))
     }
 }
