@@ -50,29 +50,29 @@ struct AdTypeSelectionView: View {
         }
     }
 
+    @ViewBuilder
     func adView(forAdType adType: AdType) -> some View {
-        let adView = GeometryReader { geometry in
-                ScrollView {
-                    Group {
-                        switch (adType, useFullscreenApi) {
-                        case (.banner, _):
-                            BannerAdView(placementName: "AllNetworkBanner")
-                        case (.interstitial, false):
-                            InterstitialAdView(placementName: "AllNetworkInterstitial")
-                        case (.interstitial, true):
-                            FullscreenAdView(placementName: "AllNetworkInterstitial")
-                        case (.rewarded, false):
-                            RewardedAdView(placementName: "AllNetworkRewarded")
-                        case (.rewarded, true):
-                            FullscreenAdView(placementName: "AllNetworkRewarded")
-                        }
+        GeometryReader { geometry in
+            ScrollView {
+                Group {
+                    switch (adType, useFullscreenApi) {
+                    case (.banner, _):
+                        BannerAdView(placementName: "AllNetworkBanner")
+                    case (.interstitial, false):
+                        InterstitialAdView(placementName: "AllNetworkInterstitial")
+                    case (.interstitial, true):
+                        FullscreenAdView(placementName: "AllNetworkInterstitial")
+                    case (.rewarded, false):
+                        RewardedAdView(placementName: "AllNetworkRewarded")
+                    case (.rewarded, true):
+                        FullscreenAdView(placementName: "AllNetworkRewarded")
                     }
-                    .frame(minHeight: geometry.size.height)
                 }
+                .frame(minHeight: geometry.size.height)
             }
-            .navigationTitle(adType.title)
-            .navigationBarTitleDisplayMode(.inline)
-            .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
-        return adView
+        }
+        .navigationTitle(adType.title)
+        .navigationBarTitleDisplayMode(.inline)
+        .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
     }
 }
