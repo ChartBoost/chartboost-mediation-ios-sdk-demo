@@ -29,11 +29,9 @@ struct AdTypeSelectionView: View {
                             .padding(.vertical, 8)
                         Spacer()
                     }
-                    HStack {
-                        Toggle("Use Fullscreen API", isOn: $useFullscreenApi)
-                            .padding(.horizontal)
-                            .tint(.accentColor)
-                    }
+                    Toggle("Use Fullscreen API", isOn: $useFullscreenApi)
+                        .padding(.horizontal)
+                        .tint(.accentColor)
                     List {
                         ForEach(AdType.allCases, id: \.self) { adType in
                             NavigationLink(destination: adView(forAdType: adType)) {
