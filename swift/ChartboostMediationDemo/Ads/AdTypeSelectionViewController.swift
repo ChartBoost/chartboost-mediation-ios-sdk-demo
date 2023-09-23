@@ -32,6 +32,7 @@ import UIKit
 /// 
 class AdTypeSelectionViewController: UIViewController {
 
+    @IBOutlet private var useFullscreenToggle: UISwitch!
     @IBOutlet private var tableView: UITableView!
 
     /// An enumeration of each advertisement type.
