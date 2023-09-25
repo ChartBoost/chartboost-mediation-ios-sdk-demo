@@ -93,17 +93,3 @@ extension AdTypeSelectionViewController: UITableViewDataSource {
         return cell
     }
 }
-
-extension AdTypeSelectionViewController.AdType {
-    var title: String {
-        rawValue.capitalized
-    }
-
-    var icon: UIImage? {
-        UIImage(named: title)
-    }
-
-    var viewController: UIViewController {
-        UIStoryboard(name: title, bundle: nil).instantiateViewController(withIdentifier: title)
-    }
-}
