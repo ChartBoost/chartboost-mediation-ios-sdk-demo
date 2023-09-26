@@ -110,9 +110,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="Use Fullscreen API" translatesAutoresizingMaskIntoConstraints="NO" id="4KD-8X-JIf">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Use Fullscreen API" translatesAutoresizingMaskIntoConstraints="NO" id="4KD-8X-JIf">
                                                 <rect key="frame" x="328" y="7.9999999999999982" width="51" height="20.333333333333329"/>
                                                 <color key="onTintColor" name="Accent"/>
+                                                <connections>
+                                                    <action selector="apiValueChanged:" destination="oek-vc-sYl" eventType="valueChanged" id="4rQ-mH-bSH"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="16" bottom="8" trailing="16"/>
@@ -138,8 +141,8 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="232-W3-tTv"/>
                     <connections>
+                        <outlet property="apiToggle" destination="4KD-8X-JIf" id="08d-Lk-WRz"/>
                         <outlet property="tableView" destination="sR3-CA-tj4" id="mQf-aL-qR3"/>
-                        <outlet property="useFullscreenToggle" destination="4KD-8X-JIf" id="xzH-6D-GJg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CW5-p0-12I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
