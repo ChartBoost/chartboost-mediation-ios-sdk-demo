@@ -100,8 +100,7 @@ class FullscreenAdController: NSObject {
         // Notify the demo UI.
         activityDelegate?.activityDidStart()
 
-        // Show the ad using the specified view controller.  Upon completion, instead of using a delegate
-        // method a ChartboostMediationAdShowResult will be passed to the completion block.
+        // Show the ad using the specified view controller.  Upon completion, a ChartboostMediationAdShowResult will be passed to the completion block.
         fullscreenAd.show(with: viewController, completion: { [weak self] result in
             guard let self = self else { return }
             self.log(action: "show", placementName: self.placementName, error: result.error)
