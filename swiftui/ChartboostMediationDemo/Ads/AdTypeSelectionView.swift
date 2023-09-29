@@ -61,11 +61,11 @@ struct AdTypeSelectionView: View {
                     case (.interstitial, false):
                         InterstitialAdView(placementName: "AllNetworkInterstitial")
                     case (.interstitial, true):
-                        FullscreenAdView(placementName: "AllNetworkInterstitial")
+                        FullscreenAdView(adType: adType, placementName: "AllNetworkInterstitial")
                     case (.rewarded, false):
                         RewardedAdView(placementName: "AllNetworkRewarded")
                     case (.rewarded, true):
-                        FullscreenAdView(placementName: "AllNetworkRewarded")
+                        FullscreenAdView(adType: adType, placementName: "AllNetworkRewarded")
                     }
                 }
                 .frame(minHeight: geometry.size.height)

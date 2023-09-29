@@ -58,7 +58,7 @@ class FullscreenAdController: NSObject, ObservableObject {
                 ad.delegate = self
                 self.fullscreenAd = ad
 
-                log(action: "load", placementName: placementName, error: result.error)
+                log(action: "Load", placementName: placementName, error: result.error)
                 // Notify the demo UI
                 activityState = .idle
             } else {

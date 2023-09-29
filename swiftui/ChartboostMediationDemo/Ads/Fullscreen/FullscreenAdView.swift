@@ -4,7 +4,7 @@
 // license that can be found in the LICENSE file.
 
 //
-//  InterstitialAdView.swift
+//  FullscreenAdView.swift
 //  ChartboostMediationDemo
 //
 //  Copyright © 2023 Chartboost. All rights reserved.
@@ -13,18 +13,24 @@
 import UIKit
 import SwiftUI
 
-/// A view that demonstrates the loading and showing of a Chartboost Mediation SDK interstitial advertisement.
+/// A view that demonstrates the loading and showing of a Chartboost Mediation SDK fullscreen advertisement.
 struct FullscreenAdView: View {
     @StateObject private var controller: FullscreenAdController
     @State private var isBusy = false
     @State private var failureMessage: String?
+    private let adType: AdType
 
     var body: some View {
         VStack {
-            Image("Interstitial")
-                .padding(.vertical, 32)
+            if adType == .interstitial {
+                Image("Interstitial")
+                    .padding(.vertical, 32)
+            } else if adType == .rewarded {
+                Image("Rewarded")
+                    .padding(.vertical, 32)
+            }
 
-            Text("A full screen interstitial advertisement must first be loaded.")
+            Text("A full screen \(adType.title) advertisement must first be loaded.")
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
 
@@ -83,7 +89,8 @@ struct FullscreenAdView: View {
         }
     }
 
-    init(placementName: String) {
+    init(adType: AdType, placementName: String) {
+        self.adType = adType
         self._controller = StateObject(wrappedValue: FullscreenAdController(placementName: placementName))
     }
 }
