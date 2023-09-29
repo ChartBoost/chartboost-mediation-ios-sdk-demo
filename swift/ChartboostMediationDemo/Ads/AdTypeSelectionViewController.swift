@@ -33,14 +33,7 @@ import UIKit
 class AdTypeSelectionViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView!
-
-    /// Current state of the "Use Fullscreen API" switch
-    var useFullscreenAPI: Bool = false
-
     @IBOutlet var apiToggle: UISwitch!
-    @IBAction func apiValueChanged(_ sender: UISwitch) {
-        useFullscreenAPI = sender.isOn
-    }
 
     // MARK: - Lifecycle
 
@@ -55,8 +48,6 @@ class AdTypeSelectionViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "AdTypeSelectionCell")
         tableView.separatorColor = .chartboost
         navigationController?.setNavigationBarHidden(true, animated: false)
-        // Make sure useFullscreenAPI and the switch are in the same state
-        useFullscreenAPI = apiToggle?.isOn ?? false
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -71,7 +62,7 @@ class AdTypeSelectionViewController: UIViewController {
 
     func adView(forAdType adType: AdType) -> UIViewController? {
         let title = adType.title
-        if useFullscreenAPI {
+        if apiToggle.isOn {
             // If we're using the fullscreen API, we need to set the ad type for Rewarded & Interstitial
             switch adType {
             case .banner:
