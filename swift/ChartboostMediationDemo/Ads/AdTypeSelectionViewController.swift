@@ -105,12 +105,7 @@ extension AdTypeSelectionViewController: UITableViewDelegate {
         // The cast in adView(forAdType:) should always succeed, but since we have to unwrap the
         // optional at some point we might as well catch it if there's a problem.
         guard let viewController = adView(forAdType: adType) else {
-            // Alert the user that we can't proceed
-            let alert = UIAlertController(title: "Error",
-                                          message: "Could not create view for ",
-                                          preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            assertionFailure("Could not create view for Ad")
             return
         }
         navigationController?.pushViewController(viewController, animated: true)
