@@ -95,7 +95,7 @@ class FullscreenAdController: NSObject {
             return
         }
 
-        // ChartboostMediationFullscreenAd does not have an equivalent to HeliumInterstitialAd's readyToShow().
+        // Once you've loaded a ChartboostMediationFullscreenAd, it can be shown immediately.
 
         // Notify the demo UI.
         activityDelegate?.activityDidStart()
