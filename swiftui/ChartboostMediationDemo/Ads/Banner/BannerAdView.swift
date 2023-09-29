@@ -86,7 +86,7 @@ struct BannerAdView: View {
                 isBusy = true
             case .failed(let message, let error):
                 isBusy = false
-                failureMessage = "\(message): \(error?.localizedDescription ?? "")"
+                failureMessage = message + (error.map { ": \($0.localizedDescription)" } ?? "")
             default:
                 isBusy = false
             }
