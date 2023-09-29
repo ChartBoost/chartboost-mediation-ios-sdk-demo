@@ -44,7 +44,7 @@ class FullscreenAdController: NSObject {
             placementName = "AllNetworkInterstitial"
         case .rewarded:
             placementName = "AllNetworkRewarded"
-        // If adType is nill or not a fullscreen type, give an empty placement name that won't load
+        // If adType is nil or not a fullscreen type, give an empty placement name that won't load
         default:
             placementName = ""
         }
@@ -52,7 +52,7 @@ class FullscreenAdController: NSObject {
 
     /// Load the fullscreen ad.
     /// - Parameter keywords: Optional keywords that can be associated with the advertisement placement.
-    func load(keywords: HeliumKeywords? = nil) {
+    func load() {
         // Attempt to load the ad only if it has not already been created and requested to load.
         guard fullscreenAd == nil else {
             print("[Warning] fullscreen advertisement has already been loaded")
@@ -62,9 +62,7 @@ class FullscreenAdController: NSObject {
         // Notify the demo UI
         activityDelegate?.activityDidStart()
 
-        // loadFullscreenAd expects keywords to be `[String : String]` instead of `HeliumKeywords?`.
-        let keywords = keywords?.dictionary ?? [:]
-        let request = ChartboostMediationAdLoadRequest(placement: placementName, keywords: keywords)
+        let request = ChartboostMediationAdLoadRequest(placement: placementName, keywords: [:])
         // Load the fullscreen ad, which will make a request to the network. Upon completion, a
         // ChartboostMediationFullscreenAdLoadResult will be passed to the completion block.
         chartboostMediation.loadFullscreenAd(with: request) { [weak self] result in
