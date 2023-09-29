@@ -15,13 +15,13 @@ import ChartboostMediationSDK
 
 /// An extenstion that is relevant for this demo only. It is not applicable to anything specific to the Chartboost Mediation SDK.
 extension UIViewController {
-    func presentAlert(message: String, error: Error) {
+    func presentAlert(message: String, error: Error?) {
         let alertMessage: String
         if let chartboostMediationError = error as? ChartboostMediationError {
             alertMessage = "\(message)\n\n\(chartboostMediationError.localizedFailureReason ?? "Reason unspecified.")\n\n\(chartboostMediationError.chartboostMediationCode.name)"
         }
         else {
-            alertMessage = "\(message)\n\n\(error)"
+            alertMessage = "\(message)\n\n\(String(describing: error))"
         }
         let alert = UIAlertController(title: "Error", message: alertMessage, preferredStyle: .alert)
         alert.addAction(.init(title: "OK", style: .default))

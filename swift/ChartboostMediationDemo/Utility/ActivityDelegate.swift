@@ -14,5 +14,5 @@
 protocol ActivityDelegate: AnyObject {
     func activityDidStart()
     func activityDidEnd()
-    func activityDidEnd(message: String, error: Error)
+    func activityDidEnd(message: String, error: Error?)
 }

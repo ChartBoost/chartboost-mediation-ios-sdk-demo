@@ -78,10 +78,8 @@ class FullscreenAdController: NSObject {
                 fullscreenAd = nil
                 self.log(action: "Load error", placementName: placementName, error: result.error)
 
-                // `.failed` requires a non-optional error type
-                let error = result.error ?? NSError(domain: "com.chartboost.mediation.demo", code: 0)
                 // Notify the demo UI
-                activityDelegate?.activityDidEnd(message: "Failed to load the advertisement.", error: error)
+                activityDelegate?.activityDidEnd(message: "Failed to load the advertisement.", error: nil)
             }
         }
     }

@@ -46,7 +46,7 @@ extension UIViewController: ActivityDelegate {
         })
     }
 
-    func activityDidEnd(message: String, error: Error) {
+    func activityDidEnd(message: String, error: Error?) {
         if let busy = busy {
             busy.dismiss(animated: true, completion: {
                 self.busy = nil
