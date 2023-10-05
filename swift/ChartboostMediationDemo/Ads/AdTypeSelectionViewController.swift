@@ -33,13 +33,7 @@ import UIKit
 class AdTypeSelectionViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView!
-
-    /// An enumeration of each advertisement type.
-    enum AdType: String, CaseIterable {
-        case banner
-        case interstitial
-        case rewarded
-    }
+    @IBOutlet var apiToggle: UISwitch!
 
     // MARK: - Lifecycle
 
@@ -65,6 +59,33 @@ class AdTypeSelectionViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
+
+    func adView(forAdType adType: AdType) -> UIViewController? {
+        let title = adType.title
+        if apiToggle.isOn {
+            // If we're using the fullscreen API, we need to set the ad type for Rewarded & Interstitial
+            switch adType {
+            case .banner:
+                // For banner, we do exactly the same thing as in the non-useFullscreeenAPI case
+                return UIStoryboard(name: title, bundle: nil).instantiateViewController(withIdentifier: title)
+            // The FullscreenAd API is used for both interstitial and rewarded ads
+            case .interstitial:
+                // A cast to FullscreenAdViewController is necessary so we can set .adType
+                let interstitialViewController = UIStoryboard(name: "Fullscreen", bundle: nil)
+                    .instantiateViewController(withIdentifier: "Fullscreen") as? FullscreenAdViewController
+                interstitialViewController?.adType = adType
+                return interstitialViewController
+            case .rewarded:
+                // A cast to FullscreenAdViewController is necessary so we can set .adType
+                let rewardedViewController = UIStoryboard(name: "Fullscreen", bundle: nil)
+                    .instantiateViewController(withIdentifier: "Fullscreen") as? FullscreenAdViewController
+                rewardedViewController?.adType = adType
+                return rewardedViewController
+            }
+        } else {
+            return UIStoryboard(name: title, bundle: nil).instantiateViewController(withIdentifier: title)
+        }
+    }
 }
 
 extension AdTypeSelectionViewController: UITableViewDelegate {
@@ -72,7 +93,12 @@ extension AdTypeSelectionViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
 
         let adType = AdType.allCases[indexPath.row]
-        let viewController = adType.viewController
+        // The cast in adView(forAdType:) should always succeed, but since we have to unwrap the
+        // optional at some point we might as well catch it if there's a problem.
+        guard let viewController = adView(forAdType: adType) else {
+            assertionFailure("Could not create view for Ad")
+            return
+        }
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -90,19 +116,5 @@ extension AdTypeSelectionViewController: UITableViewDataSource {
         cell.textLabel?.text = adType.title
         cell.accessoryType = .disclosureIndicator
         return cell
-    }
-}
-
-extension AdTypeSelectionViewController.AdType {
-    var title: String {
-        rawValue.capitalized
-    }
-
-    var icon: UIImage? {
-        UIImage(named: title)
-    }
-
-    var viewController: UIViewController {
-        UIStoryboard(name: title, bundle: nil).instantiateViewController(withIdentifier: title)
     }
 }

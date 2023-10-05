@@ -23,7 +23,7 @@ class InterstitialAdController: NSObject, ObservableObject {
     /// The placement that is controller is for.
     private let placementName: String
 
-    /// An instance of the interstitial ad that this class controls the lifecycle of.
+    /// An instance of the interstitial ad that this class controls the lifecycle of when using the deprecated API.
     private var interstitialAd: HeliumInterstitialAd?
 
     /// A state for demo purposes only so that long activity processes can be communicated to a view.
@@ -44,20 +44,18 @@ class InterstitialAdController: NSObject, ObservableObject {
             return
         }
 
-        // Create an interstitial ad from the Chartboost Mediation ad provider.
-        guard let interstitialAd = chartboostMediation.interstitialAdProvider(with: self, andPlacementName: placementName) else {
-            // It could fail if the placement name is invalid.
-            print("[Error] failed to create interstitial advertisement for placement '\(placementName)'")
-            return
-        }
-        self.interstitialAd = interstitialAd
-
         // Notify the demo UI
         activityState = .running
 
+        // Create an interstitial ad using the deprecated Chartboost Mediation ad provider.
+        self.interstitialAd = chartboostMediation.interstitialAdProvider(with: self, andPlacementName: placementName)
+        guard let interstitialAd = interstitialAd else {
+            // Ad creation could have failed if the placement name is invalid.
+            print("[Error] failed to create interstitial advertisement for placement '\(placementName)'")
+            return
+        }
         // Associate any provided keywords with the advertisement before it is loaded.
         interstitialAd.keywords = keywords
-
         // Load the interstitial ad, which will make a request to the network. Upon completion, the
         // delegate method `heliumInterstitialAd(withPlacementName:didLoadWithError:)` will be called.
         interstitialAd.load()
@@ -66,7 +64,7 @@ class InterstitialAdController: NSObject, ObservableObject {
     /// Show the interstitial ad if it has been loaded and is ready to show.
     /// - Parameter viewController: The view controller to present the interstitial over.
     func show(with viewController: UIViewController) {
-        // Attempt to show an ad only if it has been loaded.
+        // Attempt to show an interstitial ad only if it has been loaded.
         guard let interstitialAd = interstitialAd else {
             print("[Error] cannot show an interstitial advertisement that has not yet been loaded")
             return

@@ -15,7 +15,7 @@ import SwiftUI
 
 /// A view that demonstrates the loading and showing of a Chartboost Mediation SDK banner advertisement.
 struct BannerAdView: View {
-    @StateObject private var controller = BannerAdController(placementName: "AllNetworkBanner")
+    @StateObject private var controller: BannerAdController
     @State private var isBusy = false
     @State private var failureMessage: String?
 
@@ -86,10 +86,14 @@ struct BannerAdView: View {
                 isBusy = true
             case .failed(let message, let error):
                 isBusy = false
-                failureMessage = "\(message): \(error.localizedDescription)"
+                failureMessage = message + (error.map { ": \($0.localizedDescription)" } ?? "")
             default:
                 isBusy = false
             }
         }
+    }
+
+    init(placementName: String) {
+        self._controller = StateObject(wrappedValue: BannerAdController(placementName: placementName))
     }
 }
