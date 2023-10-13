@@ -71,15 +71,15 @@ class FullscreenAdController: NSObject {
                 ad.delegate = self
                 self.fullscreenAd = ad
 
-                log(action: "load", placementName: placementName, error: result.error)
+                self.log(action: "load", placementName: self.placementName, error: result.error)
                 // Notify the demo UI
-                activityDelegate?.activityDidEnd()
+                self.activityDelegate?.activityDidEnd()
             } else {
-                fullscreenAd = nil
-                self.log(action: "Load error", placementName: placementName, error: result.error)
+                self.fullscreenAd = nil
+                self.log(action: "Load error", placementName: self.placementName, error: result.error)
 
                 // Notify the demo UI
-                activityDelegate?.activityDidEnd(message: "Failed to load the advertisement.", error: nil)
+                self.activityDelegate?.activityDidEnd(message: "Failed to load the advertisement.", error: nil)
             }
         }
     }
@@ -108,11 +108,11 @@ class FullscreenAdController: NSObject {
                 self.fullscreenAd = nil
 
                 // Notify the demo UI
-                activityDelegate?.activityDidEnd(message: "Failed to load the advertisement.", error: error)
+                self.activityDelegate?.activityDidEnd(message: "Failed to load the advertisement.", error: error)
             }
             else {
                 // Notify the demo UI
-                activityDelegate?.activityDidEnd()
+                self.activityDelegate?.activityDidEnd()
             }
         })
     }

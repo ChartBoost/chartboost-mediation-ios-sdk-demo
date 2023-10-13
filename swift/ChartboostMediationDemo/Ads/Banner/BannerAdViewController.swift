@@ -20,22 +20,18 @@ import UIKit
 ///
 class BannerAdViewController: UIViewController {
 
-    /// The banner's container view. In the storyboard, it is constrained to be 320x50 for the sake of this
-    /// demo, which only uses the fixed `standard` size.
-    @IBOutlet private var bannerContainer: UIView!
-
-    /// An instance of the `BannerAdController` that is configured to use the placement "AllNetworkBanner"
-    lazy var controller = BannerAdController(placementName: "AllNetworkBanner", activityDelegate: self)
+    /// An instance of the `BannerAdController` that is configured to use the placement "AllNetworkAdaptiveBanner"
+    lazy var controller = BannerAdController(placementName: "AllNetworkAdaptiveBanner", activityDelegate: self)
 
     /// The handler for when the load button is pushed.  Pushing it results in the banner ad being loaded.
     /// After it has successfully loaded, it can then be shown.
     @IBAction func loadButtonPushed() {
-        controller.load(with: self)
+        controller.load(with: self, width: view.frame.width)
     }
 
     /// The handler for when the show button is pushed.  Pushing it results in the banner ad being shown if it was successfully loaded.
     /// The banner ad view will become a subview of the `bannerContainer` owned by this view controller.
     @IBAction func showButtonPushed() {
-        controller.show(within: bannerContainer)
+        controller.show(within: view)
     }
 }
