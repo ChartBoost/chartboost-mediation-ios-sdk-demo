@@ -117,7 +117,7 @@ class BannerAdController: NSObject {
 
 // MARK: - Lifecycle Delegate
 
-/// Implementation of the Chartboost Mediation banner ad delegate.
+/// Implementation of the Chartboost Mediation banner view delegate.
 extension BannerAdController: ChartboostMediationBannerViewDelegate {
 
     func willAppear(bannerView: ChartboostMediationBannerView) {
@@ -126,6 +126,7 @@ extension BannerAdController: ChartboostMediationBannerViewDelegate {
         // if let size = bannerView.size?.size {
         //     bannerView.frame.size = size
         // }
+        // This method can also be used to check other updated properties of `bannerView`.
     }
 }
 

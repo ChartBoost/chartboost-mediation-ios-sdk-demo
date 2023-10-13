@@ -13,17 +13,17 @@
 import ChartboostMediationSDK
 import SwiftUI
 
-/// A SwiftUI host view for a `HeliumBannerView`
+/// A SwiftUI host view for a `ChartboostMediationBannerView`
 struct Banner: UIViewRepresentable {
-    typealias UIViewType = HeliumBannerView
+    typealias UIViewType = ChartboostMediationBannerView
 
-    let source: HeliumBannerView
+    let source: ChartboostMediationBannerView
 
-    func makeUIView(context: Context) -> HeliumBannerView {
+    func makeUIView(context: Context) -> ChartboostMediationBannerView {
         source
     }
 
-    func updateUIView(_ uiView: HeliumBannerView, context: Context) {
+    func updateUIView(_ uiView: ChartboostMediationBannerView, context: Context) {
 
     }
 }

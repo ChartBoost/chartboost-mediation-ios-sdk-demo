@@ -30,7 +30,7 @@ struct BannerAdView: View {
                     .padding(.horizontal, 32)
 
                 Button {
-                    controller.load(with: topViewController)
+                    controller.load(with: topViewController, width: topViewController.view.frame.width)
                 } label: {
                     Text("Load")
                         .font(.title2)
@@ -59,13 +59,11 @@ struct BannerAdView: View {
                 .buttonStyle(.borderedProminent)
                 .padding(.horizontal, 32)
 
-                if controller.shouldShow, let bannerAd = controller.bannerAd {
+                if controller.shouldShow, let bannerAd = controller.bannerAd, let size = bannerAd.size?.size {
                     Spacer()
                     HStack {
-                        Spacer()
                         Banner(source: bannerAd)
-                            .frame(width: 320, height: 50)
-                        Spacer()
+                            .frame(width: size.width, height: size.height)
                     }
                 }
             }
