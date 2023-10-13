@@ -76,9 +76,8 @@ class BannerAdController: NSObject, ObservableObject {
 
             self.log(action: "load", placementName: self.placementName, error: result.error)
 
-            // An ad that has failed to load could be cleared so that an attempt to load it can be done  on the
-            // same ad object again, e.g. `bannerAd?.clear()`. However, for simplicity, it will be
-            // now be destroyed.
+            // If a banner fails to load, you can simply call `load` on it again to retry.
+            // However for this demo, we will destroy the banner.
             if let error = result.error {
                 self.bannerAd = nil
 
