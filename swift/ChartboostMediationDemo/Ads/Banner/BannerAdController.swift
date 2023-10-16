@@ -24,7 +24,7 @@ class BannerAdController: NSObject {
     private let placementName: String
 
     /// An instance of the banner ad that this class controls the lifecycle of.
-    private var bannerAd: HeliumBannerView?
+    private var bannerAd: ChartboostMediationBannerView?
 
     /// A delegate for demo purposes only so that long activity processes can be communicated to a view controller.
     private weak var activityDelegate: ActivityDelegate?
@@ -39,32 +39,54 @@ class BannerAdController: NSObject {
 
     /// Load the banner ad.
     /// - Parameter viewController: The view controller that will be the viewer for the banner advertisement.
+    /// - Parameter width: The max width of ad to load.
     /// - Parameter keywords: Optional keywords that can be associated with the advertisement placement.
-    func load(with viewController: UIViewController, keywords: HeliumKeywords? = nil) {
+    func load(with viewController: UIViewController, width: CGFloat, keywords: [String: String]? = nil) {
         // Attempt to load the ad only if it has not already been created and requested to load.
         guard bannerAd == nil else {
             print("[Warning] banner advertisement has already been loaded")
             return
         }
 
-        // Create a banner ad from the Chartboost Mediation ad provider. In this demo, the `standard` size is being loaded.
-        // Standard banners are 320x50 in size.
-        guard let bannerAd = chartboostMediation.bannerProvider(with: self, andPlacementName: placementName, andSize: .standard) else {
-            // It could fail if the placement name is invalid.
-            print("[Error] failed to create banner advertisement for placement '\(placementName)'")
-            return
-        }
-        self.bannerAd = bannerAd
+        bannerAd = ChartboostMediationBannerView()
+        bannerAd?.delegate = self
+
+        // In this demo, we will load a 6x1 banner with the max width of the screen.
+        // If you are instead loading a fixed size banner placement, you can do that with:
+        // ChartboostMediationBannerSize.standard, ChartboostMediationBannerSize.medium, or
+        // ChartboostMediationBannerSize.leaderboard.
+        let size = ChartboostMediationBannerSize.adaptive6x1(width: width)
+        let request = ChartboostMediationBannerLoadRequest(
+            placement: placementName,
+            size: size
+        )
 
         // Notify the demo UI
         activityDelegate?.activityDidStart()
 
         // Associate any provided keywords with the advertisement before it is loaded.
-        bannerAd.keywords = keywords
+        bannerAd?.keywords = keywords
 
         // Load the banner ad, which will make a request to the network. Upon completion, the
-        // delegate method `heliumBannerAd(placementName:didLoadWithError:)` will be called.
-        bannerAd.load(with: viewController)
+        // completion block will be called.
+        bannerAd?.load(with: request, viewController: viewController, completion: { [weak self] result in
+            guard let self else { return }
+
+            self.log(action: "load", placementName: self.placementName, error: result.error)
+
+            // If a banner fails to load, you can simply call `load` on it again to retry.
+            // However for this demo, we will destroy the banner.
+            if let error = result.error {
+                self.bannerAd = nil
+
+                // Notify the demo UI
+                self.activityDelegate?.activityDidEnd(message: "Failed to load the banner advertisement.", error: error)
+            }
+            else {
+                // Notify the demo UI
+                self.activityDelegate?.activityDidEnd()
+            }
+        })
     }
 
     /// Show the banner ad within a specific view.
@@ -80,37 +102,30 @@ class BannerAdController: NSObject {
         bannerAd.removeFromSuperview()
 
         // Place the banner ad view within the provided view container.
+        bannerAd.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bannerAd)
-        bannerAd.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+        // If using auto-layout, the banner view will automatically resize when new ads are loaded.
+        // The banner view can also be manually sized, see `willAppear` below.
+        NSLayoutConstraint.activate([
+            bannerAd.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            bannerAd.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+        ])
     }
 }
 
 // MARK: - Lifecycle Delegate
 
-/// Implementation of the Chartboost Mediation banner ad delegate.
-extension BannerAdController: HeliumBannerAdDelegate {
+/// Implementation of the Chartboost Mediation banner view delegate.
+extension BannerAdController: ChartboostMediationBannerViewDelegate {
 
-    /// *Required* delegate callback that notifies that the ad finished loading.
-    /// - Parameter placementName: The placement associated with the load completion
-    /// - Parameter requestIdentifier: A unique identifier for the load request
-    /// - parameter winningBidInfo: Bid information JSON.
-    /// - Parameter error: An optional error associated with the load completion.
-    func heliumBannerAd(placementName: String, requestIdentifier: String, winningBidInfo: [String: Any]?, didLoadWithError error: ChartboostMediationError?) {
-        log(action: "load", placementName: placementName, error: error)
-
-        // An ad that has failed to load could be cleared so that an attempt to load it can be done  on the
-        // same ad object again, e.g. `bannerAd?.clear()`. However, for simplicity, it will be
-        // now be destroyed.
-        if let error = error {
-            bannerAd = nil
-
-            // Notify the demo UI
-            activityDelegate?.activityDidEnd(message: "Failed to load the banner advertisement.", error: error)
-        }
-        else {
-            // Notify the demo UI
-            activityDelegate?.activityDidEnd()
-        }
+    func willAppear(bannerView: ChartboostMediationBannerView) {
+        // Called when a new ad is about to appear inside of `bannerView`. This method can be used
+        // to manually size `bannerView` if desired:
+        // if let size = bannerView.size?.size {
+        //     bannerView.frame.size = size
+        // }
+        // This method can also be used to check other updated properties of `bannerView`.
     }
 }
 

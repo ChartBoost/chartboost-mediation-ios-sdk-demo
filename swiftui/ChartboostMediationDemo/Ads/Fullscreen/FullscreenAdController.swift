@@ -58,17 +58,17 @@ class FullscreenAdController: NSObject, ObservableObject {
                 ad.delegate = self
                 self.fullscreenAd = ad
 
-                log(action: "Load", placementName: placementName, error: result.error)
+                self.log(action: "Load", placementName: self.placementName, error: result.error)
                 // Notify the demo UI
-                activityState = .idle
+                self.activityState = .idle
             } else {
-                fullscreenAd = nil
-                self.log(action: "Load error", placementName: placementName, error: result.error)
+                self.fullscreenAd = nil
+                self.log(action: "Load error", placementName: self.placementName, error: result.error)
 
                 // `.failed` requires a non-optional error type
                 let error = result.error ?? NSError(domain: "com.chartboost.mediation.demo", code: 0)
                 // Notify the demo UI
-                activityState = .failed(message: "Failed to load the interstitial advertisement.", error: error)
+                self.activityState = .failed(message: "Failed to load the interstitial advertisement.", error: error)
             }
         }
     }

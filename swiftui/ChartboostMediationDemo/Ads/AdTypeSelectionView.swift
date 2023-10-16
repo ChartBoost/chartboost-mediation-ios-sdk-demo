@@ -57,7 +57,7 @@ struct AdTypeSelectionView: View {
                 Group {
                     switch (adType, useFullscreenApi) {
                     case (.banner, _):
-                        BannerAdView(placementName: "AllNetworkBanner")
+                        BannerAdView(placementName: "AllNetworkAdaptiveBanner")
                     case (.interstitial, false):
                         InterstitialAdView(placementName: "AllNetworkInterstitial")
                     case (.interstitial, true):
