@@ -10,6 +10,7 @@
 		9A100C072ABCEBC300A7E6E1 /* FullscreenAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7AD6B2ABBB4C90036B3EB /* FullscreenAdView.swift */; };
 		9A100C082ABCEBC300A7E6E1 /* FullscreenAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7AD6A2ABBB4A50036B3EB /* FullscreenAdController.swift */; };
 		9F2B0841095D4D40883BB4D0 /* Pods_ChartboostMediationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4BA50B0885969AB837FF29 /* Pods_ChartboostMediationDemo.framework */; };
+		B9EF67002AD9E043000BCE6A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B9EF66FF2AD9E043000BCE6A /* PrivacyInfo.xcprivacy */; };
 		E66C9FFA2A24EA9000315DC4 /* ChartboostMediationDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66C9FF92A24EA9000315DC4 /* ChartboostMediationDemoApp.swift */; };
 		E66C9FFE2A24EA9100315DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66C9FFD2A24EA9100315DC4 /* Assets.xcassets */; };
 		E66CA0012A24EA9100315DC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66CA0002A24EA9100315DC4 /* Preview Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		9AB7AD6A2ABBB4A50036B3EB /* FullscreenAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenAdController.swift; sourceTree = "<group>"; };
 		9AB7AD6B2ABBB4C90036B3EB /* FullscreenAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenAdView.swift; sourceTree = "<group>"; };
 		AD4BA50B0885969AB837FF29 /* Pods_ChartboostMediationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartboostMediationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9EF66FF2AD9E043000BCE6A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		E66C9FF62A24EA9000315DC4 /* ChartboostMediationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartboostMediationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66C9FF92A24EA9000315DC4 /* ChartboostMediationDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartboostMediationDemoApp.swift; sourceTree = "<group>"; };
 		E66C9FFD2A24EA9100315DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,11 +123,12 @@
 			isa = PBXGroup;
 			children = (
 				E66CA0092A24EBCB00315DC4 /* Ads */,
-				E66CA0102A24ECF400315DC4 /* Utility */,
 				E66C9FF92A24EA9000315DC4 /* ChartboostMediationDemoApp.swift */,
 				E66CA0072A24EB9F00315DC4 /* Launch Screen.storyboard */,
 				E66C9FFF2A24EA9100315DC4 /* Preview Content */,
+				B9EF66FF2AD9E043000BCE6A /* PrivacyInfo.xcprivacy */,
 				E66CA00B2A24EC1E00315DC4 /* Supporting Files */,
+				E66CA0102A24ECF400315DC4 /* Utility */,
 			);
 			path = ChartboostMediationDemo;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				E66CA0082A24EBA000315DC4 /* Launch Screen.storyboard in Resources */,
 				E66CA0012A24EA9100315DC4 /* Preview Assets.xcassets in Resources */,
+				B9EF67002AD9E043000BCE6A /* PrivacyInfo.xcprivacy in Resources */,
 				E66C9FFE2A24EA9100315DC4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
