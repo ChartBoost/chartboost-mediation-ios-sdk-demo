@@ -111,6 +111,10 @@
 			</array>
 		</dict>
 	</array>
+	<key>NSPrivacyTrackingDomains</key>
+	<array>
+		<string>tracking.auction.mediation-sdk.chartboost.com</string>
+	</array>
 	<key>NSPrivacyTracking</key>
 	<true/>
 </dict>
