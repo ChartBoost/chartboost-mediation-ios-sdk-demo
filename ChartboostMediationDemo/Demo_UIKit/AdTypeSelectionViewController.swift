@@ -74,12 +74,14 @@ class AdTypeSelectionViewController: UIViewController {
                 let interstitialViewController = UIStoryboard(name: "Fullscreen", bundle: nil)
                     .instantiateViewController(withIdentifier: "Fullscreen") as? FullscreenAdViewController
                 interstitialViewController?.adType = adType
+                interstitialViewController?.placementName = "AllNetworkInterstitial"
                 return interstitialViewController
             case .rewarded:
                 // A cast to FullscreenAdViewController is necessary so we can set .adType
                 let rewardedViewController = UIStoryboard(name: "Fullscreen", bundle: nil)
                     .instantiateViewController(withIdentifier: "Fullscreen") as? FullscreenAdViewController
                 rewardedViewController?.adType = adType
+                rewardedViewController?.placementName = "AllNetworkRewarded"
                 return rewardedViewController
             }
         } else {

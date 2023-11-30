@@ -21,7 +21,6 @@
 		E66CA01D2A24FA5400315DC4 /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA01C2A24FA5400315DC4 /* InterstitialAdView.swift */; };
 		E66CA01F2A24FA6F00315DC4 /* RewardedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA01E2A24FA6F00315DC4 /* RewardedAdView.swift */; };
 		E66CA0212A24FACD00315DC4 /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0202A24FACD00315DC4 /* AdType.swift */; };
-		E66CA0252A24FD1700315DC4 /* ActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0242A24FD1700315DC4 /* ActivityState.swift */; };
 		E66CA0272A2500C500315DC4 /* BusyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0262A2500C500315DC4 /* BusyModifier.swift */; };
 		E66CA02F2A2516CD00315DC4 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA02E2A2516CD00315DC4 /* Banner.swift */; };
 		E686E8922A28FCAF0045BC43 /* Application+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686E8912A28FCAF0045BC43 /* Application+Extras.swift */; };
@@ -44,7 +43,6 @@
 		E66CA01C2A24FA5400315DC4 /* InterstitialAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdView.swift; sourceTree = "<group>"; };
 		E66CA01E2A24FA6F00315DC4 /* RewardedAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdView.swift; sourceTree = "<group>"; };
 		E66CA0202A24FACD00315DC4 /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
-		E66CA0242A24FD1700315DC4 /* ActivityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityState.swift; sourceTree = "<group>"; };
 		E66CA0262A2500C500315DC4 /* BusyModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyModifier.swift; sourceTree = "<group>"; };
 		E66CA02E2A2516CD00315DC4 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		E686E8912A28FCAF0045BC43 /* Application+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Extras.swift"; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 		E66CA0102A24ECF400315DC4 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				E66CA0242A24FD1700315DC4 /* ActivityState.swift */,
 				E66CA0262A2500C500315DC4 /* BusyModifier.swift */,
 				E66CA0152A24F8CC00315DC4 /* UInt64+Extras.swift */,
 			);
@@ -306,7 +303,6 @@
 				E66CA0272A2500C500315DC4 /* BusyModifier.swift in Sources */,
 				E66CA0142A24ED7500315DC4 /* AdTypeSelectionView.swift in Sources */,
 				E66CA01B2A24FA2D00315DC4 /* BannerAdView.swift in Sources */,
-				E66CA0252A24FD1700315DC4 /* ActivityState.swift in Sources */,
 				E66CA01F2A24FA6F00315DC4 /* RewardedAdView.swift in Sources */,
 				9A100C072ABCEBC300A7E6E1 /* FullscreenAdView.swift in Sources */,
 				E686E8922A28FCAF0045BC43 /* Application+Extras.swift in Sources */,

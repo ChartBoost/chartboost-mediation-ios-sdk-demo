@@ -32,6 +32,24 @@ class BannerAdViewController: UIViewController {
     /// The handler for when the show button is pushed.  Pushing it results in the banner ad being shown if it was successfully loaded.
     /// The banner ad view will become a subview of the `bannerContainer` owned by this view controller.
     @IBAction func showButtonPushed() {
-        controller.show(within: view)
+        // Attempt to show an ad only if it has been loaded.
+        guard let bannerAd = controller.bannerAd else {
+            print("[Error] cannot show an banner advertisement that has not yet been loaded")
+            return
+        }
+
+        // Remove the banner ad from its super view if it was previously added to one.
+        bannerAd.removeFromSuperview()
+
+        // Place the banner ad view within the provided view container.
+        bannerAd.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerAd)
+
+        // If using auto-layout, the banner view will automatically resize when new ads are loaded.
+        // The banner view can also be manually sized, see `willAppear` below.
+        NSLayoutConstraint.activate([
+            bannerAd.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            bannerAd.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+        ])
     }
 }

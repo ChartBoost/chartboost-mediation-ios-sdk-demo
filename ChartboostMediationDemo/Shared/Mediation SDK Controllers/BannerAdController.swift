@@ -29,9 +29,6 @@ class BannerAdController: NSObject, ObservableObject {
     /// A state for demo purposes only so that long activity processes can be communicated to a view.
     @Published private(set) var activityState: ActivityState = .idle
 
-    /// Indicates that the banner should be showing
-    @Published private(set) var shouldShow = false
-
     /// A delegate for demo purposes only so that long activity processes can be communicated to a view controller.
     private weak var activityDelegate: ActivityDelegate?
 
@@ -96,17 +93,6 @@ class BannerAdController: NSObject, ObservableObject {
                 self.activityState = .idle
             }
         })
-    }
-
-    /// Show the banner ad.
-    func show() {
-        // Attempt to show an ad only if it has been loaded.
-        guard bannerAd != nil else {
-            print("[Error] cannot show an banner advertisement that has not yet been loaded")
-            return
-        }
-
-        shouldShow = true
     }
 }
 
