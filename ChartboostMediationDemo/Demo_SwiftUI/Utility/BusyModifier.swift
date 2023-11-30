@@ -13,6 +13,7 @@
 import SwiftUI
 
 /// A view that is relevent for this demo only. It is not applicable to anything specific to the Chartboost Mediation SDK.
+@available(iOS 15.0, *)
 struct BusyView: ViewModifier {
     @Binding var isBusy: Bool
 
@@ -25,7 +26,6 @@ struct BusyView: ViewModifier {
                     Spacer()
                     ProgressView()
                         .progressViewStyle(.circular)
-                        .tint(.accentColor)
                         .padding(.bottom, 64)
                         .frame(maxWidth: .infinity)
                 }
@@ -35,6 +35,7 @@ struct BusyView: ViewModifier {
     }
 }
 
+@available(iOS 15.0, *)
 extension View {
     func busy(_ isBusy: Binding<Bool>) -> some View {
         modifier(BusyView(isBusy: isBusy))

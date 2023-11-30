@@ -4,7 +4,7 @@
 // license that can be found in the LICENSE file.
 
 //
-//  RewardedAdView.swift
+//  InterstitialAdView.swift
 //  ChartboostMediationDemo
 //
 //  Copyright © 2023 Chartboost. All rights reserved.
@@ -13,18 +13,19 @@
 import UIKit
 import SwiftUI
 
-/// A view that demonstrates the loading and showing of a Chartboost Mediation SDK rewarded advertisement.
-struct RewardedAdView: View {
-    @StateObject private var controller: RewardedAdController
+/// A view that demonstrates the loading and showing of a Chartboost Mediation SDK interstitial advertisement.
+@available(iOS 15.0, *)
+struct InterstitialAdView: View {
+    @StateObject private var controller: InterstitialAdController
     @State private var isBusy = false
     @State private var failureMessage: String?
 
     var body: some View {
         VStack {
-            Image("Rewarded")
+            Image("Interstitial")
                 .padding(.vertical, 32)
 
-            Text("A full screen rewarded advertisement must first be loaded.")
+            Text("A full screen interstitial advertisement must first be loaded.")
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
 
@@ -66,7 +67,7 @@ struct RewardedAdView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 32)
             }
-            
+
             Spacer()
         }
         .busy($isBusy)
@@ -84,6 +85,6 @@ struct RewardedAdView: View {
     }
 
     init(placementName: String) {
-        self._controller = StateObject(wrappedValue: RewardedAdController(placementName: placementName))
+        self._controller = StateObject(wrappedValue: InterstitialAdController(activityDelegate: nil, placementName: placementName))
     }
 }

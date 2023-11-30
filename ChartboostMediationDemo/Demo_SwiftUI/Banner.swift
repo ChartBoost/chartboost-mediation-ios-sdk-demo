@@ -14,6 +14,7 @@ import ChartboostMediationSDK
 import SwiftUI
 
 /// A SwiftUI host view for a `ChartboostMediationBannerView`
+@available(iOS 15.0, *)
 struct Banner: UIViewRepresentable {
     typealias UIViewType = ChartboostMediationBannerView
 

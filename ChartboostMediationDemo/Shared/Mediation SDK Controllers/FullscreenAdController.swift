@@ -35,7 +35,7 @@ class FullscreenAdController: NSObject, ObservableObject {
     /// Initializer for the view model.
     /// - Parameter activityDelegate: A delegate to communicate the start and end of asyncronous activity to.  This is applicable only for this demo.
     /// - Parameter placementName: Placement to use.
-    init(activityDelegate: ActivityDelegate, placementName: String) {
+    init(activityDelegate: ActivityDelegate?, placementName: String) {
         self.placementName = placementName
         self.activityDelegate = activityDelegate
     }

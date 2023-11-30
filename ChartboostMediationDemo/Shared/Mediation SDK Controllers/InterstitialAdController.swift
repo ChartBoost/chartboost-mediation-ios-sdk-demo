@@ -33,9 +33,9 @@ class InterstitialAdController: NSObject, ObservableObject {
     private weak var activityDelegate: ActivityDelegate?
 
     /// Initializer for the view model.
-    /// - Parameter placementName: Placement to use.
     /// - Parameter activityDelegate: A delegate to communicate the start and end of asyncronous activity to.  This is applicable only for this demo.
-    init(placementName: String, activityDelegate: ActivityDelegate?) {
+    /// - Parameter placementName: Placement to use.
+    init(activityDelegate: ActivityDelegate?, placementName: String) {
         self.placementName = placementName
         self.activityDelegate = activityDelegate
     }

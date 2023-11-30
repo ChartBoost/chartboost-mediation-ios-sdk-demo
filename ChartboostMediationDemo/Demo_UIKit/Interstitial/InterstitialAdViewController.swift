@@ -19,7 +19,7 @@ import UIKit
 class InterstitialAdViewController: UIViewController {
 
     /// An instance of the `InterstitialAdController` that is configured to use the placement "AllNetworkInterstitial"
-    lazy var controller = InterstitialAdController(placementName: "AllNetworkInterstitial", activityDelegate: self)
+    lazy var controller = InterstitialAdController(activityDelegate: self, placementName: "AllNetworkInterstitial")
 
     /// The handler for when the load button is pushed.  Pushing it results in the insterstitial ad being loaded.
     /// After it has successfully loaded, it can then be shown.

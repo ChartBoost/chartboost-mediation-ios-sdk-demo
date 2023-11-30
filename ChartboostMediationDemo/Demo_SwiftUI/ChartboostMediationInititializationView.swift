@@ -13,6 +13,7 @@
 import SwiftUI
 
 /// A view that is shown while the Chartboost Mediation SDK is initializaing.
+@available(iOS 15.0, *)
 struct ChartboostMediationInititializationView: View {
     @StateObject private var chartboostMediationController = ChartboostMediationController.instance
 
@@ -34,7 +35,6 @@ struct ChartboostMediationInititializationView: View {
                 let initializationResult = chartboostMediationController.initializationResult
                 ProgressView()
                     .progressViewStyle(.circular)
-                    .tint(.accentColor)
                     .padding()
                     .opacity(initializationResult == nil ? 1 : 0)
 
@@ -44,7 +44,7 @@ struct ChartboostMediationInititializationView: View {
                     } else if case .success = initializationResult {
                         Text("Chartboost Mediation SDK initialization complete!")
                     } else {
-                        Text("Initializaing the Chartboost Mediation SDK...")
+                        Text("Initializing the Chartboost Mediation SDK...")
                     }
                 }
                 .multilineTextAlignment(.center)

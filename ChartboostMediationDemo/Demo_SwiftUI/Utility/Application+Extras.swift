@@ -12,6 +12,7 @@
 
 import UIKit
 
+@available(iOS 15.0, *)
 extension UIApplication {
     class var topViewController: UIViewController? {
         guard

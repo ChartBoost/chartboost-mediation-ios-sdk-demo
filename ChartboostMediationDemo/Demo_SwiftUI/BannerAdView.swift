@@ -14,10 +14,12 @@ import UIKit
 import SwiftUI
 
 /// A view that demonstrates the loading and showing of a Chartboost Mediation SDK banner advertisement.
+@available(iOS 15.0, *)
 struct BannerAdView: View {
     @StateObject private var controller: BannerAdController
     @State private var isBusy = false
     @State private var failureMessage: String?
+    @State private var shouldShow = false
 
     var body: some View {
         VStack {
@@ -48,7 +50,7 @@ struct BannerAdView: View {
                     .padding(.horizontal, 32)
 
                 Button {
-                    controller.show()
+                    shouldShow = true
                 } label: {
                     Text("Show")
                         .font(.title2)
@@ -59,7 +61,7 @@ struct BannerAdView: View {
                 .buttonStyle(.borderedProminent)
                 .padding(.horizontal, 32)
 
-                if controller.shouldShow, let bannerAd = controller.bannerAd, let size = bannerAd.size?.size {
+                if shouldShow, let bannerAd = controller.bannerAd, let size = bannerAd.size?.size {
                     Spacer()
                     HStack {
                         Banner(source: bannerAd)
@@ -92,6 +94,6 @@ struct BannerAdView: View {
     }
 
     init(placementName: String) {
-        self._controller = StateObject(wrappedValue: BannerAdController(placementName: placementName))
+        self._controller = StateObject(wrappedValue: BannerAdController(placementName: placementName, activityDelegate: nil))
     }
 }

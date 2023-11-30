@@ -19,7 +19,7 @@ import UIKit
 class RewardedAdViewController: UIViewController {
 
     /// An instance of the `RewardedAdController` that is configured to use the placement "AllNetworkRewarded"
-    lazy var controller = RewardedAdController(placementName: "AllNetworkRewarded", activityDelegate: self)
+    lazy var controller = RewardedAdController(activityDelegate: self, placementName: "AllNetworkRewarded")
 
     /// The handler for when the load button is pushed.  Pushing it results in the rewarded ad being loaded.
     /// After it has successfully loaded, it can then be shown.

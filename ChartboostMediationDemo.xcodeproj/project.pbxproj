@@ -63,6 +63,17 @@
 		E695AD1228B59323000160CE /* BannerAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695AD0F28B59323000160CE /* BannerAdController.swift */; };
 		E695AD1328B59323000160CE /* BannerAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695AD1028B59323000160CE /* BannerAdViewController.swift */; };
 		EAEA59802B192EEC00AE5605 /* ActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA597F2B192EEC00AE5605 /* ActivityState.swift */; };
+		EAEA598B2B193B2400AE5605 /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59832B193B2400AE5605 /* InterstitialAdView.swift */; };
+		EAEA598C2B193B2400AE5605 /* Application+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59842B193B2400AE5605 /* Application+Extras.swift */; };
+		EAEA598D2B193B2400AE5605 /* FullscreenAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59852B193B2400AE5605 /* FullscreenAdView.swift */; };
+		EAEA598E2B193B2400AE5605 /* RewardedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59862B193B2400AE5605 /* RewardedAdView.swift */; };
+		EAEA598F2B193B2400AE5605 /* AdTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59872B193B2400AE5605 /* AdTypeSelectionView.swift */; };
+		EAEA59902B193B2400AE5605 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59882B193B2400AE5605 /* BannerAdView.swift */; };
+		EAEA59912B193B2400AE5605 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59892B193B2400AE5605 /* Banner.swift */; };
+		EAEA59922B193B2400AE5605 /* ChartboostMediationInititializationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA598A2B193B2400AE5605 /* ChartboostMediationInititializationView.swift */; };
+		EAEA59942B193B5700AE5605 /* ChartboostMediationMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59932B193B5700AE5605 /* ChartboostMediationMainView.swift */; };
+		EAEA59972B193BB100AE5605 /* UInt64+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59952B193BB100AE5605 /* UInt64+Extras.swift */; };
+		EAEA59982B193BB100AE5605 /* BusyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59962B193BB100AE5605 /* BusyModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,7 +139,18 @@
 		E695AD0E28B59323000160CE /* Banner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Banner.storyboard; sourceTree = "<group>"; };
 		E695AD0F28B59323000160CE /* BannerAdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAdController.swift; sourceTree = "<group>"; };
 		E695AD1028B59323000160CE /* BannerAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAdViewController.swift; sourceTree = "<group>"; };
-		EAEA597F2B192EEC00AE5605 /* ActivityState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityState.swift; path = swiftui/ChartboostMediationDemo/Utility/ActivityState.swift; sourceTree = SOURCE_ROOT; };
+		EAEA597F2B192EEC00AE5605 /* ActivityState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityState.swift; sourceTree = "<group>"; };
+		EAEA59832B193B2400AE5605 /* InterstitialAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAdView.swift; sourceTree = "<group>"; };
+		EAEA59842B193B2400AE5605 /* Application+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Application+Extras.swift"; sourceTree = "<group>"; };
+		EAEA59852B193B2400AE5605 /* FullscreenAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenAdView.swift; sourceTree = "<group>"; };
+		EAEA59862B193B2400AE5605 /* RewardedAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedAdView.swift; sourceTree = "<group>"; };
+		EAEA59872B193B2400AE5605 /* AdTypeSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdTypeSelectionView.swift; sourceTree = "<group>"; };
+		EAEA59882B193B2400AE5605 /* BannerAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		EAEA59892B193B2400AE5605 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		EAEA598A2B193B2400AE5605 /* ChartboostMediationInititializationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartboostMediationInititializationView.swift; sourceTree = "<group>"; };
+		EAEA59932B193B5700AE5605 /* ChartboostMediationMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartboostMediationMainView.swift; sourceTree = "<group>"; };
+		EAEA59952B193BB100AE5605 /* UInt64+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt64+Extras.swift"; sourceTree = "<group>"; };
+		EAEA59962B193BB100AE5605 /* BusyModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +341,14 @@
 		EAEA597A2B1926DE00AE5605 /* Demo_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				EAEA59932B193B5700AE5605 /* ChartboostMediationMainView.swift */,
+				EAEA59872B193B2400AE5605 /* AdTypeSelectionView.swift */,
+				EAEA59892B193B2400AE5605 /* Banner.swift */,
+				EAEA59882B193B2400AE5605 /* BannerAdView.swift */,
+				EAEA598A2B193B2400AE5605 /* ChartboostMediationInititializationView.swift */,
+				EAEA59852B193B2400AE5605 /* FullscreenAdView.swift */,
+				EAEA59832B193B2400AE5605 /* InterstitialAdView.swift */,
+				EAEA59862B193B2400AE5605 /* RewardedAdView.swift */,
 				EAEA597E2B192DB200AE5605 /* Utility */,
 			);
 			path = Demo_SwiftUI;
@@ -332,6 +362,7 @@
 				EAEA597F2B192EEC00AE5605 /* ActivityState.swift */,
 				E695ACFF28B588BE000160CE /* ActivityDelegate.swift */,
 				E66016E628B67A8700ABE0B7 /* Collection+Extras.swift */,
+				E695ACF528B56F88000160CE /* Colors.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -342,7 +373,6 @@
 				E695AD0628B58C1C000160CE /* Alert.swift */,
 				E695AD0428B58A36000160CE /* Busy.storyboard */,
 				E695AD0228B58A2E000160CE /* Busy.swift */,
-				E695ACF528B56F88000160CE /* Colors.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -362,6 +392,9 @@
 		EAEA597E2B192DB200AE5605 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				EAEA59842B193B2400AE5605 /* Application+Extras.swift */,
+				EAEA59962B193BB100AE5605 /* BusyModifier.swift */,
+				EAEA59952B193BB100AE5605 /* UInt64+Extras.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -488,25 +521,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAEA59972B193BB100AE5605 /* UInt64+Extras.swift in Sources */,
+				EAEA59982B193BB100AE5605 /* BusyModifier.swift in Sources */,
 				E695AD0728B58C1C000160CE /* Alert.swift in Sources */,
 				9A100C0F2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift in Sources */,
 				E66016E728B67A8700ABE0B7 /* Collection+Extras.swift in Sources */,
 				E695AD1328B59323000160CE /* BannerAdViewController.swift in Sources */,
 				EAEA59802B192EEC00AE5605 /* ActivityState.swift in Sources */,
 				9A100C0D2AC0F69E00A7E6E1 /* FullscreenAdController.swift in Sources */,
+				EAEA598C2B193B2400AE5605 /* Application+Extras.swift in Sources */,
 				E695AD0D28B58FAA000160CE /* RewardedAdViewController.swift in Sources */,
+				EAEA598B2B193B2400AE5605 /* InterstitialAdView.swift in Sources */,
 				E695ACF628B56F88000160CE /* Colors.swift in Sources */,
 				E695ACFC28B57AC5000160CE /* ChartboostMediationController.swift in Sources */,
 				E695ACF428B569C3000160CE /* AdTypeSelectionViewController.swift in Sources */,
+				EAEA59942B193B5700AE5605 /* ChartboostMediationMainView.swift in Sources */,
+				EAEA598F2B193B2400AE5605 /* AdTypeSelectionView.swift in Sources */,
 				E695ACFA28B57A8C000160CE /* InterstitialAdViewController.swift in Sources */,
 				E62D990828B52CFE0035F1D2 /* AppDelegate.swift in Sources */,
+				EAEA59912B193B2400AE5605 /* Banner.swift in Sources */,
 				E695AD0328B58A2E000160CE /* Busy.swift in Sources */,
+				EAEA59902B193B2400AE5605 /* BannerAdView.swift in Sources */,
 				9AC709182AC2060E00406EF6 /* AdType.swift in Sources */,
 				E695AD0028B588BE000160CE /* ActivityDelegate.swift in Sources */,
 				E695AD1228B59323000160CE /* BannerAdController.swift in Sources */,
 				E695ACE628B532BC000160CE /* InterstitialAdController.swift in Sources */,
+				EAEA59922B193B2400AE5605 /* ChartboostMediationInititializationView.swift in Sources */,
 				E695ACFE28B57FEC000160CE /* ChartboostMediationInititializationViewController.swift in Sources */,
+				EAEA598D2B193B2400AE5605 /* FullscreenAdView.swift in Sources */,
 				E695AD0B28B58FAA000160CE /* RewardedAdController.swift in Sources */,
+				EAEA598E2B193B2400AE5605 /* RewardedAdView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

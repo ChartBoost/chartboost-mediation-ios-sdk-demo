@@ -14,6 +14,7 @@ import SwiftUI
 
 /// A view that lists the different Chartboost Mediation SDK advertisement types. Selecting one will
 /// navigate to a view that can be used to load and show that type of advertisement.
+@available(iOS 15.0, *)
 struct AdTypeSelectionView: View {
     @State private var useFullscreenApi = true
     var body: some View {
@@ -31,7 +32,6 @@ struct AdTypeSelectionView: View {
                     }
                     Toggle("Use Fullscreen API", isOn: $useFullscreenApi)
                         .padding(.horizontal)
-                        .tint(.accentColor)
                     List {
                         ForEach(AdType.allCases, id: \.self) { adType in
                             NavigationLink(destination: adView(forAdType: adType)) {
@@ -74,5 +74,13 @@ struct AdTypeSelectionView: View {
         .navigationTitle(adType.title)
         .navigationBarTitleDisplayMode(.inline)
         .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
+    }
+}
+
+private extension AdType {
+
+    /// An icon that represents the ad type.
+    var icon: Image {
+        Image(title)
     }
 }
