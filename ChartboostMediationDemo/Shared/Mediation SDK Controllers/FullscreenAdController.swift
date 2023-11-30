@@ -73,7 +73,7 @@ class FullscreenAdController: NSObject, ObservableObject {
                 self.log(action: "Load error", placementName: self.placementName, error: result.error)
 
                 // Notify the demo UI
-                self.activityDelegate?.activityDidEnd(message: "Failed to load the advertisement.", error: nil)
+                self.activityDelegate?.activityDidEnd(message: "Failed to load the advertisement.", error: result.error)
                 // `.failed` requires a non-optional error type
                 let error = result.error ?? NSError(domain: "com.chartboost.mediation.demo", code: 0)
                 self.activityState = .failed(message: "Failed to load the fullscreen advertisement.", error: error)
@@ -93,7 +93,6 @@ class FullscreenAdController: NSObject, ObservableObject {
         // Once you've loaded a ChartboostMediationFullscreenAd, it can be shown immediately.
 
         // Notify the demo UI.
-        activityDelegate?.activityDidStart()
         activityState = .running
 
         // Show the ad using the specified view controller.  Upon completion, a ChartboostMediationAdShowResult will be passed to the completion block.

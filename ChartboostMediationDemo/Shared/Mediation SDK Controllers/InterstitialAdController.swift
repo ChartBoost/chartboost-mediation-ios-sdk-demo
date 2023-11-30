@@ -85,7 +85,6 @@ class InterstitialAdController: NSObject, ObservableObject {
         }
 
         // Notify the demo UI
-        activityDelegate?.activityDidStart()
         activityState = .running
 
         // Show the ad using the specified view controller.  Upon completion, the delegate meethod
