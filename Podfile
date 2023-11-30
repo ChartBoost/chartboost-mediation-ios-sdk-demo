@@ -3,7 +3,7 @@ target 'ChartboostMediationDemo' do
 
   use_frameworks!
 
-  pod 'ChartboostMediationSDK', '~> 4.6'
+  pod 'ChartboostMediationSDK', '~> 4.7'
 # Uncomment any of the following lines to use provider
 #  pod 'ChartboostMediationAdapterAdColony'
 #  *** Remember to add your GADApplicationIdentifier to Info.plist if you use AdMob ***

@@ -10,11 +10,11 @@ The Chartboost Mediation SDK iOS Demo is a sample Xcode project that demonstrate
 | Software                                                              | Version              |
 | :---                                                                  |:---------------------|
 | [XCode](https://developer.apple.com/xcode/)                           | 14.1                 |
-| [iOS](https://www.apple.com/ios)                                      | 11.0+                |
+| [iOS](https://www.apple.com/ios)                                      | 13.0+                |
 
 ## Privacy Manifests
 
-The `PrivacyInfo.xcprivacy` files in the `/swift/ChartboostMediationDemo` ([link](https://github.com/ChartBoost/chartboost-mediation-ios-sdk-demo/tree/main/swift/ChartboostMediationDemo)) and `/swiftui/ChartboostMediationDemo` ([link](https://github.com/ChartBoost/chartboost-mediation-ios-sdk-demo/tree/main/swiftui/ChartboostMediationDemo)) directories are copied from the `ChartboostMediationSDK` 4.6.0 SDK. 
+The `PrivacyInfo.xcprivacy` file in the is copied from the `ChartboostMediationSDK` 4.6.0 SDK. 
 
 It's copied here as an example of how a `PrivacyInfo.xcprivacy` file is added to an app project. The values in it do not represent the actual implementation of the demo app. 
 

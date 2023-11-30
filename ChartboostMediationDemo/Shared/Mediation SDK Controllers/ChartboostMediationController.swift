@@ -97,7 +97,7 @@ class ChartboostMediationController: NSObject, ObservableObject {
         // Start the Chartboost Mediation SDK using the application identifier, application signature, and
         // an instance of the `HeliumSdkDelegate` in order to be notified when Chartboost Mediation initialization
         // has completed.
-        chartboostMediation.start(withAppId: appIdentifier, andAppSignature: appSignature, options: nil, delegate: self)
+        chartboostMediation.start(withAppId: appIdentifier, options: nil, delegate: self)
     }
 
     // MARK: - Private
