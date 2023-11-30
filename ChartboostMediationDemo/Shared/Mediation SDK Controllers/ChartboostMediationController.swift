@@ -1,5 +1,5 @@
 // Copyright 2022-2023 Chartboost, Inc.
-//
+// 
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
@@ -13,7 +13,7 @@
 import ChartboostMediationSDK
 
 /// This class is used by this demo to initialize the Chartboost Mediation SDK, manages the user's various privacy settings, and shows how impression
-/// level revenue data (ILRD) can be received within an application.  See `ChartboostMediationDemoApp` to see where
+/// level revenue data (ILRD) can be received within an application.  See `ChartboostMediationInititializationViewController` to see where
 /// the `startHelium(completion:)` method is used.
 class ChartboostMediationController: NSObject, ObservableObject {
     /// The unique application identifier that is supplied by the Chartboost Mediation developer dashboard.

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9A100C072ABCEBC300A7E6E1 /* FullscreenAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7AD6B2ABBB4C90036B3EB /* FullscreenAdView.swift */; };
-		9A100C082ABCEBC300A7E6E1 /* FullscreenAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7AD6A2ABBB4A50036B3EB /* FullscreenAdController.swift */; };
 		9F2B0841095D4D40883BB4D0 /* Pods_ChartboostMediationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4BA50B0885969AB837FF29 /* Pods_ChartboostMediationDemo.framework */; };
 		B9EF67002AD9E043000BCE6A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B9EF66FF2AD9E043000BCE6A /* PrivacyInfo.xcprivacy */; };
 		E66C9FFA2A24EA9000315DC4 /* ChartboostMediationDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66C9FF92A24EA9000315DC4 /* ChartboostMediationDemoApp.swift */; };
@@ -16,26 +15,20 @@
 		E66CA0012A24EA9100315DC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66CA0002A24EA9100315DC4 /* Preview Assets.xcassets */; };
 		E66CA0082A24EBA000315DC4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66CA0072A24EB9F00315DC4 /* Launch Screen.storyboard */; };
 		E66CA00D2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA00C2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift */; };
-		E66CA00F2A24ECC200315DC4 /* ChartboostMediationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA00E2A24ECC200315DC4 /* ChartboostMediationController.swift */; };
-		E66CA0122A24ED0C00315DC4 /* Collection+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0112A24ED0C00315DC4 /* Collection+Extras.swift */; };
 		E66CA0142A24ED7500315DC4 /* AdTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0132A24ED7500315DC4 /* AdTypeSelectionView.swift */; };
 		E66CA0162A24F8CC00315DC4 /* UInt64+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0152A24F8CC00315DC4 /* UInt64+Extras.swift */; };
 		E66CA01B2A24FA2D00315DC4 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA01A2A24FA2D00315DC4 /* BannerAdView.swift */; };
 		E66CA01D2A24FA5400315DC4 /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA01C2A24FA5400315DC4 /* InterstitialAdView.swift */; };
 		E66CA01F2A24FA6F00315DC4 /* RewardedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA01E2A24FA6F00315DC4 /* RewardedAdView.swift */; };
 		E66CA0212A24FACD00315DC4 /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0202A24FACD00315DC4 /* AdType.swift */; };
-		E66CA0232A24FC8400315DC4 /* InterstitialAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0222A24FC8400315DC4 /* InterstitialAdController.swift */; };
 		E66CA0252A24FD1700315DC4 /* ActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0242A24FD1700315DC4 /* ActivityState.swift */; };
 		E66CA0272A2500C500315DC4 /* BusyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0262A2500C500315DC4 /* BusyModifier.swift */; };
-		E66CA0292A2503C700315DC4 /* RewardedAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA0282A2503C700315DC4 /* RewardedAdController.swift */; };
-		E66CA02B2A25056700315DC4 /* BannerAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA02A2A25056700315DC4 /* BannerAdController.swift */; };
 		E66CA02F2A2516CD00315DC4 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CA02E2A2516CD00315DC4 /* Banner.swift */; };
 		E686E8922A28FCAF0045BC43 /* Application+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686E8912A28FCAF0045BC43 /* Application+Extras.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		191C655036FEA5200B0F9B9F /* Pods-ChartboostMediationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartboostMediationDemo.release.xcconfig"; path = "Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo.release.xcconfig"; sourceTree = "<group>"; };
-		9AB7AD6A2ABBB4A50036B3EB /* FullscreenAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenAdController.swift; sourceTree = "<group>"; };
 		9AB7AD6B2ABBB4C90036B3EB /* FullscreenAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenAdView.swift; sourceTree = "<group>"; };
 		AD4BA50B0885969AB837FF29 /* Pods_ChartboostMediationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartboostMediationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9EF66FF2AD9E043000BCE6A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -45,19 +38,14 @@
 		E66CA0002A24EA9100315DC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E66CA0072A24EB9F00315DC4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E66CA00C2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartboostMediationInititializationView.swift; sourceTree = "<group>"; };
-		E66CA00E2A24ECC200315DC4 /* ChartboostMediationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartboostMediationController.swift; sourceTree = "<group>"; };
-		E66CA0112A24ED0C00315DC4 /* Collection+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extras.swift"; sourceTree = "<group>"; };
 		E66CA0132A24ED7500315DC4 /* AdTypeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTypeSelectionView.swift; sourceTree = "<group>"; };
 		E66CA0152A24F8CC00315DC4 /* UInt64+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt64+Extras.swift"; sourceTree = "<group>"; };
 		E66CA01A2A24FA2D00315DC4 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		E66CA01C2A24FA5400315DC4 /* InterstitialAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdView.swift; sourceTree = "<group>"; };
 		E66CA01E2A24FA6F00315DC4 /* RewardedAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdView.swift; sourceTree = "<group>"; };
 		E66CA0202A24FACD00315DC4 /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
-		E66CA0222A24FC8400315DC4 /* InterstitialAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdController.swift; sourceTree = "<group>"; };
 		E66CA0242A24FD1700315DC4 /* ActivityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityState.swift; sourceTree = "<group>"; };
 		E66CA0262A2500C500315DC4 /* BusyModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyModifier.swift; sourceTree = "<group>"; };
-		E66CA0282A2503C700315DC4 /* RewardedAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdController.swift; sourceTree = "<group>"; };
-		E66CA02A2A25056700315DC4 /* BannerAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdController.swift; sourceTree = "<group>"; };
 		E66CA02E2A2516CD00315DC4 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		E686E8912A28FCAF0045BC43 /* Application+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Extras.swift"; sourceTree = "<group>"; };
 		F5F9FF2D7E80AE570E45E905 /* Pods-ChartboostMediationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartboostMediationDemo.debug.xcconfig"; path = "Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +74,6 @@
 		9AB7AD692ABBB48A0036B3EB /* Fullscreen */ = {
 			isa = PBXGroup;
 			children = (
-				9AB7AD6A2ABBB4A50036B3EB /* FullscreenAdController.swift */,
 				9AB7AD6B2ABBB4C90036B3EB /* FullscreenAdView.swift */,
 			);
 			path = Fullscreen;
@@ -147,7 +134,6 @@
 				E66CA0202A24FACD00315DC4 /* AdType.swift */,
 				E66CA0132A24ED7500315DC4 /* AdTypeSelectionView.swift */,
 				E686E8912A28FCAF0045BC43 /* Application+Extras.swift */,
-				E66CA00E2A24ECC200315DC4 /* ChartboostMediationController.swift */,
 				E66CA00C2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift */,
 				E66CA0172A24FA0100315DC4 /* Banner */,
 				9AB7AD692ABBB48A0036B3EB /* Fullscreen */,
@@ -170,7 +156,6 @@
 			children = (
 				E66CA0242A24FD1700315DC4 /* ActivityState.swift */,
 				E66CA0262A2500C500315DC4 /* BusyModifier.swift */,
-				E66CA0112A24ED0C00315DC4 /* Collection+Extras.swift */,
 				E66CA0152A24F8CC00315DC4 /* UInt64+Extras.swift */,
 			);
 			path = Utility;
@@ -180,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				E66CA02E2A2516CD00315DC4 /* Banner.swift */,
-				E66CA02A2A25056700315DC4 /* BannerAdController.swift */,
 				E66CA01A2A24FA2D00315DC4 /* BannerAdView.swift */,
 			);
 			path = Banner;
@@ -189,7 +173,6 @@
 		E66CA0182A24FA0E00315DC4 /* Interstitial */ = {
 			isa = PBXGroup;
 			children = (
-				E66CA0222A24FC8400315DC4 /* InterstitialAdController.swift */,
 				E66CA01C2A24FA5400315DC4 /* InterstitialAdView.swift */,
 			);
 			path = Interstitial;
@@ -198,7 +181,6 @@
 		E66CA0192A24FA1700315DC4 /* Rewarded */ = {
 			isa = PBXGroup;
 			children = (
-				E66CA0282A2503C700315DC4 /* RewardedAdController.swift */,
 				E66CA01E2A24FA6F00315DC4 /* RewardedAdView.swift */,
 			);
 			path = Rewarded;
@@ -320,24 +302,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E66CA0292A2503C700315DC4 /* RewardedAdController.swift in Sources */,
 				E66CA0162A24F8CC00315DC4 /* UInt64+Extras.swift in Sources */,
-				E66CA0122A24ED0C00315DC4 /* Collection+Extras.swift in Sources */,
 				E66CA0272A2500C500315DC4 /* BusyModifier.swift in Sources */,
 				E66CA0142A24ED7500315DC4 /* AdTypeSelectionView.swift in Sources */,
-				E66CA02B2A25056700315DC4 /* BannerAdController.swift in Sources */,
 				E66CA01B2A24FA2D00315DC4 /* BannerAdView.swift in Sources */,
 				E66CA0252A24FD1700315DC4 /* ActivityState.swift in Sources */,
-				E66CA0232A24FC8400315DC4 /* InterstitialAdController.swift in Sources */,
 				E66CA01F2A24FA6F00315DC4 /* RewardedAdView.swift in Sources */,
-				9A100C082ABCEBC300A7E6E1 /* FullscreenAdController.swift in Sources */,
 				9A100C072ABCEBC300A7E6E1 /* FullscreenAdView.swift in Sources */,
 				E686E8922A28FCAF0045BC43 /* Application+Extras.swift in Sources */,
 				E66CA00D2A24EC6900315DC4 /* ChartboostMediationInititializationView.swift in Sources */,
 				E66CA0212A24FACD00315DC4 /* AdType.swift in Sources */,
 				E66C9FFA2A24EA9000315DC4 /* ChartboostMediationDemoApp.swift in Sources */,
 				E66CA02F2A2516CD00315DC4 /* Banner.swift in Sources */,
-				E66CA00F2A24ECC200315DC4 /* ChartboostMediationController.swift in Sources */,
 				E66CA01D2A24FA5400315DC4 /* InterstitialAdView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,8 +17,4 @@ enum AdType: String, CaseIterable {
     var title: String {
         rawValue.capitalized
     }
-
-    var icon: UIImage? {
-        UIImage(named: title)
-    }
 }

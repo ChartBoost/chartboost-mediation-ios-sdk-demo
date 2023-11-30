@@ -118,3 +118,9 @@ extension AdTypeSelectionViewController: UITableViewDataSource {
         return cell
     }
 }
+
+private extension AdType {
+    var icon: UIImage? {
+        UIImage(named: title)
+    }
+}

@@ -12,18 +12,7 @@
 
 import SwiftUI
 
-/// An enumeration of each advertisement type.
-enum AdType: String, CaseIterable {
-    case banner
-    case interstitial
-    case rewarded
-}
-
 extension AdType {
-    /// A title for the ad type.
-    var title: String {
-        rawValue.capitalized
-    }
 
     /// An icon that represents the ad type.
     var icon: Image {

@@ -1,5 +1,5 @@
 // Copyright 2022-2023 Chartboost, Inc.
-//
+// 
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
@@ -29,10 +29,15 @@ class RewardedAdController: NSObject, ObservableObject {
     /// A state for demo purposes only so that long activity processes can be communicated to a view.
     @Published private(set) var activityState: ActivityState = .idle
 
+    /// A delegate for demo purposes only so that long activity processes can be communicated to a view controller.
+    private weak var activityDelegate: ActivityDelegate?
+
     /// Initializer for the view model.
     /// - Parameter placementName: Placement to use.
-    init(placementName: String) {
+    /// - Parameter activityDelegate: A delegate to communicate the start and end of asyncronous activity to.  This is applicable only for this demo.
+    init(placementName: String, activityDelegate: ActivityDelegate) {
         self.placementName = placementName
+        self.activityDelegate = activityDelegate
     }
 
     /// Load the rewarded ad.
@@ -53,6 +58,7 @@ class RewardedAdController: NSObject, ObservableObject {
         self.rewardedAd = rewardedAd
 
         // Notify the demo UI
+        activityDelegate?.activityDidStart()
         activityState = .running
 
         // Associate any provided keywords with the advertisement before it is loaded.
@@ -80,6 +86,7 @@ class RewardedAdController: NSObject, ObservableObject {
         }
 
         // Notify the demo UI
+        activityDelegate?.activityDidStart()
         activityState = .running
 
         // Show the ad using the specified view controller.  Upon completion, the delegate meethod
@@ -108,10 +115,12 @@ extension RewardedAdController: CHBHeliumRewardedAdDelegate {
             rewardedAd = nil
 
             // Notify the demo UI
+            activityDelegate?.activityDidEnd(message: "Failed to load the rewarded advertisement.", error: error)
             activityState = .failed(message: "Failed to load the rewarded advertisement.", error: error)
         }
         else {
             // Notify the demo UI
+            activityDelegate?.activityDidEnd()
             activityState = .idle
         }
     }
@@ -127,10 +136,12 @@ extension RewardedAdController: CHBHeliumRewardedAdDelegate {
             rewardedAd = nil
 
             // Notify the demo UI
+            activityDelegate?.activityDidEnd(message: "Failed to show the rewarded advertisement.", error: error)
             activityState = .failed(message: "Failed to show the rewarded advertisement.", error: error)
         }
         else {
             // Notify the demo UI
+            activityDelegate?.activityDidEnd()
             activityState = .idle
         }
     }

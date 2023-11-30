@@ -16,15 +16,18 @@ import ChartboostMediationSDK
 /// A basic implementation of a controller for Chartboost Mediation interstitial ads.  It is capable of loading and showing a full screen interstitial ad
 /// for a single placement.  This controller is also its own `CHBHeliumInterstitialAdDelegate` so that it is in full control
 /// of the ad's lifecycle.
-class InterstitialAdController: NSObject {
+class InterstitialAdController: NSObject, ObservableObject {
     /// The entry point for the Chartboost Mediation SDK.
     private let chartboostMediation = Helium.shared()
 
     /// The placement that is controller is for.
     private let placementName: String
 
-    /// An instance of the interstitial ad that this class controls the lifecycle of.
+    /// An instance of the interstitial ad that this class controls the lifecycle of when using the deprecated API.
     private var interstitialAd: HeliumInterstitialAd?
+
+    /// A state for demo purposes only so that long activity processes can be communicated to a view.
+    @Published private(set) var activityState: ActivityState = .idle
 
     /// A delegate for demo purposes only so that long activity processes can be communicated to a view controller.
     private weak var activityDelegate: ActivityDelegate?
@@ -32,7 +35,7 @@ class InterstitialAdController: NSObject {
     /// Initializer for the view model.
     /// - Parameter placementName: Placement to use.
     /// - Parameter activityDelegate: A delegate to communicate the start and end of asyncronous activity to.  This is applicable only for this demo.
-    init(placementName: String, activityDelegate: ActivityDelegate) {
+    init(placementName: String, activityDelegate: ActivityDelegate?) {
         self.placementName = placementName
         self.activityDelegate = activityDelegate
     }
@@ -46,17 +49,17 @@ class InterstitialAdController: NSObject {
             return
         }
 
-        // Create an interstitial ad from the Chartboost Mediation ad provider.
-        guard let interstitialAd = chartboostMediation.interstitialAdProvider(with: self, andPlacementName: placementName) else {
-            // It could fail if the placement name is invalid.
+        // Notify the demo UI
+        activityDelegate?.activityDidStart()
+        activityState = .running
+
+        // Create an interstitial ad using the deprecated Chartboost Mediation ad provider.
+        self.interstitialAd = chartboostMediation.interstitialAdProvider(with: self, andPlacementName: placementName)
+        guard let interstitialAd = interstitialAd else {
+            // Ad creation could have failed if the placement name is invalid.
             print("[Error] failed to create interstitial advertisement for placement '\(placementName)'")
             return
         }
-        self.interstitialAd = interstitialAd
-
-        // Notify the demo UI
-        activityDelegate?.activityDidStart()
-
         // Associate any provided keywords with the advertisement before it is loaded.
         interstitialAd.keywords = keywords
 
@@ -68,7 +71,7 @@ class InterstitialAdController: NSObject {
     /// Show the interstitial ad if it has been loaded and is ready to show.
     /// - Parameter viewController: The view controller to present the interstitial over.
     func show(with viewController: UIViewController) {
-        // Attempt to show an ad only if it has been loaded.
+        // Attempt to show an interstitial ad only if it has been loaded.
         guard let interstitialAd = interstitialAd else {
             print("[Error] cannot show an interstitial advertisement that has not yet been loaded")
             return
@@ -80,6 +83,10 @@ class InterstitialAdController: NSObject {
             print("[Warning] not ready to show interstitial advertisement for placement '\(placementName)'")
             return
         }
+
+        // Notify the demo UI
+        activityDelegate?.activityDidStart()
+        activityState = .running
 
         // Show the ad using the specified view controller.  Upon completion, the delegate meethod
         // `heliumInterstitialAd(withPlacementName:didShowWithError:)` will be called.
@@ -108,10 +115,12 @@ extension InterstitialAdController: CHBHeliumInterstitialAdDelegate {
 
             // Notify the demo UI
             activityDelegate?.activityDidEnd(message: "Failed to load the interstitial advertisement.", error: error)
+            activityState = .failed(message: "Failed to load the interstitial advertisement.", error: error)
         }
         else {
             // Notify the demo UI
             activityDelegate?.activityDidEnd()
+            activityState = .idle
         }
     }
 
@@ -127,10 +136,12 @@ extension InterstitialAdController: CHBHeliumInterstitialAdDelegate {
 
             // Notify the demo UI
             activityDelegate?.activityDidEnd(message: "Failed to show the interstitial advertisement.", error: error)
+            activityState = .failed(message: "Failed to show the interstitial advertisement.", error: error)
         }
         else {
             // Notify the demo UI
             activityDelegate?.activityDidEnd()
+            activityState = .idle
         }
     }
 

@@ -1,5 +1,5 @@
 // Copyright 2022-2023 Chartboost, Inc.
-// 
+//
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
@@ -16,7 +16,7 @@ import ChartboostMediationSDK
 /// A basic implementation of a controller for Chartboost Mediation banner ads.  It is capable of loading and showing a banner ad
 /// for a single placement.  This controller is also its own `HeliumBannerAdDelegate` so that it is in full control
 /// of the ad's lifecycle.
-class BannerAdController: NSObject {
+class BannerAdController: NSObject, ObservableObject {
     /// The entry point for the Chartboost Mediation SDK.
     private let chartboostMediation = Helium.shared()
 
@@ -24,7 +24,13 @@ class BannerAdController: NSObject {
     private let placementName: String
 
     /// An instance of the banner ad that this class controls the lifecycle of.
-    private var bannerAd: ChartboostMediationBannerView?
+    @Published private(set) var bannerAd: ChartboostMediationBannerView?
+
+    /// A state for demo purposes only so that long activity processes can be communicated to a view.
+    @Published private(set) var activityState: ActivityState = .idle
+
+    /// Indicates that the banner should be showing
+    @Published private(set) var shouldShow = false
 
     /// A delegate for demo purposes only so that long activity processes can be communicated to a view controller.
     private weak var activityDelegate: ActivityDelegate?
@@ -32,7 +38,7 @@ class BannerAdController: NSObject {
     /// Initializer for the view model.
     /// - Parameter placementName: Placement to use.
     /// - Parameter activityDelegate: A delegate to communicate the start and end of asyncronous activity to.  This is applicable only for this demo.
-    init(placementName: String, activityDelegate: ActivityDelegate) {
+    init(placementName: String, activityDelegate: ActivityDelegate?) {
         self.placementName = placementName
         self.activityDelegate = activityDelegate
     }
@@ -63,6 +69,7 @@ class BannerAdController: NSObject {
 
         // Notify the demo UI
         activityDelegate?.activityDidStart()
+        activityState = .running
 
         // Associate any provided keywords with the advertisement before it is loaded.
         bannerAd?.keywords = keywords
@@ -81,36 +88,25 @@ class BannerAdController: NSObject {
 
                 // Notify the demo UI
                 self.activityDelegate?.activityDidEnd(message: "Failed to load the banner advertisement.", error: error)
+                self.activityState = .failed(message: "Failed to load the banner advertisement.", error: error)
             }
             else {
                 // Notify the demo UI
                 self.activityDelegate?.activityDidEnd()
+                self.activityState = .idle
             }
         })
     }
 
-    /// Show the banner ad within a specific view.
-    /// - Parameter view: The view to place the banner within.
-    func show(within view: UIView) {
+    /// Show the banner ad.
+    func show() {
         // Attempt to show an ad only if it has been loaded.
-        guard let bannerAd = bannerAd else {
+        guard bannerAd != nil else {
             print("[Error] cannot show an banner advertisement that has not yet been loaded")
             return
         }
 
-        // Remove the banner ad from its super view if it was previously added to one.
-        bannerAd.removeFromSuperview()
-
-        // Place the banner ad view within the provided view container.
-        bannerAd.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bannerAd)
-
-        // If using auto-layout, the banner view will automatically resize when new ads are loaded.
-        // The banner view can also be manually sized, see `willAppear` below.
-        NSLayoutConstraint.activate([
-            bannerAd.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            bannerAd.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-        ])
+        shouldShow = true
     }
 }
 

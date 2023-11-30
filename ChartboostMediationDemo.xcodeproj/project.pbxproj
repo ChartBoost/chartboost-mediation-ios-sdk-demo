@@ -92,7 +92,7 @@
 		7AE515A97D15A95F1557BE54 /* Pods_ChartboostMediationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartboostMediationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		812758213C6048C552CE5416 /* Pods-ChartboostMediationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartboostMediationDemo.debug.xcconfig"; path = "Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9A100C0A2AC0F67300A7E6E1 /* Fullscreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Fullscreen.storyboard; path = ChartboostMediationDemo/Ads/Fullscreen/Fullscreen.storyboard; sourceTree = SOURCE_ROOT; };
-		9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FullscreenAdController.swift; path = ChartboostMediationDemo/Ads/Fullscreen/FullscreenAdController.swift; sourceTree = SOURCE_ROOT; };
+		9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenAdController.swift; sourceTree = "<group>"; };
 		9A100C0E2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FullscreenAdViewController.swift; path = ChartboostMediationDemo/Ads/Fullscreen/FullscreenAdViewController.swift; sourceTree = SOURCE_ROOT; };
 		9AC709172AC2060E00406EF6 /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
 		9EE694D13617DA6474AC6767 /* Pods-ChartboostMediationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartboostMediationDemo.release.xcconfig"; path = "Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				9A100C0A2AC0F67300A7E6E1 /* Fullscreen.storyboard */,
-				9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */,
 				9A100C0E2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift */,
 			);
 			path = Fullscreen;
@@ -250,8 +249,9 @@
 		DA93B6B6182B31BC00C21472 /* ChartboostMediationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E695ACEB28B53535000160CE /* Ads */,
-				E695AD0128B589E5000160CE /* Utility */,
+				EAEA59792B1926CF00AE5605 /* Demo_UIKit */,
+				EAEA597A2B1926DE00AE5605 /* Demo_SwiftUI */,
+				EAEA597B2B1926EC00AE5605 /* Shared */,
 				DA93B6B7182B31BC00C21472 /* Supporting Files */,
 				B9EF66FD2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy */,
 			);
@@ -270,28 +270,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E695ACEB28B53535000160CE /* Ads */ = {
-			isa = PBXGroup;
-			children = (
-				11E67ECB203778E8004291DF /* Launch Screen.storyboard */,
-				E695ACF128B5697C000160CE /* Main.storyboard */,
-				E695ACFD28B57FEC000160CE /* ChartboostMediationInititializationViewController.swift */,
-				E695ACFB28B57AC5000160CE /* ChartboostMediationController.swift */,
-				E695ACF328B569C3000160CE /* AdTypeSelectionViewController.swift */,
-				E695ACEE28B53561000160CE /* Banner */,
-				9A100C092AC0F61A00A7E6E1 /* Fullscreen */,
-				E695ACEC28B53556000160CE /* Interstitial */,
-				E695ACED28B5355B000160CE /* Rewarded */,
-				9AC709172AC2060E00406EF6 /* AdType.swift */,
-			);
-			path = Ads;
-			sourceTree = "<group>";
-		};
 		E695ACEC28B53556000160CE /* Interstitial */ = {
 			isa = PBXGroup;
 			children = (
 				E695ACF728B57591000160CE /* Interstitial.storyboard */,
-				E695ACE528B532BC000160CE /* InterstitialAdController.swift */,
 				E695ACF928B57A8C000160CE /* InterstitialAdViewController.swift */,
 			);
 			path = Interstitial;
@@ -301,7 +283,6 @@
 			isa = PBXGroup;
 			children = (
 				E695AD0928B58FAA000160CE /* Rewarded.storyboard */,
-				E695AD0828B58FAA000160CE /* RewardedAdController.swift */,
 				E695AD0A28B58FAA000160CE /* RewardedAdViewController.swift */,
 			);
 			path = Rewarded;
@@ -311,22 +292,73 @@
 			isa = PBXGroup;
 			children = (
 				E695AD0E28B59323000160CE /* Banner.storyboard */,
-				E695AD0F28B59323000160CE /* BannerAdController.swift */,
 				E695AD1028B59323000160CE /* BannerAdViewController.swift */,
 			);
 			path = Banner;
 			sourceTree = "<group>";
 		};
-		E695AD0128B589E5000160CE /* Utility */ = {
+		EAEA59792B1926CF00AE5605 /* Demo_UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				E695ACFF28B588BE000160CE /* ActivityDelegate.swift */,
-				E695AD0628B58C1C000160CE /* Alert.swift */,
+				11E67ECB203778E8004291DF /* Launch Screen.storyboard */,
+				E695ACF128B5697C000160CE /* Main.storyboard */,
 				E62D990728B52CFE0035F1D2 /* AppDelegate.swift */,
+				E695ACFD28B57FEC000160CE /* ChartboostMediationInititializationViewController.swift */,
+				E695ACF328B569C3000160CE /* AdTypeSelectionViewController.swift */,
+				E695ACEE28B53561000160CE /* Banner */,
+				9A100C092AC0F61A00A7E6E1 /* Fullscreen */,
+				E695ACEC28B53556000160CE /* Interstitial */,
+				E695ACED28B5355B000160CE /* Rewarded */,
+				EAEA597C2B192CEA00AE5605 /* Utility */,
+			);
+			path = Demo_UIKit;
+			sourceTree = "<group>";
+		};
+		EAEA597A2B1926DE00AE5605 /* Demo_SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				EAEA597E2B192DB200AE5605 /* Utility */,
+			);
+			path = Demo_SwiftUI;
+			sourceTree = "<group>";
+		};
+		EAEA597B2B1926EC00AE5605 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				EAEA597D2B192D4F00AE5605 /* Mediation SDK Controllers */,
+				9AC709172AC2060E00406EF6 /* AdType.swift */,
+				E695ACFF28B588BE000160CE /* ActivityDelegate.swift */,
+				E66016E628B67A8700ABE0B7 /* Collection+Extras.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		EAEA597C2B192CEA00AE5605 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E695AD0628B58C1C000160CE /* Alert.swift */,
 				E695AD0428B58A36000160CE /* Busy.storyboard */,
 				E695AD0228B58A2E000160CE /* Busy.swift */,
-				E66016E628B67A8700ABE0B7 /* Collection+Extras.swift */,
 				E695ACF528B56F88000160CE /* Colors.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		EAEA597D2B192D4F00AE5605 /* Mediation SDK Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E695AD0F28B59323000160CE /* BannerAdController.swift */,
+				E695ACFB28B57AC5000160CE /* ChartboostMediationController.swift */,
+				9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */,
+				E695ACE528B532BC000160CE /* InterstitialAdController.swift */,
+				E695AD0828B58FAA000160CE /* RewardedAdController.swift */,
+			);
+			path = "Mediation SDK Controllers";
+			sourceTree = "<group>";
+		};
+		EAEA597E2B192DB200AE5605 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Utility;
 			sourceTree = "<group>";
