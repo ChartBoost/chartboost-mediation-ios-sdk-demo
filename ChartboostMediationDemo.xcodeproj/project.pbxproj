@@ -30,11 +30,12 @@
 		03F5649E21E6A2DF0065B61D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F5649D21E6A2DF0065B61D /* Assets.xcassets */; };
 		11D6027A1EC13FDB0075AF5E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D602791EC13FDB0075AF5E /* WebKit.framework */; };
 		11E67ECC203778E8004291DF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E67ECB203778E8004291DF /* Launch Screen.storyboard */; };
-		250C89C367DF52B9DB4369AF /* Pods_ChartboostMediationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE515A97D15A95F1557BE54 /* Pods_ChartboostMediationDemo.framework */; };
+		594B3585F25F9EB0E5B957DE /* Pods_Demo_ChartboostMediationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD62834F9A91A5C95B021EE4 /* Pods_Demo_ChartboostMediationDemo.framework */; };
 		9A100C0B2AC0F67300A7E6E1 /* Fullscreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A100C0A2AC0F67300A7E6E1 /* Fullscreen.storyboard */; };
 		9A100C0D2AC0F69E00A7E6E1 /* FullscreenAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */; };
 		9A100C0F2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A100C0E2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift */; };
 		9AC709182AC2060E00406EF6 /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC709172AC2060E00406EF6 /* AdType.swift */; };
+		9EB895C6AB0C2B5D42650E4D /* Pods_Demo_ChartboostMediationDemo_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC313CA32F6E1D13E5DB9330 /* Pods_Demo_ChartboostMediationDemo_SwiftUI.framework */; };
 		B57E85E51A1FD5C400E6D9AD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57E85E41A1FD5C400E6D9AD /* AdSupport.framework */; };
 		B9EF66FE2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B9EF66FD2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy */; };
 		DA93B6B1182B31BC00C21472 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93B6B0182B31BC00C21472 /* Foundation.framework */; };
@@ -83,33 +84,6 @@
 		EAC761BB2B1A6B4100FDB0E5 /* FullscreenAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59852B193B2400AE5605 /* FullscreenAdView.swift */; };
 		EAC761BC2B1A6B4100FDB0E5 /* RewardedAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695AD0828B58FAA000160CE /* RewardedAdController.swift */; };
 		EAC761BD2B1A6B4100FDB0E5 /* RewardedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59862B193B2400AE5605 /* RewardedAdView.swift */; };
-		EAC761BF2B1A6B4100FDB0E5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039CE38A22CBD93100E3CB5F /* CoreMedia.framework */; };
-		EAC761C02B1A6B4100FDB0E5 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A9445E22A869910029D753 /* VideoToolbox.framework */; };
-		EAC761C12B1A6B4100FDB0E5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE2CB72203A30600DC7815 /* Security.framework */; };
-		EAC761C22B1A6B4100FDB0E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE2CB52203A2FD00DC7815 /* QuartzCore.framework */; };
-		EAC761C32B1A6B4100FDB0E5 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE2CB32203A2F100DC7815 /* PassKit.framework */; };
-		EAC761C42B1A6B4100FDB0E5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE2CAF2203A2D600DC7815 /* MapKit.framework */; };
-		EAC761C52B1A6B4100FDB0E5 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE2CAD2203A2CA00DC7815 /* libxml2.tbd */; };
-		EAC761C62B1A6B4100FDB0E5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE2CAB2203A2BE00DC7815 /* libsqlite3.tbd */; };
-		EAC761C72B1A6B4100FDB0E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93B6B0182B31BC00C21472 /* Foundation.framework */; };
-		EAC761C82B1A6B4100FDB0E5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED66821CC6CF000077FF2 /* libz.tbd */; };
-		EAC761C92B1A6B4100FDB0E5 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED66621CC6CE800077FF2 /* libc++.tbd */; };
-		EAC761CA2B1A6B4100FDB0E5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65621CC6CD700077FF2 /* CoreData.framework */; };
-		EAC761CB2B1A6B4100FDB0E5 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65721CC6CD800077FF2 /* CoreServices.framework */; };
-		EAC761CC2B1A6B4100FDB0E5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65821CC6CD800077FF2 /* CoreTelephony.framework */; };
-		EAC761CD2B1A6B4100FDB0E5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65921CC6CD800077FF2 /* CFNetwork.framework */; };
-		EAC761CE2B1A6B4100FDB0E5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65A21CC6CD800077FF2 /* CoreMotion.framework */; };
-		EAC761CF2B1A6B4100FDB0E5 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65B21CC6CD900077FF2 /* MediaPlayer.framework */; };
-		EAC761D02B1A6B4100FDB0E5 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65C21CC6CD900077FF2 /* CoreImage.framework */; };
-		EAC761D12B1A6B4100FDB0E5 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65D21CC6CD900077FF2 /* ImageIO.framework */; };
-		EAC761D22B1A6B4100FDB0E5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57E85E41A1FD5C400E6D9AD /* AdSupport.framework */; };
-		EAC761D32B1A6B4100FDB0E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93B6B2182B31BC00C21472 /* CoreGraphics.framework */; };
-		EAC761D42B1A6B4100FDB0E5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93B6F2182B33FD00C21472 /* StoreKit.framework */; };
-		EAC761D52B1A6B4100FDB0E5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11768D631D7F9DE200241EE4 /* SystemConfiguration.framework */; };
-		EAC761D62B1A6B4100FDB0E5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03098A882099075F00AA27CA /* AVFoundation.framework */; };
-		EAC761D72B1A6B4100FDB0E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93B6B4182B31BC00C21472 /* UIKit.framework */; };
-		EAC761D82B1A6B4100FDB0E5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D602791EC13FDB0075AF5E /* WebKit.framework */; };
-		EAC761D92B1A6B4100FDB0E5 /* Pods_ChartboostMediationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE515A97D15A95F1557BE54 /* Pods_ChartboostMediationDemo.framework */; };
 		EAC761DE2B1A6B4100FDB0E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA93B6B9182B31BC00C21472 /* InfoPlist.strings */; };
 		EAC761E32B1A6B4100FDB0E5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B9EF66FD2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy */; };
 		EAC761E42B1A6B4100FDB0E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F5649D21E6A2DF0065B61D /* Assets.xcassets */; };
@@ -142,7 +116,8 @@
 		11768D631D7F9DE200241EE4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		11D602791EC13FDB0075AF5E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		11E67ECB203778E8004291DF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		7AE515A97D15A95F1557BE54 /* Pods_ChartboostMediationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartboostMediationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A54D38BD7DC129FDA14B17 /* Pods-Demo-ChartboostMediationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-ChartboostMediationDemo.release.xcconfig"; path = "Target Support Files/Pods-Demo-ChartboostMediationDemo/Pods-Demo-ChartboostMediationDemo.release.xcconfig"; sourceTree = "<group>"; };
+		64DA363266BA389A2CC55A46 /* Pods-Demo-ChartboostMediationDemo-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-ChartboostMediationDemo-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Demo-ChartboostMediationDemo-SwiftUI/Pods-Demo-ChartboostMediationDemo-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		812758213C6048C552CE5416 /* Pods-ChartboostMediationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartboostMediationDemo.debug.xcconfig"; path = "Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9A100C0A2AC0F67300A7E6E1 /* Fullscreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fullscreen.storyboard; sourceTree = "<group>"; };
 		9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenAdController.swift; sourceTree = "<group>"; };
@@ -151,6 +126,8 @@
 		9EE694D13617DA6474AC6767 /* Pods-ChartboostMediationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartboostMediationDemo.release.xcconfig"; path = "Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B57E85E41A1FD5C400E6D9AD /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		B9EF66FD2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		BC313CA32F6E1D13E5DB9330 /* Pods_Demo_ChartboostMediationDemo_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo_ChartboostMediationDemo_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFD46B7E4181E99E0F3406AF /* Pods-Demo-ChartboostMediationDemo-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-ChartboostMediationDemo-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Demo-ChartboostMediationDemo-SwiftUI/Pods-Demo-ChartboostMediationDemo-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		DA93B6AD182B31BC00C21472 /* ChartboostMediationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartboostMediationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA93B6B0182B31BC00C21472 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DA93B6B2182B31BC00C21472 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -180,6 +157,8 @@
 		E695AD0E28B59323000160CE /* Banner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Banner.storyboard; sourceTree = "<group>"; };
 		E695AD0F28B59323000160CE /* BannerAdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAdController.swift; sourceTree = "<group>"; };
 		E695AD1028B59323000160CE /* BannerAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAdViewController.swift; sourceTree = "<group>"; };
+		EA893F372B1A702C008706F3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		EA893F392B1A7038008706F3 /* CoreAudioTypes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioTypes.framework; path = System/Library/Frameworks/CoreAudioTypes.framework; sourceTree = SDKROOT; };
 		EAC761E92B1A6B4100FDB0E5 /* ChartboostMediationDemo-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChartboostMediationDemo-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAEA597F2B192EEC00AE5605 /* ActivityState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityState.swift; sourceTree = "<group>"; };
 		EAEA59832B193B2400AE5605 /* InterstitialAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAdView.swift; sourceTree = "<group>"; };
@@ -193,6 +172,8 @@
 		EAEA59932B193B5700AE5605 /* ChartboostMediationDemoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartboostMediationDemoApp.swift; sourceTree = "<group>"; };
 		EAEA59952B193BB100AE5605 /* UInt64+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt64+Extras.swift"; sourceTree = "<group>"; };
 		EAEA59962B193BB100AE5605 /* BusyModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyModifier.swift; sourceTree = "<group>"; };
+		ED60B14688476BBA519A225E /* Pods-Demo-ChartboostMediationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-ChartboostMediationDemo.debug.xcconfig"; path = "Target Support Files/Pods-Demo-ChartboostMediationDemo/Pods-Demo-ChartboostMediationDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FD62834F9A91A5C95B021EE4 /* Pods_Demo_ChartboostMediationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo_ChartboostMediationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,7 +207,7 @@
 				03098A892099075F00AA27CA /* AVFoundation.framework in Frameworks */,
 				DA93B6B5182B31BC00C21472 /* UIKit.framework in Frameworks */,
 				11D6027A1EC13FDB0075AF5E /* WebKit.framework in Frameworks */,
-				250C89C367DF52B9DB4369AF /* Pods_ChartboostMediationDemo.framework in Frameworks */,
+				594B3585F25F9EB0E5B957DE /* Pods_Demo_ChartboostMediationDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,33 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAC761BF2B1A6B4100FDB0E5 /* CoreMedia.framework in Frameworks */,
-				EAC761C02B1A6B4100FDB0E5 /* VideoToolbox.framework in Frameworks */,
-				EAC761C12B1A6B4100FDB0E5 /* Security.framework in Frameworks */,
-				EAC761C22B1A6B4100FDB0E5 /* QuartzCore.framework in Frameworks */,
-				EAC761C32B1A6B4100FDB0E5 /* PassKit.framework in Frameworks */,
-				EAC761C42B1A6B4100FDB0E5 /* MapKit.framework in Frameworks */,
-				EAC761C52B1A6B4100FDB0E5 /* libxml2.tbd in Frameworks */,
-				EAC761C62B1A6B4100FDB0E5 /* libsqlite3.tbd in Frameworks */,
-				EAC761C72B1A6B4100FDB0E5 /* Foundation.framework in Frameworks */,
-				EAC761C82B1A6B4100FDB0E5 /* libz.tbd in Frameworks */,
-				EAC761C92B1A6B4100FDB0E5 /* libc++.tbd in Frameworks */,
-				EAC761CA2B1A6B4100FDB0E5 /* CoreData.framework in Frameworks */,
-				EAC761CB2B1A6B4100FDB0E5 /* CoreServices.framework in Frameworks */,
-				EAC761CC2B1A6B4100FDB0E5 /* CoreTelephony.framework in Frameworks */,
-				EAC761CD2B1A6B4100FDB0E5 /* CFNetwork.framework in Frameworks */,
-				EAC761CE2B1A6B4100FDB0E5 /* CoreMotion.framework in Frameworks */,
-				EAC761CF2B1A6B4100FDB0E5 /* MediaPlayer.framework in Frameworks */,
-				EAC761D02B1A6B4100FDB0E5 /* CoreImage.framework in Frameworks */,
-				EAC761D12B1A6B4100FDB0E5 /* ImageIO.framework in Frameworks */,
-				EAC761D22B1A6B4100FDB0E5 /* AdSupport.framework in Frameworks */,
-				EAC761D32B1A6B4100FDB0E5 /* CoreGraphics.framework in Frameworks */,
-				EAC761D42B1A6B4100FDB0E5 /* StoreKit.framework in Frameworks */,
-				EAC761D52B1A6B4100FDB0E5 /* SystemConfiguration.framework in Frameworks */,
-				EAC761D62B1A6B4100FDB0E5 /* AVFoundation.framework in Frameworks */,
-				EAC761D72B1A6B4100FDB0E5 /* UIKit.framework in Frameworks */,
-				EAC761D82B1A6B4100FDB0E5 /* WebKit.framework in Frameworks */,
-				EAC761D92B1A6B4100FDB0E5 /* Pods_ChartboostMediationDemo.framework in Frameworks */,
+				9EB895C6AB0C2B5D42650E4D /* Pods_Demo_ChartboostMediationDemo_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +235,10 @@
 			children = (
 				812758213C6048C552CE5416 /* Pods-ChartboostMediationDemo.debug.xcconfig */,
 				9EE694D13617DA6474AC6767 /* Pods-ChartboostMediationDemo.release.xcconfig */,
+				ED60B14688476BBA519A225E /* Pods-Demo-ChartboostMediationDemo.debug.xcconfig */,
+				49A54D38BD7DC129FDA14B17 /* Pods-Demo-ChartboostMediationDemo.release.xcconfig */,
+				64DA363266BA389A2CC55A46 /* Pods-Demo-ChartboostMediationDemo-SwiftUI.debug.xcconfig */,
+				BFD46B7E4181E99E0F3406AF /* Pods-Demo-ChartboostMediationDemo-SwiftUI.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -316,6 +275,8 @@
 		DA93B6AF182B31BC00C21472 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA893F392B1A7038008706F3 /* CoreAudioTypes.framework */,
+				EA893F372B1A702C008706F3 /* SwiftUI.framework */,
 				03A9445E22A869910029D753 /* VideoToolbox.framework */,
 				03DE2CB72203A30600DC7815 /* Security.framework */,
 				03DE2CB52203A2FD00DC7815 /* QuartzCore.framework */,
@@ -342,7 +303,8 @@
 				11768D631D7F9DE200241EE4 /* SystemConfiguration.framework */,
 				DA93B6B4182B31BC00C21472 /* UIKit.framework */,
 				11D602791EC13FDB0075AF5E /* WebKit.framework */,
-				7AE515A97D15A95F1557BE54 /* Pods_ChartboostMediationDemo.framework */,
+				FD62834F9A91A5C95B021EE4 /* Pods_Demo_ChartboostMediationDemo.framework */,
+				BC313CA32F6E1D13E5DB9330 /* Pods_Demo_ChartboostMediationDemo_SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -527,7 +489,6 @@
 				ORGANIZATIONNAME = Chartboost;
 				TargetAttributes = {
 					DA93B6AC182B31BC00C21472 = {
-						DevelopmentTeam = F38H382JLK;
 						LastSwiftMigration = 1340;
 					};
 				};
@@ -589,15 +550,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo/Pods-Demo-ChartboostMediationDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo/Pods-Demo-ChartboostMediationDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo/Pods-Demo-ChartboostMediationDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D7E24C2AC03240BAA57EBA47 /* [CP] Check Pods Manifest.lock */ = {
@@ -615,7 +576,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ChartboostMediationDemo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Demo-ChartboostMediationDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -637,7 +598,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ChartboostMediationDemo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Demo-ChartboostMediationDemo-SwiftUI-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -650,15 +611,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo-SwiftUI/Pods-Demo-ChartboostMediationDemo-SwiftUI-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo-SwiftUI/Pods-Demo-ChartboostMediationDemo-SwiftUI-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo-SwiftUI/Pods-Demo-ChartboostMediationDemo-SwiftUI-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -836,9 +797,8 @@
 		};
 		DA93B6E3182B31BC00C21472 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 812758213C6048C552CE5416 /* Pods-ChartboostMediationDemo.debug.xcconfig */;
+			baseConfigurationReference = ED60B14688476BBA519A225E /* Pods-Demo-ChartboostMediationDemo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -873,9 +833,8 @@
 		};
 		DA93B6E4182B31BC00C21472 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EE694D13617DA6474AC6767 /* Pods-ChartboostMediationDemo.release.xcconfig */;
+			baseConfigurationReference = 49A54D38BD7DC129FDA14B17 /* Pods-Demo-ChartboostMediationDemo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -904,9 +863,8 @@
 		};
 		EAC761E72B1A6B4100FDB0E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 812758213C6048C552CE5416 /* Pods-ChartboostMediationDemo.debug.xcconfig */;
+			baseConfigurationReference = 64DA363266BA389A2CC55A46 /* Pods-Demo-ChartboostMediationDemo-SwiftUI.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -941,9 +899,8 @@
 		};
 		EAC761E82B1A6B4100FDB0E5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EE694D13617DA6474AC6767 /* Pods-ChartboostMediationDemo.release.xcconfig */;
+			baseConfigurationReference = BFD46B7E4181E99E0F3406AF /* Pods-Demo-ChartboostMediationDemo-SwiftUI.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
