@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DA93B6AC182B31BC00C21472"
-               BuildableName = "ChartboostMediationDemo.app"
-               BlueprintName = "ChartboostMediationDemo"
+               BuildableName = "ChartboostMediationDemo-UIKit.app"
+               BlueprintName = "ChartboostMediationDemo-UIKit"
                ReferencedContainer = "container:ChartboostMediationDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DA93B6AC182B31BC00C21472"
-            BuildableName = "ChartboostMediationDemo.app"
-            BlueprintName = "ChartboostMediationDemo"
+            BuildableName = "ChartboostMediationDemo-UIKit.app"
+            BlueprintName = "ChartboostMediationDemo-UIKit"
             ReferencedContainer = "container:ChartboostMediationDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -69,8 +69,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DA93B6AC182B31BC00C21472"
-            BuildableName = "ChartboostMediationDemo.app"
-            BlueprintName = "ChartboostMediationDemo"
+            BuildableName = "ChartboostMediationDemo-UIKit.app"
+            BlueprintName = "ChartboostMediationDemo-UIKit"
             ReferencedContainer = "container:ChartboostMediationDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

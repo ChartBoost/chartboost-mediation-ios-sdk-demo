@@ -1,4 +1,4 @@
-platform :ios, '11.0'
+platform :ios, '13.0'
 
 abstract_target 'Demo' do
 
@@ -24,7 +24,7 @@ abstract_target 'Demo' do
 #  pod 'ChartboostMediationAdapterVungle'
 #  pod 'ChartboostMediationAdapterYahoo'
 
-  target 'ChartboostMediationDemo'
+  target 'ChartboostMediationDemo-UIKit'
   target 'ChartboostMediationDemo-SwiftUI'
 
 end
