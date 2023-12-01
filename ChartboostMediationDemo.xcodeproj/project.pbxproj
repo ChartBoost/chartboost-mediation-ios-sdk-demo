@@ -113,6 +113,7 @@
 		EAC761DE2B1A6B4100FDB0E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA93B6B9182B31BC00C21472 /* InfoPlist.strings */; };
 		EAC761E32B1A6B4100FDB0E5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B9EF66FD2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy */; };
 		EAC761E42B1A6B4100FDB0E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F5649D21E6A2DF0065B61D /* Assets.xcassets */; };
+		EAC761EB2B1A6E9100FDB0E5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E67ECB203778E8004291DF /* Launch Screen.storyboard */; };
 		EAEA59802B192EEC00AE5605 /* ActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA597F2B192EEC00AE5605 /* ActivityState.swift */; };
 /* End PBXBuildFile section */
 
@@ -400,7 +401,6 @@
 		EAEA59792B1926CF00AE5605 /* Demo_UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				11E67ECB203778E8004291DF /* Launch Screen.storyboard */,
 				E695ACF128B5697C000160CE /* Main.storyboard */,
 				E62D990728B52CFE0035F1D2 /* AppDelegate.swift */,
 				E695ACFD28B57FEC000160CE /* ChartboostMediationInititializationViewController.swift */,
@@ -433,6 +433,7 @@
 		EAEA597B2B1926EC00AE5605 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				11E67ECB203778E8004291DF /* Launch Screen.storyboard */,
 				EAEA597D2B192D4F00AE5605 /* Mediation SDK Controllers */,
 				9AC709172AC2060E00406EF6 /* AdType.swift */,
 				EAEA597F2B192EEC00AE5605 /* ActivityState.swift */,
@@ -574,6 +575,7 @@
 			files = (
 				EAC761DE2B1A6B4100FDB0E5 /* InfoPlist.strings in Resources */,
 				EAC761E32B1A6B4100FDB0E5 /* PrivacyInfo.xcprivacy in Resources */,
+				EAC761EB2B1A6E9100FDB0E5 /* Launch Screen.storyboard in Resources */,
 				EAC761E42B1A6B4100FDB0E5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -918,7 +920,7 @@
 					"USE_TAPJOY=1",
 					"PRINT_NETWORK_ACTIVITY=1",
 				);
-				INFOPLIST_FILE = "ChartboostMediationDemo-Info.plist";
+				INFOPLIST_FILE = "ChartboostMediationDemo/ChartboostMediationDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -926,7 +928,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chartboost.apollo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chartboost.apollo-swiftui";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ChartboostMediationDemo/ChartboostMediationDemo-Bridging-Header.h";
@@ -950,7 +952,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChartboostMediationDemo/ChartboostMediationDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
-				INFOPLIST_FILE = "ChartboostMediationDemo-Info.plist";
+				INFOPLIST_FILE = "ChartboostMediationDemo/ChartboostMediationDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -958,7 +960,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chartboost.apollo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chartboost.apollo-swiftui";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ChartboostMediationDemo/ChartboostMediationDemo-Bridging-Header.h";

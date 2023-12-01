@@ -1,5 +1,6 @@
 platform :ios, '11.0'
-target 'ChartboostMediationDemo' do
+
+abstract_target 'Demo' do
 
   use_frameworks!
 
@@ -22,5 +23,8 @@ target 'ChartboostMediationDemo' do
 #  pod 'ChartboostMediationAdapterUnityAds'
 #  pod 'ChartboostMediationAdapterVungle'
 #  pod 'ChartboostMediationAdapterYahoo'
+
+  target 'ChartboostMediationDemo'
+  target 'ChartboostMediationDemo-SwiftUI'
 
 end
