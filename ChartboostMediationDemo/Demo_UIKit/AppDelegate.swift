@@ -18,24 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    /// Set to true to run the app with the SwiftUI integration
-    let useSwiftUIView = false
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-
-        if #available(iOS 15.0, *), useSwiftUIView {
-            // Load SwiftUI View
-            let contentView = ChartboostMediationMainView()
-            window?.rootViewController = UIHostingController(rootView: contentView)
-        } else {
-            // Load Storyboard UIKit View
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            window?.rootViewController = storyboard.instantiateInitialViewController()
-        }
-
-        window?.makeKeyAndVisible()
-
         return true
     }
 }

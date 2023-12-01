@@ -71,7 +71,7 @@
 		EAC761AA2B1A6B4100FDB0E5 /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59832B193B2400AE5605 /* InterstitialAdView.swift */; };
 		EAC761AB2B1A6B4100FDB0E5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695ACF528B56F88000160CE /* Colors.swift */; };
 		EAC761AC2B1A6B4100FDB0E5 /* ChartboostMediationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695ACFB28B57AC5000160CE /* ChartboostMediationController.swift */; };
-		EAC761AE2B1A6B4100FDB0E5 /* ChartboostMediationMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59932B193B5700AE5605 /* ChartboostMediationMainView.swift */; };
+		EAC761AE2B1A6B4100FDB0E5 /* ChartboostMediationDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59932B193B5700AE5605 /* ChartboostMediationDemoApp.swift */; };
 		EAC761AF2B1A6B4100FDB0E5 /* AdTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59872B193B2400AE5605 /* AdTypeSelectionView.swift */; };
 		EAC761B22B1A6B4100FDB0E5 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59892B193B2400AE5605 /* Banner.swift */; };
 		EAC761B42B1A6B4100FDB0E5 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59882B193B2400AE5605 /* BannerAdView.swift */; };
@@ -189,7 +189,7 @@
 		EAEA59882B193B2400AE5605 /* BannerAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		EAEA59892B193B2400AE5605 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		EAEA598A2B193B2400AE5605 /* ChartboostMediationInititializationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartboostMediationInititializationView.swift; sourceTree = "<group>"; };
-		EAEA59932B193B5700AE5605 /* ChartboostMediationMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartboostMediationMainView.swift; sourceTree = "<group>"; };
+		EAEA59932B193B5700AE5605 /* ChartboostMediationDemoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartboostMediationDemoApp.swift; sourceTree = "<group>"; };
 		EAEA59952B193BB100AE5605 /* UInt64+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt64+Extras.swift"; sourceTree = "<group>"; };
 		EAEA59962B193BB100AE5605 /* BusyModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -417,7 +417,7 @@
 		EAEA597A2B1926DE00AE5605 /* Demo_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				EAEA59932B193B5700AE5605 /* ChartboostMediationMainView.swift */,
+				EAEA59932B193B5700AE5605 /* ChartboostMediationDemoApp.swift */,
 				EAEA59872B193B2400AE5605 /* AdTypeSelectionView.swift */,
 				EAEA59892B193B2400AE5605 /* Banner.swift */,
 				EAEA59882B193B2400AE5605 /* BannerAdView.swift */,
@@ -701,7 +701,7 @@
 				EAC761AA2B1A6B4100FDB0E5 /* InterstitialAdView.swift in Sources */,
 				EAC761AB2B1A6B4100FDB0E5 /* Colors.swift in Sources */,
 				EAC761AC2B1A6B4100FDB0E5 /* ChartboostMediationController.swift in Sources */,
-				EAC761AE2B1A6B4100FDB0E5 /* ChartboostMediationMainView.swift in Sources */,
+				EAC761AE2B1A6B4100FDB0E5 /* ChartboostMediationDemoApp.swift in Sources */,
 				EAC761AF2B1A6B4100FDB0E5 /* AdTypeSelectionView.swift in Sources */,
 				EAC761B22B1A6B4100FDB0E5 /* Banner.swift in Sources */,
 				EAC761B42B1A6B4100FDB0E5 /* BannerAdView.swift in Sources */,
