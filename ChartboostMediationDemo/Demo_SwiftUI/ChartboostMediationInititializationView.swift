@@ -13,7 +13,6 @@
 import SwiftUI
 
 /// A view that is shown while the Chartboost Mediation SDK is initializaing.
-@available(iOS 15.0, *)
 struct ChartboostMediationInititializationView: View {
     @StateObject private var chartboostMediationController = ChartboostMediationController.instance
 

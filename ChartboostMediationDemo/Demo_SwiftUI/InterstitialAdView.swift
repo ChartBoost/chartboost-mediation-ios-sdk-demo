@@ -14,7 +14,6 @@ import UIKit
 import SwiftUI
 
 /// A view that demonstrates the loading and showing of a Chartboost Mediation SDK interstitial advertisement.
-@available(iOS 15.0, *)
 struct InterstitialAdView: View {
     @StateObject private var controller: InterstitialAdController
     @State private var isBusy = false

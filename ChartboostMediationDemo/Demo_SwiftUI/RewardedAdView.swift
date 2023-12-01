@@ -14,7 +14,6 @@ import UIKit
 import SwiftUI
 
 /// A view that demonstrates the loading and showing of a Chartboost Mediation SDK rewarded advertisement.
-@available(iOS 15.0, *)
 struct RewardedAdView: View {
     @StateObject private var controller: RewardedAdController
     @State private var isBusy = false

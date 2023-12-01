@@ -62,18 +62,58 @@
 		E695AD1128B59323000160CE /* Banner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E695AD0E28B59323000160CE /* Banner.storyboard */; };
 		E695AD1228B59323000160CE /* BannerAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695AD0F28B59323000160CE /* BannerAdController.swift */; };
 		E695AD1328B59323000160CE /* BannerAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695AD1028B59323000160CE /* BannerAdViewController.swift */; };
+		EAC761A02B1A6B4100FDB0E5 /* UInt64+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59952B193BB100AE5605 /* UInt64+Extras.swift */; };
+		EAC761A12B1A6B4100FDB0E5 /* BusyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59962B193BB100AE5605 /* BusyModifier.swift */; };
+		EAC761A42B1A6B4100FDB0E5 /* Collection+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66016E628B67A8700ABE0B7 /* Collection+Extras.swift */; };
+		EAC761A62B1A6B4100FDB0E5 /* ActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA597F2B192EEC00AE5605 /* ActivityState.swift */; };
+		EAC761A72B1A6B4100FDB0E5 /* FullscreenAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */; };
+		EAC761A82B1A6B4100FDB0E5 /* Application+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59842B193B2400AE5605 /* Application+Extras.swift */; };
+		EAC761AA2B1A6B4100FDB0E5 /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59832B193B2400AE5605 /* InterstitialAdView.swift */; };
+		EAC761AB2B1A6B4100FDB0E5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695ACF528B56F88000160CE /* Colors.swift */; };
+		EAC761AC2B1A6B4100FDB0E5 /* ChartboostMediationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695ACFB28B57AC5000160CE /* ChartboostMediationController.swift */; };
+		EAC761AE2B1A6B4100FDB0E5 /* ChartboostMediationMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59932B193B5700AE5605 /* ChartboostMediationMainView.swift */; };
+		EAC761AF2B1A6B4100FDB0E5 /* AdTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59872B193B2400AE5605 /* AdTypeSelectionView.swift */; };
+		EAC761B22B1A6B4100FDB0E5 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59892B193B2400AE5605 /* Banner.swift */; };
+		EAC761B42B1A6B4100FDB0E5 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59882B193B2400AE5605 /* BannerAdView.swift */; };
+		EAC761B52B1A6B4100FDB0E5 /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC709172AC2060E00406EF6 /* AdType.swift */; };
+		EAC761B62B1A6B4100FDB0E5 /* ActivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695ACFF28B588BE000160CE /* ActivityDelegate.swift */; };
+		EAC761B72B1A6B4100FDB0E5 /* BannerAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695AD0F28B59323000160CE /* BannerAdController.swift */; };
+		EAC761B82B1A6B4100FDB0E5 /* InterstitialAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695ACE528B532BC000160CE /* InterstitialAdController.swift */; };
+		EAC761B92B1A6B4100FDB0E5 /* ChartboostMediationInititializationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA598A2B193B2400AE5605 /* ChartboostMediationInititializationView.swift */; };
+		EAC761BB2B1A6B4100FDB0E5 /* FullscreenAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59852B193B2400AE5605 /* FullscreenAdView.swift */; };
+		EAC761BC2B1A6B4100FDB0E5 /* RewardedAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695AD0828B58FAA000160CE /* RewardedAdController.swift */; };
+		EAC761BD2B1A6B4100FDB0E5 /* RewardedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59862B193B2400AE5605 /* RewardedAdView.swift */; };
+		EAC761BF2B1A6B4100FDB0E5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039CE38A22CBD93100E3CB5F /* CoreMedia.framework */; };
+		EAC761C02B1A6B4100FDB0E5 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A9445E22A869910029D753 /* VideoToolbox.framework */; };
+		EAC761C12B1A6B4100FDB0E5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE2CB72203A30600DC7815 /* Security.framework */; };
+		EAC761C22B1A6B4100FDB0E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE2CB52203A2FD00DC7815 /* QuartzCore.framework */; };
+		EAC761C32B1A6B4100FDB0E5 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE2CB32203A2F100DC7815 /* PassKit.framework */; };
+		EAC761C42B1A6B4100FDB0E5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE2CAF2203A2D600DC7815 /* MapKit.framework */; };
+		EAC761C52B1A6B4100FDB0E5 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE2CAD2203A2CA00DC7815 /* libxml2.tbd */; };
+		EAC761C62B1A6B4100FDB0E5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE2CAB2203A2BE00DC7815 /* libsqlite3.tbd */; };
+		EAC761C72B1A6B4100FDB0E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93B6B0182B31BC00C21472 /* Foundation.framework */; };
+		EAC761C82B1A6B4100FDB0E5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED66821CC6CF000077FF2 /* libz.tbd */; };
+		EAC761C92B1A6B4100FDB0E5 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED66621CC6CE800077FF2 /* libc++.tbd */; };
+		EAC761CA2B1A6B4100FDB0E5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65621CC6CD700077FF2 /* CoreData.framework */; };
+		EAC761CB2B1A6B4100FDB0E5 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65721CC6CD800077FF2 /* CoreServices.framework */; };
+		EAC761CC2B1A6B4100FDB0E5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65821CC6CD800077FF2 /* CoreTelephony.framework */; };
+		EAC761CD2B1A6B4100FDB0E5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65921CC6CD800077FF2 /* CFNetwork.framework */; };
+		EAC761CE2B1A6B4100FDB0E5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65A21CC6CD800077FF2 /* CoreMotion.framework */; };
+		EAC761CF2B1A6B4100FDB0E5 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65B21CC6CD900077FF2 /* MediaPlayer.framework */; };
+		EAC761D02B1A6B4100FDB0E5 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65C21CC6CD900077FF2 /* CoreImage.framework */; };
+		EAC761D12B1A6B4100FDB0E5 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED65D21CC6CD900077FF2 /* ImageIO.framework */; };
+		EAC761D22B1A6B4100FDB0E5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57E85E41A1FD5C400E6D9AD /* AdSupport.framework */; };
+		EAC761D32B1A6B4100FDB0E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93B6B2182B31BC00C21472 /* CoreGraphics.framework */; };
+		EAC761D42B1A6B4100FDB0E5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93B6F2182B33FD00C21472 /* StoreKit.framework */; };
+		EAC761D52B1A6B4100FDB0E5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11768D631D7F9DE200241EE4 /* SystemConfiguration.framework */; };
+		EAC761D62B1A6B4100FDB0E5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03098A882099075F00AA27CA /* AVFoundation.framework */; };
+		EAC761D72B1A6B4100FDB0E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93B6B4182B31BC00C21472 /* UIKit.framework */; };
+		EAC761D82B1A6B4100FDB0E5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D602791EC13FDB0075AF5E /* WebKit.framework */; };
+		EAC761D92B1A6B4100FDB0E5 /* Pods_ChartboostMediationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE515A97D15A95F1557BE54 /* Pods_ChartboostMediationDemo.framework */; };
+		EAC761DE2B1A6B4100FDB0E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA93B6B9182B31BC00C21472 /* InfoPlist.strings */; };
+		EAC761E32B1A6B4100FDB0E5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B9EF66FD2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy */; };
+		EAC761E42B1A6B4100FDB0E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F5649D21E6A2DF0065B61D /* Assets.xcassets */; };
 		EAEA59802B192EEC00AE5605 /* ActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA597F2B192EEC00AE5605 /* ActivityState.swift */; };
-		EAEA598B2B193B2400AE5605 /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59832B193B2400AE5605 /* InterstitialAdView.swift */; };
-		EAEA598C2B193B2400AE5605 /* Application+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59842B193B2400AE5605 /* Application+Extras.swift */; };
-		EAEA598D2B193B2400AE5605 /* FullscreenAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59852B193B2400AE5605 /* FullscreenAdView.swift */; };
-		EAEA598E2B193B2400AE5605 /* RewardedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59862B193B2400AE5605 /* RewardedAdView.swift */; };
-		EAEA598F2B193B2400AE5605 /* AdTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59872B193B2400AE5605 /* AdTypeSelectionView.swift */; };
-		EAEA59902B193B2400AE5605 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59882B193B2400AE5605 /* BannerAdView.swift */; };
-		EAEA59912B193B2400AE5605 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59892B193B2400AE5605 /* Banner.swift */; };
-		EAEA59922B193B2400AE5605 /* ChartboostMediationInititializationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA598A2B193B2400AE5605 /* ChartboostMediationInititializationView.swift */; };
-		EAEA59942B193B5700AE5605 /* ChartboostMediationMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59932B193B5700AE5605 /* ChartboostMediationMainView.swift */; };
-		EAEA59972B193BB100AE5605 /* UInt64+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59952B193BB100AE5605 /* UInt64+Extras.swift */; };
-		EAEA59982B193BB100AE5605 /* BusyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA59962B193BB100AE5605 /* BusyModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +179,7 @@
 		E695AD0E28B59323000160CE /* Banner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Banner.storyboard; sourceTree = "<group>"; };
 		E695AD0F28B59323000160CE /* BannerAdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAdController.swift; sourceTree = "<group>"; };
 		E695AD1028B59323000160CE /* BannerAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAdViewController.swift; sourceTree = "<group>"; };
+		EAC761E92B1A6B4100FDB0E5 /* ChartboostMediationDemo-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChartboostMediationDemo-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAEA597F2B192EEC00AE5605 /* ActivityState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityState.swift; sourceTree = "<group>"; };
 		EAEA59832B193B2400AE5605 /* InterstitialAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAdView.swift; sourceTree = "<group>"; };
 		EAEA59842B193B2400AE5605 /* Application+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Application+Extras.swift"; sourceTree = "<group>"; };
@@ -188,6 +229,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAC761BE2B1A6B4100FDB0E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC761BF2B1A6B4100FDB0E5 /* CoreMedia.framework in Frameworks */,
+				EAC761C02B1A6B4100FDB0E5 /* VideoToolbox.framework in Frameworks */,
+				EAC761C12B1A6B4100FDB0E5 /* Security.framework in Frameworks */,
+				EAC761C22B1A6B4100FDB0E5 /* QuartzCore.framework in Frameworks */,
+				EAC761C32B1A6B4100FDB0E5 /* PassKit.framework in Frameworks */,
+				EAC761C42B1A6B4100FDB0E5 /* MapKit.framework in Frameworks */,
+				EAC761C52B1A6B4100FDB0E5 /* libxml2.tbd in Frameworks */,
+				EAC761C62B1A6B4100FDB0E5 /* libsqlite3.tbd in Frameworks */,
+				EAC761C72B1A6B4100FDB0E5 /* Foundation.framework in Frameworks */,
+				EAC761C82B1A6B4100FDB0E5 /* libz.tbd in Frameworks */,
+				EAC761C92B1A6B4100FDB0E5 /* libc++.tbd in Frameworks */,
+				EAC761CA2B1A6B4100FDB0E5 /* CoreData.framework in Frameworks */,
+				EAC761CB2B1A6B4100FDB0E5 /* CoreServices.framework in Frameworks */,
+				EAC761CC2B1A6B4100FDB0E5 /* CoreTelephony.framework in Frameworks */,
+				EAC761CD2B1A6B4100FDB0E5 /* CFNetwork.framework in Frameworks */,
+				EAC761CE2B1A6B4100FDB0E5 /* CoreMotion.framework in Frameworks */,
+				EAC761CF2B1A6B4100FDB0E5 /* MediaPlayer.framework in Frameworks */,
+				EAC761D02B1A6B4100FDB0E5 /* CoreImage.framework in Frameworks */,
+				EAC761D12B1A6B4100FDB0E5 /* ImageIO.framework in Frameworks */,
+				EAC761D22B1A6B4100FDB0E5 /* AdSupport.framework in Frameworks */,
+				EAC761D32B1A6B4100FDB0E5 /* CoreGraphics.framework in Frameworks */,
+				EAC761D42B1A6B4100FDB0E5 /* StoreKit.framework in Frameworks */,
+				EAC761D52B1A6B4100FDB0E5 /* SystemConfiguration.framework in Frameworks */,
+				EAC761D62B1A6B4100FDB0E5 /* AVFoundation.framework in Frameworks */,
+				EAC761D72B1A6B4100FDB0E5 /* UIKit.framework in Frameworks */,
+				EAC761D82B1A6B4100FDB0E5 /* WebKit.framework in Frameworks */,
+				EAC761D92B1A6B4100FDB0E5 /* Pods_ChartboostMediationDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -232,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				DA93B6AD182B31BC00C21472 /* ChartboostMediationDemo.app */,
+				EAC761E92B1A6B4100FDB0E5 /* ChartboostMediationDemo-SwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -421,6 +497,25 @@
 			productReference = DA93B6AD182B31BC00C21472 /* ChartboostMediationDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EAC7619D2B1A6B4100FDB0E5 /* ChartboostMediationDemo-SwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAC761E62B1A6B4100FDB0E5 /* Build configuration list for PBXNativeTarget "ChartboostMediationDemo-SwiftUI" */;
+			buildPhases = (
+				EAC7619E2B1A6B4100FDB0E5 /* [CP] Check Pods Manifest.lock */,
+				EAC7619F2B1A6B4100FDB0E5 /* Sources */,
+				EAC761BE2B1A6B4100FDB0E5 /* Frameworks */,
+				EAC761DA2B1A6B4100FDB0E5 /* Resources */,
+				EAC761E52B1A6B4100FDB0E5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ChartboostMediationDemo-SwiftUI";
+			productName = HeliumDemo;
+			productReference = EAC761E92B1A6B4100FDB0E5 /* ChartboostMediationDemo-SwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -450,6 +545,7 @@
 			projectRoot = "";
 			targets = (
 				DA93B6AC182B31BC00C21472 /* ChartboostMediationDemo */,
+				EAC7619D2B1A6B4100FDB0E5 /* ChartboostMediationDemo-SwiftUI */,
 			);
 		};
 /* End PBXProject section */
@@ -469,6 +565,16 @@
 				E695AD0C28B58FAA000160CE /* Rewarded.storyboard in Resources */,
 				B9EF66FE2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy in Resources */,
 				03F5649E21E6A2DF0065B61D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC761DA2B1A6B4100FDB0E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC761DE2B1A6B4100FDB0E5 /* InfoPlist.strings in Resources */,
+				EAC761E32B1A6B4100FDB0E5 /* PrivacyInfo.xcprivacy in Resources */,
+				EAC761E42B1A6B4100FDB0E5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +620,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EAC7619E2B1A6B4100FDB0E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChartboostMediationDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAC761E52B1A6B4100FDB0E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChartboostMediationDemo/Pods-ChartboostMediationDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -521,36 +666,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAEA59972B193BB100AE5605 /* UInt64+Extras.swift in Sources */,
-				EAEA59982B193BB100AE5605 /* BusyModifier.swift in Sources */,
 				E695AD0728B58C1C000160CE /* Alert.swift in Sources */,
 				9A100C0F2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift in Sources */,
 				E66016E728B67A8700ABE0B7 /* Collection+Extras.swift in Sources */,
 				E695AD1328B59323000160CE /* BannerAdViewController.swift in Sources */,
 				EAEA59802B192EEC00AE5605 /* ActivityState.swift in Sources */,
 				9A100C0D2AC0F69E00A7E6E1 /* FullscreenAdController.swift in Sources */,
-				EAEA598C2B193B2400AE5605 /* Application+Extras.swift in Sources */,
 				E695AD0D28B58FAA000160CE /* RewardedAdViewController.swift in Sources */,
-				EAEA598B2B193B2400AE5605 /* InterstitialAdView.swift in Sources */,
 				E695ACF628B56F88000160CE /* Colors.swift in Sources */,
 				E695ACFC28B57AC5000160CE /* ChartboostMediationController.swift in Sources */,
 				E695ACF428B569C3000160CE /* AdTypeSelectionViewController.swift in Sources */,
-				EAEA59942B193B5700AE5605 /* ChartboostMediationMainView.swift in Sources */,
-				EAEA598F2B193B2400AE5605 /* AdTypeSelectionView.swift in Sources */,
 				E695ACFA28B57A8C000160CE /* InterstitialAdViewController.swift in Sources */,
 				E62D990828B52CFE0035F1D2 /* AppDelegate.swift in Sources */,
-				EAEA59912B193B2400AE5605 /* Banner.swift in Sources */,
 				E695AD0328B58A2E000160CE /* Busy.swift in Sources */,
-				EAEA59902B193B2400AE5605 /* BannerAdView.swift in Sources */,
 				9AC709182AC2060E00406EF6 /* AdType.swift in Sources */,
 				E695AD0028B588BE000160CE /* ActivityDelegate.swift in Sources */,
 				E695AD1228B59323000160CE /* BannerAdController.swift in Sources */,
 				E695ACE628B532BC000160CE /* InterstitialAdController.swift in Sources */,
-				EAEA59922B193B2400AE5605 /* ChartboostMediationInititializationView.swift in Sources */,
 				E695ACFE28B57FEC000160CE /* ChartboostMediationInititializationViewController.swift in Sources */,
-				EAEA598D2B193B2400AE5605 /* FullscreenAdView.swift in Sources */,
 				E695AD0B28B58FAA000160CE /* RewardedAdController.swift in Sources */,
-				EAEA598E2B193B2400AE5605 /* RewardedAdView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC7619F2B1A6B4100FDB0E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC761A02B1A6B4100FDB0E5 /* UInt64+Extras.swift in Sources */,
+				EAC761A12B1A6B4100FDB0E5 /* BusyModifier.swift in Sources */,
+				EAC761A42B1A6B4100FDB0E5 /* Collection+Extras.swift in Sources */,
+				EAC761A62B1A6B4100FDB0E5 /* ActivityState.swift in Sources */,
+				EAC761A72B1A6B4100FDB0E5 /* FullscreenAdController.swift in Sources */,
+				EAC761A82B1A6B4100FDB0E5 /* Application+Extras.swift in Sources */,
+				EAC761AA2B1A6B4100FDB0E5 /* InterstitialAdView.swift in Sources */,
+				EAC761AB2B1A6B4100FDB0E5 /* Colors.swift in Sources */,
+				EAC761AC2B1A6B4100FDB0E5 /* ChartboostMediationController.swift in Sources */,
+				EAC761AE2B1A6B4100FDB0E5 /* ChartboostMediationMainView.swift in Sources */,
+				EAC761AF2B1A6B4100FDB0E5 /* AdTypeSelectionView.swift in Sources */,
+				EAC761B22B1A6B4100FDB0E5 /* Banner.swift in Sources */,
+				EAC761B42B1A6B4100FDB0E5 /* BannerAdView.swift in Sources */,
+				EAC761B52B1A6B4100FDB0E5 /* AdType.swift in Sources */,
+				EAC761B62B1A6B4100FDB0E5 /* ActivityDelegate.swift in Sources */,
+				EAC761B72B1A6B4100FDB0E5 /* BannerAdController.swift in Sources */,
+				EAC761B82B1A6B4100FDB0E5 /* InterstitialAdController.swift in Sources */,
+				EAC761B92B1A6B4100FDB0E5 /* ChartboostMediationInititializationView.swift in Sources */,
+				EAC761BB2B1A6B4100FDB0E5 /* FullscreenAdView.swift in Sources */,
+				EAC761BC2B1A6B4100FDB0E5 /* RewardedAdController.swift in Sources */,
+				EAC761BD2B1A6B4100FDB0E5 /* RewardedAdView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,7 +851,7 @@
 					"PRINT_NETWORK_ACTIVITY=1",
 				);
 				INFOPLIST_FILE = "ChartboostMediationDemo/ChartboostMediationDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -721,7 +883,75 @@
 				GCC_PREFIX_HEADER = "ChartboostMediationDemo/ChartboostMediationDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "ChartboostMediationDemo/ChartboostMediationDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chartboost.apollo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ChartboostMediationDemo/ChartboostMediationDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EAC761E72B1A6B4100FDB0E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 812758213C6048C552CE5416 /* Pods-ChartboostMediationDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChartboostMediationDemo/ChartboostMediationDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+					"USE_TAPJOY=1",
+					"PRINT_NETWORK_ACTIVITY=1",
+				);
+				INFOPLIST_FILE = "ChartboostMediationDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chartboost.apollo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ChartboostMediationDemo/ChartboostMediationDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EAC761E82B1A6B4100FDB0E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EE694D13617DA6474AC6767 /* Pods-ChartboostMediationDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChartboostMediationDemo/ChartboostMediationDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "ChartboostMediationDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -755,6 +985,15 @@
 			buildConfigurations = (
 				DA93B6E3182B31BC00C21472 /* Debug */,
 				DA93B6E4182B31BC00C21472 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAC761E62B1A6B4100FDB0E5 /* Build configuration list for PBXNativeTarget "ChartboostMediationDemo-SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC761E72B1A6B4100FDB0E5 /* Debug */,
+				EAC761E82B1A6B4100FDB0E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

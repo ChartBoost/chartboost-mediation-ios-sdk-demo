@@ -14,7 +14,6 @@ import UIKit
 import SwiftUI
 
 /// A view that demonstrates the loading and showing of a Chartboost Mediation SDK banner advertisement.
-@available(iOS 15.0, *)
 struct BannerAdView: View {
     @StateObject private var controller: BannerAdController
     @State private var isBusy = false

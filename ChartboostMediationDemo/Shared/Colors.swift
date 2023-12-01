@@ -18,6 +18,7 @@ extension UIColor {
     static let chartboost = UIColor(red: 123/255, green: 190/255, blue: 56/255, alpha: 1)
 }
 
+@available(iOS 13.0, *)
 extension Color {
     static let chartboost = Color(red: 123/255, green: 190/255, blue: 56/255)
 }

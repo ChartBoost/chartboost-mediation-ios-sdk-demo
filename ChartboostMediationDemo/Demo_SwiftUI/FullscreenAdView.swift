@@ -14,7 +14,6 @@ import UIKit
 import SwiftUI
 
 /// A view that demonstrates the loading and showing of a Chartboost Mediation SDK fullscreen advertisement.
-@available(iOS 15.0, *)
 struct FullscreenAdView: View {
     @StateObject private var controller: FullscreenAdController
     @State private var isBusy = false
