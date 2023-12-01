@@ -5,6 +5,7 @@
 
 import SwiftUI
 
+@main
 struct ChartboostMediationDemoApp: App {
     @StateObject private var chartboostMediationController = ChartboostMediationController.instance
     @State private var chartboostMediationIsInitialized = false
