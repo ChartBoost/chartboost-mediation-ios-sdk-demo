@@ -29,7 +29,6 @@
 		03F5649E21E6A2DF0065B61D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F5649D21E6A2DF0065B61D /* Assets.xcassets */; };
 		11D6027A1EC13FDB0075AF5E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D602791EC13FDB0075AF5E /* WebKit.framework */; };
 		11E67ECC203778E8004291DF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E67ECB203778E8004291DF /* Launch Screen.storyboard */; };
-		594B3585F25F9EB0E5B957DE /* Pods_Demo_ChartboostMediationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD62834F9A91A5C95B021EE4 /* Pods_Demo_ChartboostMediationDemo.framework */; };
 		9A100C0B2AC0F67300A7E6E1 /* Fullscreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A100C0A2AC0F67300A7E6E1 /* Fullscreen.storyboard */; };
 		9A100C0D2AC0F69E00A7E6E1 /* FullscreenAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */; };
 		9A100C0F2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A100C0E2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift */; };
@@ -88,6 +87,7 @@
 		EAC761E42B1A6B4100FDB0E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F5649D21E6A2DF0065B61D /* Assets.xcassets */; };
 		EAC761EB2B1A6E9100FDB0E5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E67ECB203778E8004291DF /* Launch Screen.storyboard */; };
 		EAEA59802B192EEC00AE5605 /* ActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA597F2B192EEC00AE5605 /* ActivityState.swift */; };
+		F6D4D5F15FDD521683225326 /* Pods_Demo_ChartboostMediationDemo_UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431EDF1AD0E67BD1EA180BD8 /* Pods_Demo_ChartboostMediationDemo_UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,9 +111,12 @@
 		03EED66621CC6CE800077FF2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		03EED66821CC6CF000077FF2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		03F5649D21E6A2DF0065B61D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0D2267070B06D7A11126C93B /* Pods-Demo-ChartboostMediationDemo-UIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-ChartboostMediationDemo-UIKit.release.xcconfig"; path = "Target Support Files/Pods-Demo-ChartboostMediationDemo-UIKit/Pods-Demo-ChartboostMediationDemo-UIKit.release.xcconfig"; sourceTree = "<group>"; };
+		0F1E90D64B32BD9A5E47802B /* Pods-Demo-ChartboostMediationDemo-UIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-ChartboostMediationDemo-UIKit.debug.xcconfig"; path = "Target Support Files/Pods-Demo-ChartboostMediationDemo-UIKit/Pods-Demo-ChartboostMediationDemo-UIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		11768D631D7F9DE200241EE4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		11D602791EC13FDB0075AF5E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		11E67ECB203778E8004291DF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		431EDF1AD0E67BD1EA180BD8 /* Pods_Demo_ChartboostMediationDemo_UIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo_ChartboostMediationDemo_UIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A54D38BD7DC129FDA14B17 /* Pods-Demo-ChartboostMediationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-ChartboostMediationDemo.release.xcconfig"; path = "Target Support Files/Pods-Demo-ChartboostMediationDemo/Pods-Demo-ChartboostMediationDemo.release.xcconfig"; sourceTree = "<group>"; };
 		64DA363266BA389A2CC55A46 /* Pods-Demo-ChartboostMediationDemo-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-ChartboostMediationDemo-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Demo-ChartboostMediationDemo-SwiftUI/Pods-Demo-ChartboostMediationDemo-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		9A100C0A2AC0F67300A7E6E1 /* Fullscreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fullscreen.storyboard; sourceTree = "<group>"; };
@@ -169,7 +172,6 @@
 		EAEA59952B193BB100AE5605 /* UInt64+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt64+Extras.swift"; sourceTree = "<group>"; };
 		EAEA59962B193BB100AE5605 /* BusyModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyModifier.swift; sourceTree = "<group>"; };
 		ED60B14688476BBA519A225E /* Pods-Demo-ChartboostMediationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-ChartboostMediationDemo.debug.xcconfig"; path = "Target Support Files/Pods-Demo-ChartboostMediationDemo/Pods-Demo-ChartboostMediationDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		FD62834F9A91A5C95B021EE4 /* Pods_Demo_ChartboostMediationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo_ChartboostMediationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +204,7 @@
 				03098A892099075F00AA27CA /* AVFoundation.framework in Frameworks */,
 				DA93B6B5182B31BC00C21472 /* UIKit.framework in Frameworks */,
 				11D6027A1EC13FDB0075AF5E /* WebKit.framework in Frameworks */,
-				594B3585F25F9EB0E5B957DE /* Pods_Demo_ChartboostMediationDemo.framework in Frameworks */,
+				F6D4D5F15FDD521683225326 /* Pods_Demo_ChartboostMediationDemo_UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +226,8 @@
 				49A54D38BD7DC129FDA14B17 /* Pods-Demo-ChartboostMediationDemo.release.xcconfig */,
 				64DA363266BA389A2CC55A46 /* Pods-Demo-ChartboostMediationDemo-SwiftUI.debug.xcconfig */,
 				BFD46B7E4181E99E0F3406AF /* Pods-Demo-ChartboostMediationDemo-SwiftUI.release.xcconfig */,
+				0F1E90D64B32BD9A5E47802B /* Pods-Demo-ChartboostMediationDemo-UIKit.debug.xcconfig */,
+				0D2267070B06D7A11126C93B /* Pods-Demo-ChartboostMediationDemo-UIKit.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -287,8 +291,8 @@
 				11768D631D7F9DE200241EE4 /* SystemConfiguration.framework */,
 				DA93B6B4182B31BC00C21472 /* UIKit.framework */,
 				11D602791EC13FDB0075AF5E /* WebKit.framework */,
-				FD62834F9A91A5C95B021EE4 /* Pods_Demo_ChartboostMediationDemo.framework */,
 				BC313CA32F6E1D13E5DB9330 /* Pods_Demo_ChartboostMediationDemo_SwiftUI.framework */,
+				431EDF1AD0E67BD1EA180BD8 /* Pods_Demo_ChartboostMediationDemo_UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -380,12 +384,12 @@
 			isa = PBXGroup;
 			children = (
 				11E67ECB203778E8004291DF /* Launch Screen.storyboard */,
-				EAEA597D2B192D4F00AE5605 /* Mediation SDK Controllers */,
 				9AC709172AC2060E00406EF6 /* AdType.swift */,
 				EAEA597F2B192EEC00AE5605 /* ActivityState.swift */,
 				E695ACFF28B588BE000160CE /* ActivityDelegate.swift */,
 				E66016E628B67A8700ABE0B7 /* Collection+Extras.swift */,
 				E695ACF528B56F88000160CE /* Colors.swift */,
+				EAEA597D2B192D4F00AE5605 /* Mediation SDK Controllers */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -534,15 +538,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo/Pods-Demo-ChartboostMediationDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo-UIKit/Pods-Demo-ChartboostMediationDemo-UIKit-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo/Pods-Demo-ChartboostMediationDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo-UIKit/Pods-Demo-ChartboostMediationDemo-UIKit-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo/Pods-Demo-ChartboostMediationDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo-UIKit/Pods-Demo-ChartboostMediationDemo-UIKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D7E24C2AC03240BAA57EBA47 /* [CP] Check Pods Manifest.lock */ = {
@@ -560,7 +564,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Demo-ChartboostMediationDemo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Demo-ChartboostMediationDemo-UIKit-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -781,7 +785,7 @@
 		};
 		DA93B6E3182B31BC00C21472 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED60B14688476BBA519A225E /* Pods-Demo-ChartboostMediationDemo.debug.xcconfig */;
+			baseConfigurationReference = 0F1E90D64B32BD9A5E47802B /* Pods-Demo-ChartboostMediationDemo-UIKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -817,7 +821,7 @@
 		};
 		DA93B6E4182B31BC00C21472 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49A54D38BD7DC129FDA14B17 /* Pods-Demo-ChartboostMediationDemo.release.xcconfig */;
+			baseConfigurationReference = 0D2267070B06D7A11126C93B /* Pods-Demo-ChartboostMediationDemo-UIKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
