@@ -6,7 +6,6 @@ abstract_target 'Demo' do
 
   pod 'ChartboostMediationSDK', '~> 4.7'
 # Uncomment any of the following lines to use provider
-#  pod 'ChartboostMediationAdapterAdColony'
 #  *** Remember to add your GADApplicationIdentifier to Info.plist if you use AdMob ***
 #  pod 'ChartboostMediationAdapterAdMob'
 #  pod 'ChartboostMediationAdapterAppLovin'
@@ -22,7 +21,6 @@ abstract_target 'Demo' do
 #  pod 'ChartboostMediationAdapterTapjoy'
 #  pod 'ChartboostMediationAdapterUnityAds'
 #  pod 'ChartboostMediationAdapterVungle'
-#  pod 'ChartboostMediationAdapterYahoo'
 
   target 'ChartboostMediationDemo-UIKit'
   target 'ChartboostMediationDemo-SwiftUI'
