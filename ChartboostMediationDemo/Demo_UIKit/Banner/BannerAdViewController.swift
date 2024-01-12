@@ -20,8 +20,8 @@ import UIKit
 ///
 class BannerAdViewController: UIViewController {
 
-    /// An instance of the `BannerAdController` that is configured to use the placement "AllNetworkAdaptiveBanner"
-    lazy var controller = BannerAdController(placementName: "AllNetworkAdaptiveBanner", activityDelegate: self)
+    /// An instance of the `BannerAdController` that is configured to use the placement "CBAdaptiveBanner"
+    lazy var controller = BannerAdController(placementName: "CBAdaptiveBanner", activityDelegate: self)
 
     /// The handler for when the load button is pushed.  Pushing it results in the banner ad being loaded.
     /// After it has successfully loaded, it can then be shown.

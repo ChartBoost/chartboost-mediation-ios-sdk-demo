@@ -56,15 +56,15 @@ struct AdTypeSelectionView: View {
                 Group {
                     switch (adType, useFullscreenApi) {
                     case (.banner, _):
-                        BannerAdView(placementName: "AllNetworkAdaptiveBanner")
+                        BannerAdView(placementName: "CBAdaptiveBanner")
                     case (.interstitial, false):
-                        InterstitialAdView(placementName: "AllNetworkInterstitial")
+                        InterstitialAdView(placementName: "CBInterstitial")
                     case (.interstitial, true):
-                        FullscreenAdView(adType: adType, placementName: "AllNetworkInterstitial")
+                        FullscreenAdView(adType: adType, placementName: "CBInterstitial")
                     case (.rewarded, false):
-                        RewardedAdView(placementName: "AllNetworkRewarded")
+                        RewardedAdView(placementName: "CBRewarded")
                     case (.rewarded, true):
-                        FullscreenAdView(adType: adType, placementName: "AllNetworkRewarded")
+                        FullscreenAdView(adType: adType, placementName: "CBRewarded")
                     }
                 }
                 .frame(minHeight: geometry.size.height)
