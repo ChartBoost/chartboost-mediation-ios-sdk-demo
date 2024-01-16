@@ -25,7 +25,7 @@ class FullscreenAdViewController: UIViewController {
     /// An instance of the `FullscreenAdController` that is configured to use the placement "AllNetworkFullscreen"
     lazy var controller = FullscreenAdController(
         activityDelegate: self,
-        placementName: adType == .interstitial ? "AllNetworkInterstitial" : "AllNetworkRewarded"
+        placementName: adType == .interstitial ? "CBInterstitial" : "CBRewarded"
     )
 
     /// The handler for when the load button is pushed.  Pushing it results in the insterstitial ad being loaded.

@@ -17,7 +17,7 @@ import ChartboostMediationSDK
 /// the `startHelium(completion:)` method is used.
 class ChartboostMediationController: NSObject, ObservableObject {
     /// The unique application identifier that is supplied by the Chartboost Mediation developer dashboard.
-    let appIdentifier: String = "5ce82fbffde3570afb4647bc"
+    let appIdentifier: String = "59c2b75ed7d75f0da04c452f"
 
     /// A static instance of this class so that it can be easily accessible throughout the application.
     static let instance: ChartboostMediationController = ChartboostMediationController()
