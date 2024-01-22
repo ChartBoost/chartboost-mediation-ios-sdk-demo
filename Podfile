@@ -18,7 +18,6 @@ abstract_target 'Demo' do
 #  pod 'ChartboostMediationAdapterMetaAudienceNetwork'
 #  pod 'ChartboostMediationAdapterMintegral'
 #  pod 'ChartboostMediationAdapterPangle'
-#  pod 'ChartboostMediationAdapterTapjoy'
 #  pod 'ChartboostMediationAdapterUnityAds'
 #  pod 'ChartboostMediationAdapterVungle'
 
