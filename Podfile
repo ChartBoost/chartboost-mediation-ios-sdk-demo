@@ -23,5 +23,6 @@ abstract_target 'Demo' do
 
   target 'ChartboostMediationDemo-UIKit'
   target 'ChartboostMediationDemo-SwiftUI'
+  target 'ChartboostMediationDemo-ObjC'
 
 end
