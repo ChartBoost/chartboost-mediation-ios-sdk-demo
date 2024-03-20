@@ -17,8 +17,6 @@ import ChartboostMediationSDK
 /// for a single placement.  This controller is also its own `HeliumBannerAdDelegate` so that it is in full control
 /// of the ad's lifecycle.
 class BannerAdController: NSObject, ObservableObject {
-    /// The entry point for the Chartboost Mediation SDK.
-    private let chartboostMediation = Helium.shared()
 
     /// The placement that is controller is for.
     private let placementName: String

@@ -122,28 +122,23 @@ class FullscreenAdController: NSObject, ObservableObject {
 /// Implementation of the Chartboost Mediation fullscreen ad delegate.
 extension FullscreenAdController: ChartboostMediationFullscreenAdDelegate {
     func didRecordImpression(ad: ChartboostMediationFullscreenAd) {
-        log(action: "Did record impression", placementName: placementName, error: nil)
+        log(action: "record impression", placementName: placementName, error: nil)
     }
 
     func didClick(ad: ChartboostMediationFullscreenAd) {
-        log(action: "Did click", placementName: placementName, error: nil)
+        log(action: "click", placementName: placementName, error: nil)
     }
 
     func didReward(ad: ChartboostMediationFullscreenAd) {
-        log(action: "Did get reward", placementName: placementName, error: nil)
+        log(action: "get reward", placementName: placementName, error: nil)
     }
 
     func didClose(ad: ChartboostMediationFullscreenAd, error: ChartboostMediationError?) {
-        if let error = error {
-            log(action: "Close error", placementName: placementName, error: error)
-        }
-        else {
-            log(action: "Did close", placementName: placementName, error: nil)
-        }
+        log(action: "close", placementName: placementName, error: error)
     }
 
     func didExpire(ad: ChartboostMediationFullscreenAd) {
-        log(action: "Did expire", placementName: placementName, error: nil)
+        log(action: "expire", placementName: placementName, error: nil)
     }
 }
 

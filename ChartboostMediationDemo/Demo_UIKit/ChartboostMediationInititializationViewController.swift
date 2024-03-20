@@ -34,7 +34,7 @@ class ChartboostMediationInititializationViewController: UIViewController {
         // within the class `ChartboostMediationController`.
         let chartboostMediationController = ChartboostMediationController.instance
 
-        // Start up the Chartboost Mediation SDK using the `startHelium` method in the
+        // Start up the Chartboost Mediation SDK using the `startChartboostMediation` method in the
         // example `ChartboostMediationController` class. Initialization completion is
         // communicated back using a completion handler.
         chartboostMediationController.startChartboostMediation { [weak self] result in
