@@ -37,7 +37,7 @@
     // Notify the demo UI
     [self.activityDelegate activityDidStart];
 
-    // loadFullscreenAd expects keywords to be `[String : String]` instead of `HeliumKeywords?`.
+    // Optional keywords that can be associated with the advertisement placement.
     NSDictionary<NSString *, NSString *>* keywordsDict = keywords.dictionary;
     ChartboostMediationAdLoadRequest *request = [[ChartboostMediationAdLoadRequest alloc] initWithPlacement:self.placementName keywords:keywordsDict];
 

@@ -51,7 +51,7 @@
     [self.view addSubview:bannerAd];
 
     // If using auto-layout, the banner view will automatically resize when new ads are loaded.
-    // The banner view can also be manually sized, see `willAppear` below.
+    // The banner view can also be manually sized.
     [NSLayoutConstraint activateConstraints:@[
         [bannerAd.centerXAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.centerXAnchor],
         [bannerAd.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor]

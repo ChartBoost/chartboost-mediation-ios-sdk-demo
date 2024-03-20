@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable, readonly) ChartboostMediationBannerView *bannerAd;
 
 /// Initialize the controller with a placement.
-/// - Parameter placementName: The name of the placementt.
+/// - Parameter placementName: The name of the placement.
 /// - Parameter activityDelegate: A delegate to communicate the start and end of asyncronous activity to.  This is applicable only for this demo.
 - (instancetype)initWithPlacementName:(NSString *)placementName activityDelegate:(id<ActivityDelegate> _Nullable)activityDelegate;
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
