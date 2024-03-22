@@ -90,11 +90,18 @@ class ChartboostMediationController: NSObject, ObservableObject {
         let notificationCenter: NotificationCenter = .default
         notificationCenter.addObserver(self, selector: #selector(didReceiveImpressionLevelTrackingData(notification:)), name: .heliumDidReceiveILRD, object: nil)
 
+        // * Optional *
+        // Provide a configuration data object before initializing the SDK.
+        let config = PreinitializationConfiguration(skippedPartnerIdentifiers: ["partner_id"])
+        if let error = chartboostMediation.setPreinitializationConfiguration(config) {
+            print("[Error] failed to set preinitialization configuration: \(error.debugDescription)")
+        }
+
         // * Required *
         // Start the Chartboost Mediation SDK using the application identifier, application signature, and
         // an instance of the `HeliumSdkDelegate` in order to be notified when Chartboost Mediation initialization
         // has completed.
-        chartboostMediation.start(withAppId: appIdentifier, options: nil, delegate: self)
+        chartboostMediation.start(withAppId: appIdentifier, delegate: self)
     }
 
     // MARK: - Private
