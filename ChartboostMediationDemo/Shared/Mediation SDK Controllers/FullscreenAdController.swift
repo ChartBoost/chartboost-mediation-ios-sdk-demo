@@ -120,7 +120,7 @@ class FullscreenAdController: NSObject, ObservableObject {
 // MARK: - Lifecycle Delegate
 
 /// Implementation of the Chartboost Mediation fullscreen ad delegate.
-extension FullscreenAdController: ChartboostMediationFullscreenAdDelegate {
+extension FullscreenAdController: FullscreenAdDelegate {
     func didRecordImpression(ad: ChartboostMediationFullscreenAd) {
         log(action: "record impression", placementName: placementName, error: nil)
     }

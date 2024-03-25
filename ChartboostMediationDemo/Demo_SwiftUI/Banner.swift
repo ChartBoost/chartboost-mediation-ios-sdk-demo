@@ -15,15 +15,15 @@ import SwiftUI
 
 /// A SwiftUI host view for a `ChartboostMediationBannerView`
 struct Banner: UIViewRepresentable {
-    typealias UIViewType = ChartboostMediationBannerView
+    typealias UIViewType = BannerView
 
-    let source: ChartboostMediationBannerView
+    let source: BannerView
 
-    func makeUIView(context: Context) -> ChartboostMediationBannerView {
+    func makeUIView(context: Context) -> BannerView {
         source
     }
 
-    func updateUIView(_ uiView: ChartboostMediationBannerView, context: Context) {
+    func updateUIView(_ uiView: BannerView, context: Context) {
 
     }
 }

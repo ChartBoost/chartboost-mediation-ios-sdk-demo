@@ -27,7 +27,7 @@
     [self loadWithKeywords:nil];
 }
 
-- (void)loadWithKeywords:(HeliumKeywords * _Nullable)keywords {
+- (void)loadWithKeywords:(CBMKeywords * _Nullable)keywords {
     // Attempt to load the ad only if it has not already been created and requested to load.
     if (self.fullscreenAd) {
         NSLog(@"[Warning] fullscreen advertisement has already been loaded");
@@ -43,9 +43,9 @@
 
     // Load the fullscreen ad, which will make a request to the network. Upon completion, a
     // ChartboostMediationFullscreenAdLoadResult will be passed to the completion block.
-    Helium *chartboostMediation = Helium.sharedHelium;
+    ChartboostMediation *chartboostMediation = ChartboostMediation.shared;
     __weak __typeof__(self) weakSelf = self;
-    [chartboostMediation loadFullscreenAdWithRequest:request completion:^(ChartboostMediationFullscreenAdLoadResult * _Nonnull result) {
+    [chartboostMediation loadFullscreenAdWithRequest:request completion:^(CBMFullscreenAdLoadResult * _Nonnull result) {
         FullscreenAdController *strongSelf = weakSelf;
 
         [strongSelf logAction:@"load" placementName:strongSelf.placementName error:result.error];

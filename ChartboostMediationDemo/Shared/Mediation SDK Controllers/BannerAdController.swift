@@ -22,7 +22,7 @@ class BannerAdController: NSObject, ObservableObject {
     private let placementName: String
 
     /// An instance of the banner ad that this class controls the lifecycle of.
-    @Published private(set) var bannerAd: ChartboostMediationBannerView?
+    @Published private(set) var bannerAd: BannerView?
 
     /// A state for demo purposes only so that long activity processes can be communicated to a view.
     @Published private(set) var activityState: ActivityState = .idle
@@ -49,15 +49,15 @@ class BannerAdController: NSObject, ObservableObject {
             return
         }
 
-        bannerAd = ChartboostMediationBannerView()
+        bannerAd = BannerView()
         bannerAd?.delegate = self
 
         // In this demo, we will load a 6x1 banner with the max width of the screen.
         // If you are instead loading a fixed size banner placement, you can do that with:
         // ChartboostMediationBannerSize.standard, ChartboostMediationBannerSize.medium, or
         // ChartboostMediationBannerSize.leaderboard.
-        let size = ChartboostMediationBannerSize.adaptive6x1(width: width)
-        let request = ChartboostMediationBannerLoadRequest(
+        let size = BannerSize.adaptive6x1(width: width)
+        let request = BannerLoadRequest(
             placement: placementName,
             size: size
         )
@@ -97,9 +97,9 @@ class BannerAdController: NSObject, ObservableObject {
 // MARK: - Lifecycle Delegate
 
 /// Implementation of the Chartboost Mediation banner view delegate.
-extension BannerAdController: ChartboostMediationBannerViewDelegate {
+extension BannerAdController: BannerViewDelegate {
 
-    func willAppear(bannerView: ChartboostMediationBannerView) {
+    func willAppear(bannerView: BannerView) {
         // Called when a new ad is about to appear inside of `bannerView`. This method can be used
         // to manually size `bannerView` if desired:
         // if let size = bannerView.size?.size {

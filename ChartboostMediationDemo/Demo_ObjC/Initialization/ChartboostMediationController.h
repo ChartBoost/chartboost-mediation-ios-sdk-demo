@@ -21,7 +21,7 @@ typedef void (^ChartboostMediationControllerCompletionBlock)(BOOL success, NSErr
 @property (nonatomic, class, readonly) ChartboostMediationController *sharedInstance;
 
 /// The shared instances of the Chartboost Mediation SDK.
-@property (nonatomic, class, readonly) Helium *chartboostMediation;
+@property (nonatomic, class, readonly) ChartboostMediation *chartboostMediation;
 
 /// A property that can be used to define and update the user's GDPR settings.
 /// For more information about GDPR, see: https://answers.chartboost.com/en-us/articles/115001489613
