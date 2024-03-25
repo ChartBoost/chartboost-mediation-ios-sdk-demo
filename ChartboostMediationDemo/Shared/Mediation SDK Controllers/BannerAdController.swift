@@ -14,7 +14,7 @@ import UIKit
 import ChartboostMediationSDK
 
 /// A basic implementation of a controller for Chartboost Mediation banner ads.  It is capable of loading and showing a banner ad
-/// for a single placement.  This controller is also its own `HeliumBannerAdDelegate` so that it is in full control
+/// for a single placement. This controller is also its own `ChartboostMediationBannerViewDelegate` so that it is in full control
 /// of the ad's lifecycle.
 class BannerAdController: NSObject, ObservableObject {
 

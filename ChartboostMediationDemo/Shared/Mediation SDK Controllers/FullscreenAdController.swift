@@ -18,7 +18,7 @@ import ChartboostMediationSDK
 /// of the ad's lifecycle.
 class FullscreenAdController: NSObject, ObservableObject {
     /// The entry point for the Chartboost Mediation SDK.
-    private let chartboostMediation = Helium.shared()
+    private let chartboostMediation = ChartboostMediation.shared()
 
     /// The placement that this controller is for.
     private let placementName: String
@@ -42,7 +42,7 @@ class FullscreenAdController: NSObject, ObservableObject {
 
     /// Load the fullscreen ad.
     /// - Parameter keywords: Optional keywords that can be associated with the advertisement placement.
-    func load(keywords: HeliumKeywords? = nil) {
+    func load(keywords: Keywords? = nil) {
         // Attempt to load the ad only if it has not already been created and requested to load.
         guard fullscreenAd == nil else {
             print("[Warning] fullscreen advertisement has already been loaded")

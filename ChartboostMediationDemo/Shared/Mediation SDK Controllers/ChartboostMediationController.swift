@@ -23,7 +23,7 @@ class ChartboostMediationController: NSObject, ObservableObject {
     static let instance: ChartboostMediationController = ChartboostMediationController()
 
     /// The shared instances of the Chartboost Mediation SDK.
-    let chartboostMediation = Helium.shared()
+    let chartboostMediation = ChartboostMediation.shared()
 
     /// A convenient structure that defines a user's GDPR privacy settings.
     /// For more information about GDPR, see: https://answers.chartboost.com/en-us/articles/115001489613
@@ -86,14 +86,19 @@ class ChartboostMediationController: NSObject, ObservableObject {
         // * Optional *
         // Enable test mode to make test ads available.
         // Do not enable test mode in production builds.
-        Helium.isTestModeEnabled = true
+        ChartboostMediation.isTestModeEnabled = true
 
         // * Optional *
         // Register for impression level revenue data notifications. The Chartboost Mediation SDK publishes this data on the `default`
         // instances of the NotificationCenter. In this demo, the method `didReceiveImpressionLevelTrackingData` receives
         // this data, parses it, and logs it to the console.
         let notificationCenter: NotificationCenter = .default
-        notificationCenter.addObserver(self, selector: #selector(didReceiveImpressionLevelTrackingData(notification:)), name: .heliumDidReceiveILRD, object: nil)
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(didReceiveImpressionLevelTrackingData(notification:)),
+            name: .chartboostMediationDidReceiveILRD,
+            object: nil
+        )
 
         // * Optional *
         // Provide a configuration data object before initializing the SDK.
@@ -132,7 +137,7 @@ class ChartboostMediationController: NSObject, ObservableObject {
     }
 
     @objc private func didReceiveImpressionLevelTrackingData(notification: Notification) {
-        guard let ilrd = notification.object as? HeliumImpressionData else {
+        guard let ilrd = notification.object as? ImpressionData else {
             return
         }
         print("[ILRD] received impression level tracking data")
