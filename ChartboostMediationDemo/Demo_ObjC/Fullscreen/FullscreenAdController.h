@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <ChartboostMediationSDK/ChartboostMediationSDK.h>
+#import <ChartboostMediationSDK/ChartboostMediationSDK-Swift.h>
 #import "ActivityDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN

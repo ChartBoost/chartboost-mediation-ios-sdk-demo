@@ -6,7 +6,7 @@
 #import "UIViewController+ActivityDelegate.h"
 #import <objc/runtime.h>
 #import "BusyViewController.h"
-#import <ChartboostMediationSDK/ChartboostMediationSDK.h>
+#import <ChartboostMediationSDK/ChartboostMediationSDK-Swift.h>
 
 static char kAssociatedObjectKey;
 

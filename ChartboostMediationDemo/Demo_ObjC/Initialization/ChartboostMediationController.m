@@ -50,7 +50,7 @@
     // Start the Chartboost Mediation SDK using the application identifier, application signature, and
     // an instance of the `HeliumSdkDelegate` in order to be notified when Chartboost Mediation initialization
     // has completed.
-    [ChartboostMediationController.chartboostMediation startWithAppId:@"59c2b75ed7d75f0da04c452f" options:nil delegate:self];
+    [ChartboostMediationController.chartboostMediation startWithAppId:@"59c2b75ed7d75f0da04c452f" delegate:self];
 }
 
 - (void)setGdpr:(GDPR)gdpr {
