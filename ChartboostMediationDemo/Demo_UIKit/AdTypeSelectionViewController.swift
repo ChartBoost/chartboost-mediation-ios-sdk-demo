@@ -22,18 +22,13 @@ import UIKit
 /// - `BannerAdController`
 /// - `BannerAdViewController`
 ///
-/// To see how to utilize interstitial advertisements, look at the following classes:
-/// - `InterstitialAdController`
-/// - `InterstitialAdViewController`
+/// To see how to utilize fullscreen advertisements, look at the following classes:
+/// - `FullscreenAdController`
+/// - `FullscreenAdViewController`
 ///
-/// To see how to utilize rewarded advertisemetns, look at the following classes:
-/// - `RewardedAdController`
-/// - `RewardedAdViewController`
-/// 
 class AdTypeSelectionViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView!
-    @IBOutlet var apiToggle: UISwitch!
 
     // MARK: - Lifecycle
 
@@ -62,28 +57,24 @@ class AdTypeSelectionViewController: UIViewController {
 
     func adView(forAdType adType: AdType) -> UIViewController? {
         let title = adType.title
-        if apiToggle.isOn {
-            // If we're using the fullscreen API, we need to set the ad type for Rewarded & Interstitial
-            switch adType {
-            case .banner:
-                // For banner, we do exactly the same thing as in the non-useFullscreeenAPI case
-                return UIStoryboard(name: title, bundle: nil).instantiateViewController(withIdentifier: title)
-            // The FullscreenAd API is used for both interstitial and rewarded ads
-            case .interstitial:
-                // A cast to FullscreenAdViewController is necessary so we can set .adType
-                let interstitialViewController = UIStoryboard(name: "Fullscreen", bundle: nil)
-                    .instantiateViewController(withIdentifier: "Fullscreen") as? FullscreenAdViewController
-                interstitialViewController?.adType = adType
-                return interstitialViewController
-            case .rewarded:
-                // A cast to FullscreenAdViewController is necessary so we can set .adType
-                let rewardedViewController = UIStoryboard(name: "Fullscreen", bundle: nil)
-                    .instantiateViewController(withIdentifier: "Fullscreen") as? FullscreenAdViewController
-                rewardedViewController?.adType = adType
-                return rewardedViewController
-            }
-        } else {
+        // If we're using the fullscreen API, we need to set the ad type for Rewarded & Interstitial
+        switch adType {
+        case .banner:
+            // For banner, we do exactly the same thing as in the non-useFullscreeenAPI case
             return UIStoryboard(name: title, bundle: nil).instantiateViewController(withIdentifier: title)
+        // The FullscreenAd API is used for both interstitial and rewarded ads
+        case .interstitial:
+            // A cast to FullscreenAdViewController is necessary so we can set .adType
+            let interstitialViewController = UIStoryboard(name: "Fullscreen", bundle: nil)
+                .instantiateViewController(withIdentifier: "Fullscreen") as? FullscreenAdViewController
+            interstitialViewController?.adType = adType
+            return interstitialViewController
+        case .rewarded:
+            // A cast to FullscreenAdViewController is necessary so we can set .adType
+            let rewardedViewController = UIStoryboard(name: "Fullscreen", bundle: nil)
+                .instantiateViewController(withIdentifier: "Fullscreen") as? FullscreenAdViewController
+            rewardedViewController?.adType = adType
+            return rewardedViewController
         }
     }
 }

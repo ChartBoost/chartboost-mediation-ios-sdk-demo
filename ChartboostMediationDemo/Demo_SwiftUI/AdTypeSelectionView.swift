@@ -15,7 +15,6 @@ import SwiftUI
 /// A view that lists the different Chartboost Mediation SDK advertisement types. Selecting one will
 /// navigate to a view that can be used to load and show that type of advertisement.
 struct AdTypeSelectionView: View {
-    @State private var useFullscreenApi = true
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
@@ -29,8 +28,6 @@ struct AdTypeSelectionView: View {
                             .padding(.vertical, 8)
                         Spacer()
                     }
-                    Toggle("Use Fullscreen API", isOn: $useFullscreenApi)
-                        .padding(.horizontal)
                     List {
                         ForEach(AdType.allCases, id: \.self) { adType in
                             NavigationLink(destination: adView(forAdType: adType)) {
@@ -54,16 +51,12 @@ struct AdTypeSelectionView: View {
         GeometryReader { geometry in
             ScrollView {
                 Group {
-                    switch (adType, useFullscreenApi) {
-                    case (.banner, _):
+                    switch adType{
+                    case .banner:
                         BannerAdView(placementName: "CBAdaptiveBanner")
-                    case (.interstitial, false):
-                        InterstitialAdView(placementName: "CBInterstitial")
-                    case (.interstitial, true):
+                    case .interstitial:
                         FullscreenAdView(adType: adType, placementName: "CBInterstitial")
-                    case (.rewarded, false):
-                        RewardedAdView(placementName: "CBRewarded")
-                    case (.rewarded, true):
+                    case .rewarded:
                         FullscreenAdView(adType: adType, placementName: "CBRewarded")
                     }
                 }

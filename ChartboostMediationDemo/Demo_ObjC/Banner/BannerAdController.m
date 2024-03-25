@@ -4,7 +4,7 @@
 // license that can be found in the LICENSE file.
 
 #import "BannerAdController.h"
-#import <ChartboostMediationSDK/ChartboostMediationSDK.h>
+#import <ChartboostMediationSDK/ChartboostMediationSDK-Swift.h>
 
 @interface BannerAdController ()
 
