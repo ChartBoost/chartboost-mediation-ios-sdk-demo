@@ -24,7 +24,7 @@ class FullscreenAdController: NSObject, ObservableObject {
     private let placementName: String
 
     /// An instance of the fullscreen ad that this class controls the lifecycle of when using the new API.
-    private var fullscreenAd: ChartboostMediationFullscreenAd?
+    private var fullscreenAd: FullscreenAd?
 
     /// A state for demo purposes only so that long activity processes can be communicated to a view.
     @Published private(set) var activityState: ActivityState = .idle
@@ -55,7 +55,7 @@ class FullscreenAdController: NSObject, ObservableObject {
 
         // loadFullscreenAd expects keywords to be `[String : String]` instead of `HeliumKeywords?`.
         let keywords = keywords?.dictionary ?? [:]
-        let request = ChartboostMediationAdLoadRequest(placement: placementName, keywords: keywords)
+        let request = AdLoadRequest(placement: placementName, keywords: keywords)
         // Load the fullscreen ad, which will make a request to the network. Upon completion, a
         // ChartboostMediationFullscreenAdLoadResult will be passed to the completion block.
         chartboostMediation.loadFullscreenAd(with: request) { [weak self] result in
@@ -121,23 +121,23 @@ class FullscreenAdController: NSObject, ObservableObject {
 
 /// Implementation of the Chartboost Mediation fullscreen ad delegate.
 extension FullscreenAdController: FullscreenAdDelegate {
-    func didRecordImpression(ad: ChartboostMediationFullscreenAd) {
+    func didRecordImpression(ad: FullscreenAd) {
         log(action: "record impression", placementName: placementName, error: nil)
     }
 
-    func didClick(ad: ChartboostMediationFullscreenAd) {
+    func didClick(ad: FullscreenAd) {
         log(action: "click", placementName: placementName, error: nil)
     }
 
-    func didReward(ad: ChartboostMediationFullscreenAd) {
+    func didReward(ad: FullscreenAd) {
         log(action: "get reward", placementName: placementName, error: nil)
     }
 
-    func didClose(ad: ChartboostMediationFullscreenAd, error: ChartboostMediationError?) {
+    func didClose(ad: FullscreenAd, error: ChartboostMediationError?) {
         log(action: "close", placementName: placementName, error: error)
     }
 
-    func didExpire(ad: ChartboostMediationFullscreenAd) {
+    func didExpire(ad: FullscreenAd) {
         log(action: "expire", placementName: placementName, error: nil)
     }
 }

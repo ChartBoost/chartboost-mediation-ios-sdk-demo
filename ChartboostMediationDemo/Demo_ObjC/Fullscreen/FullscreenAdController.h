@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSString *placementName;
 
 /// An instance of the fullscreen ad that this class controls the lifecycle of when using the new API.
-@property (nonatomic, strong, nullable, readonly) id<ChartboostMediationFullscreenAd> fullscreenAd;
+@property (nonatomic, strong, nullable, readonly) id<CBMFullscreenAd> fullscreenAd;
 
 /// Initialize the controller with a placement.
 /// - Parameter placementName: The name of the placementt.

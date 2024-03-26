@@ -8,7 +8,7 @@
 @interface FullscreenAdController ()
 
 @property (nonatomic, weak, nullable) id<ActivityDelegate> activityDelegate;
-@property (nonatomic, strong, nullable) id<ChartboostMediationFullscreenAd> fullscreenAd;
+@property (nonatomic, strong, nullable) id<CBMFullscreenAd> fullscreenAd;
 
 @end
 
@@ -39,7 +39,7 @@
 
     // Optional keywords that can be associated with the advertisement placement.
     NSDictionary<NSString *, NSString *>* keywordsDict = keywords.dictionary;
-    ChartboostMediationAdLoadRequest *request = [[ChartboostMediationAdLoadRequest alloc] initWithPlacement:self.placementName keywords:keywordsDict];
+    CBMAdLoadRequest *request = [[CBMAdLoadRequest alloc] initWithPlacement:self.placementName keywords:keywordsDict];
 
     // Load the fullscreen ad, which will make a request to the network. Upon completion, a
     // ChartboostMediationFullscreenAdLoadResult will be passed to the completion block.
@@ -49,7 +49,7 @@
         FullscreenAdController *strongSelf = weakSelf;
 
         [strongSelf logAction:@"load" placementName:strongSelf.placementName error:result.error];
-        id<ChartboostMediationFullscreenAd> ad = result.ad;
+        id<CBMFullscreenAd> ad = result.ad;
         if (ad) {
             ad.delegate = strongSelf;
             strongSelf.fullscreenAd = ad;
@@ -67,7 +67,7 @@
 }
 
 - (void)showWithViewController:(UIViewController *)viewController {
-    id<ChartboostMediationFullscreenAd> fullscreenAd = self.fullscreenAd;
+    id<CBMFullscreenAd> fullscreenAd = self.fullscreenAd;
 
     // Attempt to show a fullscreen ad only if it has been loaded.
     if (fullscreenAd == nil) {
@@ -78,7 +78,7 @@
     // Once you've loaded a ChartboostMediationFullscreenAd, it can be shown immediately.
 
     // Show the ad using the specified view controller.  Upon completion, a ChartboostMediationAdShowResult will be passed to the completion block.
-    [fullscreenAd showWith:viewController completion:^(ChartboostMediationAdShowResult * _Nonnull result) {
+    [fullscreenAd showWith:viewController completion:^(CBMAdShowResult * _Nonnull result) {
         [self logAction:@"show" placementName:self.placementName error:result.error];
 
         // For simplicity, an ad that has failed to show will be destroyed.
@@ -88,27 +88,27 @@
     }];
 }
 
-- (void)didRecordImpressionWithAd:(id<ChartboostMediationFullscreenAd>)ad {
+- (void)didRecordImpressionWithAd:(id<CBMFullscreenAd>)ad {
     [self logAction:@"record impression" placementName:self.placementName error:nil];
 }
 
-- (void)didClickWithAd:(id<ChartboostMediationFullscreenAd>)ad {
+- (void)didClickWithAd:(id<CBMFullscreenAd>)ad {
     [self logAction:@"click" placementName:self.placementName error:nil];
 }
 
-- (void)didRewardWithAd:(id<ChartboostMediationFullscreenAd>)ad {
+- (void)didRewardWithAd:(id<CBMFullscreenAd>)ad {
     [self logAction:@"get reward" placementName:self.placementName error:nil];
 }
 
-- (void)didCloseWithAd:(id<ChartboostMediationFullscreenAd>)ad error:(ChartboostMediationError *)error {
+- (void)didCloseWithAd:(id<CBMFullscreenAd>)ad error:(CBMError *)error {
     [self logAction:@"close" placementName:self.placementName error:error];
 }
 
-- (void)didExpireWithAd:(id<ChartboostMediationFullscreenAd>)ad {
+- (void)didExpireWithAd:(id<CBMFullscreenAd>)ad {
     [self logAction:@"expire" placementName:self.placementName error:nil];
 }
 
-- (void)logAction:(NSString *)action placementName:(NSString *)placementName error:(ChartboostMediationError *)error {
+- (void)logAction:(NSString *)action placementName:(NSString *)placementName error:(CBMError *)error {
     if (error) {
         NSLog(@"[Error] did %@ fullscreen advertisement for placement '%@': '%@' (code: %li)", action, placementName, error.localizedDescription, error.code);
     }

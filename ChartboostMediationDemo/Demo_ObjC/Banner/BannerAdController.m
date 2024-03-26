@@ -52,7 +52,7 @@
     __weak __typeof__(self) weakSelf = self;
     [self.bannerAd loadWith:request viewController:viewController completion:^(CBMBannerLoadResult * _Nonnull result) {
         BannerAdController *strongSelf = weakSelf;
-        ChartboostMediationError *error = result.error;
+        CBMError *error = result.error;
 
         [weakSelf logAction:@"load" placementName:strongSelf.placementName error:error];
 
@@ -77,7 +77,7 @@
     // This method can also be used to check other updated properties of `bannerView`.
 }
 
-- (void)logAction:(NSString *)action placementName:(NSString *)placementName error:(ChartboostMediationError *)error {
+- (void)logAction:(NSString *)action placementName:(NSString *)placementName error:(CBMError *)error {
     if (error) {
         NSLog(@"[Error] did %@ banner advertisement for placement '%@': '%@' (code: %li)", action, placementName, error.localizedDescription, error.code);
     }
