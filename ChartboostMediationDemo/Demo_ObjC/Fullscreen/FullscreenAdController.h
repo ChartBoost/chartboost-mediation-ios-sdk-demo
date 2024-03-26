@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// A basic implementation of a controller for Chartboost Mediation fullscreen ads.  It is capable of loading and showing a full screen fullscreen ad
-/// for a single placement.  This controller is also its own `ChartboostMediationFullscreenAdDelegate` so that it is in full control
+/// for a single placement. This controller is also its own `CBMFullscreenAdDelegate` so that it is in full control
 /// of the ad's lifecycle.
 @interface FullscreenAdController : NSObject <CBMFullscreenAdDelegate>
 

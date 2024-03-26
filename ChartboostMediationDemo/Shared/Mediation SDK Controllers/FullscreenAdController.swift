@@ -14,7 +14,7 @@ import UIKit
 import ChartboostMediationSDK
 
 /// A basic implementation of a controller for Chartboost Mediation fullscreen ads.  It is capable of loading and showing a full screen fullscreen ad
-/// for a single placement.  This controller is also its own `CHBHeliumFullscreenAdDelegate` so that it is in full control
+/// for a single placement. This controller is also its own `FullscreenAdDelegate` so that it is in full control
 /// of the ad's lifecycle.
 class FullscreenAdController: NSObject, ObservableObject {
     /// The entry point for the Chartboost Mediation SDK.
