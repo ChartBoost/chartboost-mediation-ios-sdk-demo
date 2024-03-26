@@ -14,17 +14,17 @@ import UIKit
 import ChartboostMediationSDK
 
 /// A basic implementation of a controller for Chartboost Mediation fullscreen ads.  It is capable of loading and showing a full screen fullscreen ad
-/// for a single placement.  This controller is also its own `CHBHeliumFullscreenAdDelegate` so that it is in full control
+/// for a single placement. This controller is also its own `FullscreenAdDelegate` so that it is in full control
 /// of the ad's lifecycle.
 class FullscreenAdController: NSObject, ObservableObject {
     /// The entry point for the Chartboost Mediation SDK.
-    private let chartboostMediation = Helium.shared()
+    private let chartboostMediation = ChartboostMediation.shared()
 
     /// The placement that this controller is for.
     private let placementName: String
 
     /// An instance of the fullscreen ad that this class controls the lifecycle of when using the new API.
-    private var fullscreenAd: ChartboostMediationFullscreenAd?
+    private var fullscreenAd: FullscreenAd?
 
     /// A state for demo purposes only so that long activity processes can be communicated to a view.
     @Published private(set) var activityState: ActivityState = .idle
@@ -42,7 +42,7 @@ class FullscreenAdController: NSObject, ObservableObject {
 
     /// Load the fullscreen ad.
     /// - Parameter keywords: Optional keywords that can be associated with the advertisement placement.
-    func load(keywords: HeliumKeywords? = nil) {
+    func load(keywords: Keywords? = nil) {
         // Attempt to load the ad only if it has not already been created and requested to load.
         guard fullscreenAd == nil else {
             print("[Warning] fullscreen advertisement has already been loaded")
@@ -55,7 +55,7 @@ class FullscreenAdController: NSObject, ObservableObject {
 
         // loadFullscreenAd expects keywords to be `[String : String]` instead of `HeliumKeywords?`.
         let keywords = keywords?.dictionary ?? [:]
-        let request = ChartboostMediationAdLoadRequest(placement: placementName, keywords: keywords)
+        let request = AdLoadRequest(placement: placementName, keywords: keywords)
         // Load the fullscreen ad, which will make a request to the network. Upon completion, a
         // ChartboostMediationFullscreenAdLoadResult will be passed to the completion block.
         chartboostMediation.loadFullscreenAd(with: request) { [weak self] result in
@@ -120,24 +120,24 @@ class FullscreenAdController: NSObject, ObservableObject {
 // MARK: - Lifecycle Delegate
 
 /// Implementation of the Chartboost Mediation fullscreen ad delegate.
-extension FullscreenAdController: ChartboostMediationFullscreenAdDelegate {
-    func didRecordImpression(ad: ChartboostMediationFullscreenAd) {
+extension FullscreenAdController: FullscreenAdDelegate {
+    func didRecordImpression(ad: FullscreenAd) {
         log(action: "record impression", placementName: placementName, error: nil)
     }
 
-    func didClick(ad: ChartboostMediationFullscreenAd) {
+    func didClick(ad: FullscreenAd) {
         log(action: "click", placementName: placementName, error: nil)
     }
 
-    func didReward(ad: ChartboostMediationFullscreenAd) {
+    func didReward(ad: FullscreenAd) {
         log(action: "get reward", placementName: placementName, error: nil)
     }
 
-    func didClose(ad: ChartboostMediationFullscreenAd, error: ChartboostMediationError?) {
+    func didClose(ad: FullscreenAd, error: ChartboostMediationError?) {
         log(action: "close", placementName: placementName, error: error)
     }
 
-    func didExpire(ad: ChartboostMediationFullscreenAd) {
+    func didExpire(ad: FullscreenAd) {
         log(action: "expire", placementName: placementName, error: nil)
     }
 }

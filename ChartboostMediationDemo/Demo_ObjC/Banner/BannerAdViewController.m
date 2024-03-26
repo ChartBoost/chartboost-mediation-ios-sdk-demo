@@ -35,7 +35,7 @@
 }
 
 - (IBAction)showButtonPushed:(id)sender {
-    ChartboostMediationBannerView *bannerAd = self.controller.bannerAd;
+    CBMBannerView *bannerAd = self.controller.bannerAd;
 
     // Attempt to show an ad only if it has been loaded.
     if (bannerAd == nil) {

@@ -11,15 +11,15 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// A basic implementation of a controller for Chartboost Mediation banner ads.  It is capable of loading and showing a banner ad
-/// for a single placement.  This controller is also its own `ChartboostMediationBannerViewDelegate` so that it is in full control
+/// for a single placement. This controller is also its own `CBMBannerViewDelegate` so that it is in full control
 /// of the ad's lifecycle.
-@interface BannerAdController : NSObject <ChartboostMediationBannerViewDelegate>
+@interface BannerAdController : NSObject <CBMBannerViewDelegate>
 
 /// The placement that is controller is for.
 @property (nonatomic, readonly) NSString *placementName;
 
 /// An instance of the banner ad that this class controls the lifecycle of.
-@property (nonatomic, strong, nullable, readonly) ChartboostMediationBannerView *bannerAd;
+@property (nonatomic, strong, nullable, readonly) CBMBannerView *bannerAd;
 
 /// Initialize the controller with a placement.
 /// - Parameter placementName: The name of the placement.

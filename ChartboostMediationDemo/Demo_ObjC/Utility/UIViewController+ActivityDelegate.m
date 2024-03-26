@@ -45,7 +45,7 @@ static char kAssociatedObjectKey;
 }
 
 - (void)presentAlertWithMessage:(NSString *)message error:(NSError * _Nullable)error {
-    ChartboostMediationError *chartboostError = (ChartboostMediationError *)error;
+    CBMError *chartboostError = (CBMError *)error;
     NSString *alertMessage;
     if (chartboostError) {
         alertMessage = [NSString stringWithFormat:@"%@\n\n%@", message, chartboostError.localizedFailureReason];

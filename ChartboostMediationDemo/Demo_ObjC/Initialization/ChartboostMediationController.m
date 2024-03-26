@@ -26,8 +26,8 @@
     return sharedInstance;
 }
 
-+ (Helium *)chartboostMediation {
-    return Helium.sharedHelium;
++ (ChartboostMediation *)chartboostMediation {
+    return ChartboostMediation.shared;
 }
 
 - (void)startChartboostMediationWithCompletion:(ChartboostMediationControllerCompletionBlock)completionHandler {
@@ -44,7 +44,10 @@
     // instances of the NotificationCenter. In this demo, the method `didReceiveImpressionLevelTrackingData` receives
     // this data, parses it, and logs it to the console.
     NSNotificationCenter *notificationCenter = NSNotificationCenter.defaultCenter;
-    [notificationCenter addObserver:self selector:@selector(didReceiveImpressionLevelTrackingData:) name:NSNotification.heliumDidReceiveILRD object:nil];
+    [notificationCenter addObserver:self
+                           selector:@selector(didReceiveImpressionLevelTrackingData:)
+                               name:NSNotification.chartboostMediationDidReceiveILRD
+                             object:nil];
 
     // * Required *
     // Start the Chartboost Mediation SDK using the application identifier, application signature, and
@@ -77,14 +80,14 @@
 }
 
 - (void)didReceiveImpressionLevelTrackingData:(NSNotification *)notification {
-    HeliumImpressionData *ilrd = (HeliumImpressionData *)notification.object;
+    CBMImpressionData *ilrd = (CBMImpressionData *)notification.object;
     if (ilrd) {
         NSLog(@"[ILRD] received impression level tracking data");
         NSLog(@"[ILRD] %@", ilrd.jsonData);
     }
 }
 
-- (void)heliumDidStartWithError:(ChartboostMediationError *)error {
+- (void)heliumDidStartWithError:(CBMError *)error {
     if (error) {
         NSLog(@"[Error] failed to start Chartboost Mediation: '%@'", [error localizedDescription]);
         self.completionHandler(NO, error);

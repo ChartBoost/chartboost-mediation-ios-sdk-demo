@@ -10,7 +10,7 @@ abstract_target 'Demo' do
 #  pod 'ChartboostMediationAdapterAdMob'
 #  pod 'ChartboostMediationAdapterAppLovin'
 #  pod 'ChartboostMediationAdapterAmazonPublisherServices'
-  pod 'ChartboostMediationAdapterChartboost'
+#  pod 'ChartboostMediationAdapterChartboost' # TODO: uncomment this for Mediation 5 when it's ready
 #  pod 'ChartboostMediationAdapterDigitalTurbineExchange'
 #  pod 'ChartboostMediationAdapterGoogleBidding'
 #  pod 'ChartboostMediationAdapterInMobi'
