@@ -3,7 +3,7 @@
 //  ChartboostMediationDemo
 //
 //  Created by Alexander Rice on 9/25/23.
-//  Copyright © 2023 Chartboost. All rights reserved.
+//  Copyright © 2023-2024 Chartboost. All rights reserved.
 //
 
 import UIKit
