@@ -16,6 +16,8 @@ import ChartboostMediationSDK
 /// An example view controller that can queue and display fullscreen ads
 ///
 class QueuedAdViewController: UIViewController {
+    // A FullscreenAdQueue can only load ads for a single mediation placement, and
+    // for each placement ID there can only be one FullscreenAdQueue.
     let queue: FullscreenAdQueue = FullscreenAdQueue.queue(forPlacement: "CBInterstitial")
     var queueDelegate: QueueDelegate?
 
@@ -36,14 +38,19 @@ class QueuedAdViewController: UIViewController {
 
     /// The handler for when the show button is pushed.  Pushing it results in the fullscreen ad being shown if it was successfully loaded.
     @IBAction func showButtonPushed() {
+        // getNextAd() returns the oldest ad in the queue, or nil if the queue is empty.
         if let ad = queue.getNextAd() {
+            // Update the UI now that an ad has been removed from the queue
+            updateUI()
             ad.show(with: self) { _ in
             }
         }
     }
 
     override func viewDidLoad() {
+        // Setting a delegate so we can react when ads are loaded.
         queueDelegate = QueueDelegate(controller: self)
+        // Holding onto a reference to the delegate, because FullScreenAdQueue only holds a weak reference to it.
         queue.delegate = queueDelegate
         updateUI()
     }
@@ -66,6 +73,7 @@ class QueuedAdViewController: UIViewController {
         showButton.isEnabled = queue.hasNextAd
     }
 
+    // A FullscreenAdQueueDelegate can be used to receive updates about queue events.
     class QueueDelegate: FullscreenAdQueueDelegate {
         let queuedAdViewController: QueuedAdViewController
         init(controller: QueuedAdViewController) {
@@ -73,6 +81,9 @@ class QueuedAdViewController: UIViewController {
         }
         func fullscreenAdQueue(_ adQueue: FullscreenAdQueue, didFinishLoadingWithResult: ChartboostMediationAdLoadResult, numberOfAdsReady: Int) {
             queuedAdViewController.updateUI()
+        }
+        func fullscreenAdQueueDidRemoveExpiredAd(_ adQueue: FullscreenAdQueue, numberOfAdsReady: Int) {
+            print("Expired ad removed from queue, \(numberOfAdsReady) loaded ads remaining.")
         }
     }
 
