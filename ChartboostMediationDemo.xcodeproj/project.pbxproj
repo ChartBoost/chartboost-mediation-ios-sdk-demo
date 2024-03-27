@@ -34,6 +34,8 @@
 		9A100C0D2AC0F69E00A7E6E1 /* FullscreenAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */; };
 		9A100C0F2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A100C0E2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift */; };
 		9AC709182AC2060E00406EF6 /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC709172AC2060E00406EF6 /* AdType.swift */; };
+		9ACCFA0B2BB24C1900CD89B7 /* QueuedAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCFA0A2BB24C1900CD89B7 /* QueuedAdViewController.swift */; };
+		9ACCFA0E2BB253A900CD89B7 /* Queued.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ACCFA0D2BB253A900CD89B7 /* Queued.storyboard */; };
 		9EB895C6AB0C2B5D42650E4D /* Pods_Demo_ChartboostMediationDemo_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC313CA32F6E1D13E5DB9330 /* Pods_Demo_ChartboostMediationDemo_SwiftUI.framework */; };
 		B57E85E51A1FD5C400E6D9AD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57E85E41A1FD5C400E6D9AD /* AdSupport.framework */; };
 		B9EF66FE2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B9EF66FD2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy */; };
@@ -143,6 +145,8 @@
 		9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenAdController.swift; sourceTree = "<group>"; };
 		9A100C0E2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenAdViewController.swift; sourceTree = "<group>"; };
 		9AC709172AC2060E00406EF6 /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
+		9ACCFA0A2BB24C1900CD89B7 /* QueuedAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueuedAdViewController.swift; sourceTree = "<group>"; };
+		9ACCFA0D2BB253A900CD89B7 /* Queued.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Queued.storyboard; path = ChartboostMediationDemo/Demo_UIKit/Queued/Queued.storyboard; sourceTree = SOURCE_ROOT; };
 		A789153D50F7649968038568 /* Pods-Demo-ChartboostMediationDemo-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-ChartboostMediationDemo-ObjC.debug.xcconfig"; path = "Target Support Files/Pods-Demo-ChartboostMediationDemo-ObjC/Pods-Demo-ChartboostMediationDemo-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		B57E85E41A1FD5C400E6D9AD /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		B9EF66FD2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -303,6 +307,15 @@
 				9A100C0E2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift */,
 			);
 			path = Fullscreen;
+			sourceTree = "<group>";
+		};
+		9ACCFA0C2BB24C2600CD89B7 /* Queued */ = {
+			isa = PBXGroup;
+			children = (
+				9ACCFA0D2BB253A900CD89B7 /* Queued.storyboard */,
+				9ACCFA0A2BB24C1900CD89B7 /* QueuedAdViewController.swift */,
+			);
+			path = Queued;
 			sourceTree = "<group>";
 		};
 		DA93B6A4182B31BC00C21472 = {
@@ -500,6 +513,7 @@
 				E62D990728B52CFE0035F1D2 /* AppDelegate.swift */,
 				E695ACFD28B57FEC000160CE /* ChartboostMediationInititializationViewController.swift */,
 				E695ACF328B569C3000160CE /* AdTypeSelectionViewController.swift */,
+				9ACCFA0C2BB24C2600CD89B7 /* Queued */,
 				E695ACEE28B53561000160CE /* Banner */,
 				9A100C092AC0F61A00A7E6E1 /* Fullscreen */,
 				E695ACEC28B53556000160CE /* Interstitial */,
@@ -682,6 +696,7 @@
 				E695AD1128B59323000160CE /* Banner.storyboard in Resources */,
 				E695AD0C28B58FAA000160CE /* Rewarded.storyboard in Resources */,
 				B9EF66FE2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy in Resources */,
+				9ACCFA0E2BB253A900CD89B7 /* Queued.storyboard in Resources */,
 				03F5649E21E6A2DF0065B61D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -766,7 +781,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#\"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo-ObjC/Pods-Demo-ChartboostMediationDemo-ObjC-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo-ObjC/Pods-Demo-ChartboostMediationDemo-ObjC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D7E24C2AC03240BAA57EBA47 /* [CP] Check Pods Manifest.lock */ = {
@@ -837,6 +852,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ACCFA0B2BB24C1900CD89B7 /* QueuedAdViewController.swift in Sources */,
 				E695AD0728B58C1C000160CE /* Alert.swift in Sources */,
 				9A100C0F2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift in Sources */,
 				E66016E728B67A8700ABE0B7 /* Collection+Extras.swift in Sources */,
