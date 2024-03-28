@@ -1,4 +1,4 @@
-// Copyright 2022-2023 Chartboost, Inc.
+// Copyright 2022-2024 Chartboost, Inc.
 //
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
@@ -7,7 +7,7 @@
 //  ActivityState.swift
 //  ChartboostMediationDemo
 //
-//  Copyright © 2023 Chartboost. All rights reserved.
+//  Copyright © 2023-2024 Chartboost. All rights reserved.
 //
 
 /// A enumeration that is relevent for this demo only. It is not applicable to anything specific to the Chartboost Mediation SDK.
