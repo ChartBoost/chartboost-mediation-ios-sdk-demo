@@ -147,6 +147,8 @@
 		9AC709172AC2060E00406EF6 /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
 		9ACCFA0A2BB24C1900CD89B7 /* QueuedAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueuedAdViewController.swift; sourceTree = "<group>"; };
 		9ACCFA0D2BB253A900CD89B7 /* Queued.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Queued.storyboard; path = ChartboostMediationDemo/Demo_UIKit/Queued/Queued.storyboard; sourceTree = SOURCE_ROOT; };
+		9ACCFA0F2BB53D1B00CD89B7 /* ChartboostMediationDemoSwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChartboostMediationDemoSwiftUI-Info.plist"; sourceTree = "<group>"; };
+		9ACCFA102BB53D4400CD89B7 /* ChartboostMediationDemoUIKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChartboostMediationDemoUIKit-Info.plist"; sourceTree = "<group>"; };
 		A789153D50F7649968038568 /* Pods-Demo-ChartboostMediationDemo-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-ChartboostMediationDemo-ObjC.debug.xcconfig"; path = "Target Support Files/Pods-Demo-ChartboostMediationDemo-ObjC/Pods-Demo-ChartboostMediationDemo-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		B57E85E41A1FD5C400E6D9AD /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		B9EF66FD2AD9E01F000BCE6A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 		EAEA59792B1926CF00AE5605 /* Demo_UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				9ACCFA102BB53D4400CD89B7 /* ChartboostMediationDemoUIKit-Info.plist */,
 				E695ACF128B5697C000160CE /* Main.storyboard */,
 				E62D990728B52CFE0035F1D2 /* AppDelegate.swift */,
 				E695ACFD28B57FEC000160CE /* ChartboostMediationInititializationViewController.swift */,
@@ -526,6 +529,7 @@
 		EAEA597A2B1926DE00AE5605 /* Demo_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				9ACCFA0F2BB53D1B00CD89B7 /* ChartboostMediationDemoSwiftUI-Info.plist */,
 				EAEA59932B193B5700AE5605 /* ChartboostMediationDemoApp.swift */,
 				EAEA59872B193B2400AE5605 /* AdTypeSelectionView.swift */,
 				EAEA59892B193B2400AE5605 /* Banner.swift */,
@@ -1055,6 +1059,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = F38H382JLK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChartboostMediationDemo/ChartboostMediationDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1063,7 +1068,7 @@
 					"USE_TAPJOY=1",
 					"PRINT_NETWORK_ACTIVITY=1",
 				);
-				INFOPLIST_FILE = "ChartboostMediationDemo/ChartboostMediationDemo-Info.plist";
+				INFOPLIST_FILE = "ChartboostMediationDemo/Demo_UIKit/ChartboostMediationDemoUIKit-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1091,10 +1096,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = F38H382JLK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChartboostMediationDemo/ChartboostMediationDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
-				INFOPLIST_FILE = "ChartboostMediationDemo/ChartboostMediationDemo-Info.plist";
+				INFOPLIST_FILE = "ChartboostMediationDemo/Demo_UIKit/ChartboostMediationDemoUIKit-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1218,7 +1224,7 @@
 					"USE_TAPJOY=1",
 					"PRINT_NETWORK_ACTIVITY=1",
 				);
-				INFOPLIST_FILE = "ChartboostMediationDemo/ChartboostMediationDemo-Info.plist";
+				INFOPLIST_FILE = "ChartboostMediationDemo/Demo_SwiftUI/ChartboostMediationDemoSwiftUI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1249,7 +1255,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChartboostMediationDemo/ChartboostMediationDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
-				INFOPLIST_FILE = "ChartboostMediationDemo/ChartboostMediationDemo-Info.plist";
+				INFOPLIST_FILE = "ChartboostMediationDemo/Demo_SwiftUI/ChartboostMediationDemoSwiftUI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

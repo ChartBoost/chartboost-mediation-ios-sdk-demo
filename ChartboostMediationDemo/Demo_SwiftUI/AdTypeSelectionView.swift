@@ -63,7 +63,8 @@ struct AdTypeSelectionView: View {
                         FullscreenAdView(adType: adType, placementName: "CBInterstitial")
                     case (.rewarded, false):
                         RewardedAdView(placementName: "CBRewarded")
-                    case (.rewarded, true):
+//                    case (.rewarded, true):
+                    default:
                         FullscreenAdView(adType: adType, placementName: "CBRewarded")
                     }
                 }
