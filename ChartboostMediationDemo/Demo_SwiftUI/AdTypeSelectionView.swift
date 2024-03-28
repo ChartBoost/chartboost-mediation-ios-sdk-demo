@@ -32,7 +32,10 @@ struct AdTypeSelectionView: View {
                     Toggle("Use Fullscreen API", isOn: $useFullscreenApi)
                         .padding(.horizontal)
                     List {
-                        ForEach(AdType.allCases, id: \.self) { adType in
+                        ForEach(AdType.allCases.filter({ adType in
+                            // Don't show queueing as an option if we're not using the Fullscreen API
+                            !(adType == .queued && !useFullscreenApi)
+                        }), id: \.self) { adType in
                             NavigationLink(destination: adView(forAdType: adType)) {
                                 HStack {
                                     adType.icon
@@ -63,9 +66,12 @@ struct AdTypeSelectionView: View {
                         FullscreenAdView(adType: adType, placementName: "CBInterstitial")
                     case (.rewarded, false):
                         RewardedAdView(placementName: "CBRewarded")
-//                    case (.rewarded, true):
-                    default:
+                    case (.rewarded, true):
                         FullscreenAdView(adType: adType, placementName: "CBRewarded")
+                    case (.queued, false):
+                        EmptyView()
+                    case (.queued, true):
+                        FullscreenAdView(adType: adType, placementName: "CBInterstitial")
                     }
                 }
                 .frame(minHeight: geometry.size.height)
