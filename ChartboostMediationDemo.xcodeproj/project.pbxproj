@@ -159,7 +159,6 @@
 		DA93B6B0182B31BC00C21472 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DA93B6B2182B31BC00C21472 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DA93B6B4182B31BC00C21472 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		DA93B6B8182B31BC00C21472 /* ChartboostMediationDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChartboostMediationDemo-Info.plist"; sourceTree = "<group>"; };
 		DA93B6BA182B31BC00C21472 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA93B6BE182B31BC00C21472 /* ChartboostMediationDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChartboostMediationDemo-Prefix.pch"; sourceTree = "<group>"; };
 		DA93B6F2182B33FD00C21472 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -396,7 +395,6 @@
 			children = (
 				03F5649D21E6A2DF0065B61D /* Assets.xcassets */,
 				E62D990628B52CFE0035F1D2 /* ChartboostMediationDemo-Bridging-Header.h */,
-				DA93B6B8182B31BC00C21472 /* ChartboostMediationDemo-Info.plist */,
 				DA93B6BE182B31BC00C21472 /* ChartboostMediationDemo-Prefix.pch */,
 				DA93B6B9182B31BC00C21472 /* InfoPlist.strings */,
 			);
