@@ -33,6 +33,7 @@
 		9A100C0B2AC0F67300A7E6E1 /* Fullscreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A100C0A2AC0F67300A7E6E1 /* Fullscreen.storyboard */; };
 		9A100C0D2AC0F69E00A7E6E1 /* FullscreenAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */; };
 		9A100C0F2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A100C0E2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift */; };
+		9A6E9C252BB5F43A00A4BE3F /* QueuedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6E9C242BB5F43A00A4BE3F /* QueuedAdView.swift */; };
 		9AC709182AC2060E00406EF6 /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC709172AC2060E00406EF6 /* AdType.swift */; };
 		9ACCFA0B2BB24C1900CD89B7 /* QueuedAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCFA0A2BB24C1900CD89B7 /* QueuedAdViewController.swift */; };
 		9ACCFA0E2BB253A900CD89B7 /* Queued.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ACCFA0D2BB253A900CD89B7 /* Queued.storyboard */; };
@@ -144,6 +145,7 @@
 		9A100C0A2AC0F67300A7E6E1 /* Fullscreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fullscreen.storyboard; sourceTree = "<group>"; };
 		9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenAdController.swift; sourceTree = "<group>"; };
 		9A100C0E2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenAdViewController.swift; sourceTree = "<group>"; };
+		9A6E9C242BB5F43A00A4BE3F /* QueuedAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueuedAdView.swift; sourceTree = "<group>"; };
 		9AC709172AC2060E00406EF6 /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
 		9ACCFA0A2BB24C1900CD89B7 /* QueuedAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueuedAdViewController.swift; sourceTree = "<group>"; };
 		9ACCFA0D2BB253A900CD89B7 /* Queued.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Queued.storyboard; path = ChartboostMediationDemo/Demo_UIKit/Queued/Queued.storyboard; sourceTree = SOURCE_ROOT; };
@@ -534,6 +536,7 @@
 				EAEA59882B193B2400AE5605 /* BannerAdView.swift */,
 				EAEA598A2B193B2400AE5605 /* ChartboostMediationInititializationView.swift */,
 				EAEA59852B193B2400AE5605 /* FullscreenAdView.swift */,
+				9A6E9C242BB5F43A00A4BE3F /* QueuedAdView.swift */,
 				EAEA59832B193B2400AE5605 /* InterstitialAdView.swift */,
 				EAEA59862B193B2400AE5605 /* RewardedAdView.swift */,
 				EAEA597E2B192DB200AE5605 /* Utility */,
@@ -908,6 +911,7 @@
 				EAC761A82B1A6B4100FDB0E5 /* Application+Extras.swift in Sources */,
 				EAC761AA2B1A6B4100FDB0E5 /* InterstitialAdView.swift in Sources */,
 				EAC761AB2B1A6B4100FDB0E5 /* Colors.swift in Sources */,
+				9A6E9C252BB5F43A00A4BE3F /* QueuedAdView.swift in Sources */,
 				EAC761AC2B1A6B4100FDB0E5 /* ChartboostMediationController.swift in Sources */,
 				EAC761AE2B1A6B4100FDB0E5 /* ChartboostMediationDemoApp.swift in Sources */,
 				EAC761AF2B1A6B4100FDB0E5 /* AdTypeSelectionView.swift in Sources */,
@@ -1132,7 +1136,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1179,7 +1183,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GENERATE_INFOPLIST_FILE = YES;

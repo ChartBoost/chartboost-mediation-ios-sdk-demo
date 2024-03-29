@@ -11,6 +11,7 @@
 //
 
 import SwiftUI
+import ChartboostMediationSDK
 
 /// A view that lists the different Chartboost Mediation SDK advertisement types. Selecting one will
 /// navigate to a view that can be used to load and show that type of advertisement.
@@ -71,7 +72,8 @@ struct AdTypeSelectionView: View {
                     case (.queued, false):
                         EmptyView()
                     case (.queued, true):
-                        FullscreenAdView(adType: adType, placementName: "CBInterstitial")
+//                        EmptyView()
+                        QueuedAdView(queue: FullscreenAdQueue.queue(forPlacement: "CBInterstitial"))
                     }
                 }
                 .frame(minHeight: geometry.size.height)
