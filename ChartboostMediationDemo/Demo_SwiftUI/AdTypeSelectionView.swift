@@ -17,6 +17,7 @@ import ChartboostMediationSDK
 /// navigate to a view that can be used to load and show that type of advertisement.
 struct AdTypeSelectionView: View {
     @State private var useFullscreenApi = true
+    private let adQueueViewModel: AdQueueViewModel = AdQueueViewModel()
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
@@ -72,8 +73,7 @@ struct AdTypeSelectionView: View {
                     case (.queued, false):
                         EmptyView()
                     case (.queued, true):
-//                        EmptyView()
-                        QueuedAdView(queue: FullscreenAdQueue.queue(forPlacement: "CBInterstitial"))
+                        QueuedAdView().environmentObject(adQueueViewModel)
                     }
                 }
                 .frame(minHeight: geometry.size.height)

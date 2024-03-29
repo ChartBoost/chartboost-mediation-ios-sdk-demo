@@ -16,10 +16,7 @@ import ChartboostMediationSDK
 
 /// A view that demonstrates the loading and showing of a Chartboost Mediation SDK fullscreen advertisement.
 struct QueuedAdView: View {
-    @ObservedObject private var delegate: QueueDelegate
-    @State private var failureMessage: String?
-    @State private var runButtonText: String = "Start"
-    private let queue: FullscreenAdQueue
+    @EnvironmentObject var viewModel: AdQueueViewModel
 
     var body: some View {
         VStack {
@@ -31,18 +28,9 @@ struct QueuedAdView: View {
                 .padding(.horizontal, 32)
 
             Button {
-                if queue.isRunning {
-                    queue.stop()
-                    runButtonText = "Start"
-                } else {
-                    queue.start()
-                    runButtonText = "Stop"
-                }
+                viewModel.toggleRunningState()
             } label: {
-                // FullscreenAdQueue does some work in a background thread when starting or stopping,
-                // so if we try to update the button label by checking queue.isRunning it will not
-                // have changed in time. We have to keep track of the correct label text ourself.
-                Text(runButtonText)
+                Text(viewModel.runButtonText)
                     .font(.title2)
                     .foregroundColor(.white)
                     .frame(height: 48)
@@ -51,9 +39,9 @@ struct QueuedAdView: View {
             .buttonStyle(.borderedProminent)
             .padding(.horizontal, 32)
 
-            HStack(spacing: 0) { // Adjust spacing to your preference
+            HStack(spacing: 0) {
                 ForEach(0..<5) { index in
-                    Text(delegate.numberOfAdsReady >= index + 1 ? "🟩" : "🔲")
+                    Text(viewModel.numberOfAdsReady >= index + 1 ? "🟩" : "🔲")
                         .font(.largeTitle)
                         .frame(maxWidth: .infinity)
                 }
@@ -63,10 +51,9 @@ struct QueuedAdView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
 
-
             if let topViewController = UIApplication.topViewController {
                 Button {
-                    if let ad = queue.getNextAd() {
+                    if let ad = viewModel.getNextAd() {
                         ad.show(with: topViewController) { result in
                             if let error = result.error {
                                 print("[Error] showing fullscreen advertisement (name: \(error.chartboostMediationCode.name), code: \(error.code))")
@@ -85,35 +72,67 @@ struct QueuedAdView: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .padding(.horizontal, 32)
-            }
-
-            if let failureMessage = failureMessage {
-                Text(failureMessage)
-                    .foregroundColor(.red)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 32)
+                .disabled(viewModel.numberOfAdsReady == 0)
             }
 
             Spacer()
         }
-    }
-
-    init(queue: FullscreenAdQueue) {
-        let delegate = QueueDelegate()
-        queue.delegate = delegate
-        self.delegate = delegate
-        self.queue = queue
+        .onAppear {
+            viewModel.setDelegate()
+        }
     }
 }
 
 // A FullscreenAdQueueDelegate can be used to receive updates about queue events.
 class QueueDelegate: ObservableObject, FullscreenAdQueueDelegate {
-    @Published var numberOfAdsReady: Int = 0
+    var viewModel: AdQueueViewModel
+
+    init(viewModel: AdQueueViewModel) {
+        self.viewModel = viewModel
+    }
 
     func fullscreenAdQueue(_ adQueue: FullscreenAdQueue, didFinishLoadingWithResult: ChartboostMediationAdLoadResult, numberOfAdsReady: Int) {
-        self.numberOfAdsReady = numberOfAdsReady
+        DispatchQueue.main.async {
+            self.viewModel.numberOfAdsReady = numberOfAdsReady
+        }
     }
+
     func fullscreenAdQueueDidRemoveExpiredAd(_ adQueue: FullscreenAdQueue, numberOfAdsReady: Int) {
         print("Expired ad removed from queue, \(numberOfAdsReady) loaded ads remaining.")
+        DispatchQueue.main.async {
+            self.viewModel.numberOfAdsReady = numberOfAdsReady
+        }
+    }
+}
+
+class AdQueueViewModel: ObservableObject {
+    @Published var numberOfAdsReady: Int = 0
+    @Published var runButtonText = "Start"
+    let queue: FullscreenAdQueue = FullscreenAdQueue.queue(forPlacement: "CBInterstitial")
+    var delegate: QueueDelegate?
+
+    func setDelegate() {
+        // If this function is called repeatedly, we don't want to keep recreating the QueueDelegate
+        guard delegate == nil else {
+            return
+        }
+        self.delegate = QueueDelegate(viewModel: self)
+        queue.delegate = self.delegate
+    }
+
+    func toggleRunningState() {
+        if queue.isRunning {
+            queue.stop()
+            runButtonText = "Start"
+        } else {
+            queue.start()
+            runButtonText = "Stop"
+        }
+    }
+
+    func getNextAd() -> ChartboostMediationFullscreenAd? {
+        let ad = queue.getNextAd()
+        numberOfAdsReady = queue.numberOfAdsReady
+        return ad
     }
 }
