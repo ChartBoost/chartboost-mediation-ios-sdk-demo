@@ -10,6 +10,7 @@
 //  Copyright © 2023 Chartboost. All rights reserved.
 //
 
+import ChartboostCoreSDK
 import ChartboostMediationSDK
 
 /// This class is used by this demo to initialize the Chartboost Mediation SDK, manages the user's various privacy settings, and shows how impression
@@ -108,10 +109,10 @@ class ChartboostMediationController: NSObject, ObservableObject {
         }
 
         // * Required *
-        // Start the Chartboost Mediation SDK using the application identifier, application signature, and
-        // an instance of the `HeliumSdkDelegate` in order to be notified when Chartboost Mediation initialization
+        // Start the Chartboost Core SDK using the application identifier, application signature, and
+        // an instance of the `ModuleObserver` in order to be notified when Chartboost Core initialization
         // has completed.
-        chartboostMediation.start(withAppId: appIdentifier, delegate: self)
+        ChartboostCore.initializeSDK(configuration: .init(chartboostAppID: appIdentifier), moduleObserver: self)
     }
 
     // MARK: - Private
@@ -145,21 +146,18 @@ class ChartboostMediationController: NSObject, ObservableObject {
     }
 }
 
-// MARK: - HeliumSdkDelegate
+// MARK: - ModuleObserver
 
-/// Implementation for the delegate for receiving Chartboost Mediation SDK initialization callbacks.
-extension ChartboostMediationController: HeliumSdkDelegate {
-
-    /// Chartboost Mediation SDK has finished initializing.
-    /// @param error Optional error if the Chartboost Mediation SDK did not initialize properly.
-    func heliumDidStartWithError(_ error: ChartboostMediationError?) {
-        if let error = error {
-            print("[Error] failed to start Chartboost Mediation: '\(error.debugDescription)'")
+/// Implementation for the delegate for receiving Chartboost Core SDK initialization callbacks.
+extension ChartboostMediationController: ModuleObserver {
+    func onModuleInitializationCompleted(_ result: ChartboostCoreSDK.ModuleInitializationResult) {
+        if let error = result.error {
+            print("[Error] Chartboost Core module \(result.module.moduleID) initialization failed: \(error.localizedDescription)");
             initializationResult = .failure(error)
             completionHandler?(.failure(error))
         }
         else {
-            print("[Success] Chartboost Mediation has successfully started")
+            print("[Success] Chartboost Core module \(result.module.moduleID) initialization succeeded");
             initializationResult = .success(true)
             completionHandler?(.success(true))
         }

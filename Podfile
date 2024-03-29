@@ -4,6 +4,7 @@ abstract_target 'Demo' do
 
   use_frameworks!
 
+  pod 'ChartboostCoreSDK', '~> 0.4.0'
   pod 'ChartboostMediationSDK', '~> 4.9'
 # Uncomment any of the following lines to use provider
 #  *** Remember to add your GADApplicationIdentifier to Info.plist if you use AdMob ***

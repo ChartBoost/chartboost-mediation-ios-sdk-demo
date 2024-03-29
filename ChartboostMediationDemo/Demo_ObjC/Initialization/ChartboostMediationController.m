@@ -4,11 +4,19 @@
 // license that can be found in the LICENSE file.
 
 #import "ChartboostMediationController.h"
+#import <ChartboostCoreSDK/ChartboostCoreSDK-Swift.h>
+#import <ChartboostMediationSDK/ChartboostMediationSDK-Swift.h>
 
 @interface ChartboostMediationController ()
 
+/// The shared instances of the Chartboost Mediation SDK.
+@property (nonatomic, class, readonly) ChartboostMediation *chartboostMediation;
+
 @property (nonatomic, copy) ChartboostMediationControllerCompletionBlock completionHandler;
 
+@end
+
+@interface ChartboostMediationController (CBCModuleObserver) <CBCModuleObserver>
 @end
 
 @implementation ChartboostMediationController
@@ -53,7 +61,10 @@
     // Start the Chartboost Mediation SDK using the application identifier, application signature, and
     // an instance of the `HeliumSdkDelegate` in order to be notified when Chartboost Mediation initialization
     // has completed.
-    [ChartboostMediationController.chartboostMediation startWithAppId:@"59c2b75ed7d75f0da04c452f" delegate:self];
+    CBCSDKConfiguration *config = [[CBCSDKConfiguration alloc] initWithChartboostAppID:@"59c2b75ed7d75f0da04c452f"
+                                                                               modules:@[]
+                                                                      skippedModuleIDs:@[]];
+    [ChartboostCore initializeSDKWithConfiguration:config moduleObserver:self];
 }
 
 - (void)setGdpr:(GDPR)gdpr {
@@ -87,13 +98,16 @@
     }
 }
 
-- (void)heliumDidStartWithError:(CBMError *)error {
-    if (error) {
-        NSLog(@"[Error] failed to start Chartboost Mediation: '%@'", [error localizedDescription]);
-        self.completionHandler(NO, error);
-    }
-    else {
-        NSLog(@"[Success] Chartboost Mediation has successfully started");
+@end
+
+@implementation ChartboostMediationController (CBCModuleObserver)
+
+- (void)onModuleInitializationCompleted:(CBCModuleInitializationResult * _Nonnull)result {
+    if (result.error != nil) {
+        NSLog(@"[Error] Chartboost Core module %@ initialization failed: %@", result.module.moduleID, result.error.localizedDescription);
+        self.completionHandler(NO, result.error);
+    } else {
+        NSLog(@"[Success] Chartboost Core module %@ initialization succeeded", result.module.moduleID);
         self.completionHandler(YES, nil);
     }
     self.completionHandler = nil;

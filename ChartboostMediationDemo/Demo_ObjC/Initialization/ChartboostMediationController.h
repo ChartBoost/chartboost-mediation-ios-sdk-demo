@@ -4,7 +4,6 @@
 // license that can be found in the LICENSE file.
 
 #import <Foundation/Foundation.h>
-#import <ChartboostMediationSDK/ChartboostMediationSDK-Swift.h>
 #import "GDPR.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -15,13 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^ChartboostMediationControllerCompletionBlock)(BOOL success, NSError  * _Nullable error);
 
-@interface ChartboostMediationController : NSObject <HeliumSdkDelegate>
+@interface ChartboostMediationController : NSObject
 
 /// A static instance of this class so that it can be easily accessible throughout the application.
 @property (nonatomic, class, readonly) ChartboostMediationController *sharedInstance;
-
-/// The shared instances of the Chartboost Mediation SDK.
-@property (nonatomic, class, readonly) ChartboostMediation *chartboostMediation;
 
 /// A property that can be used to define and update the user's GDPR settings.
 /// For more information about GDPR, see: https://answers.chartboost.com/en-us/articles/115001489613
