@@ -16,7 +16,7 @@ import ChartboostMediationSDK
 
 /// A view that demonstrates the loading and showing of a Chartboost Mediation SDK fullscreen advertisement.
 struct QueuedAdView: View {
-    @EnvironmentObject var viewModel: AdQueueViewModel
+    @StateObject var viewModel = AdQueueViewModel()
 
     var body: some View {
         VStack {
