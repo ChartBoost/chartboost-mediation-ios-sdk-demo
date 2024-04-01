@@ -25,9 +25,8 @@ class QueuedAdViewController: UIViewController {
     @IBOutlet weak var showButton: UIButton!
     @IBOutlet var adSlots: [UILabel]!
 
-    /// The handler for when the load button is pushed.  Pushing it results in the insterstitial ad being loaded.
-    /// After it has successfully loaded, it can then be shown.
-    @IBAction func loadButtonPushed() {
+    /// The handler for when the run button is pushed.  Pushing it starts or stops the queue.
+    @IBAction func runButtonPushed() {
         if queue.isRunning {
             queue.stop()
         } else {
