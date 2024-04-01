@@ -34,6 +34,8 @@
 		9A100C0D2AC0F69E00A7E6E1 /* FullscreenAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */; };
 		9A100C0F2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A100C0E2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift */; };
 		9A6E9C252BB5F43A00A4BE3F /* QueuedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6E9C242BB5F43A00A4BE3F /* QueuedAdView.swift */; };
+		9A6E9C272BB7822900A4BE3F /* Queued.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A6E9C262BB7822900A4BE3F /* Queued.storyboard */; };
+		9A6E9C2D2BB783BC00A4BE3F /* QueuedAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6E9C2C2BB783BC00A4BE3F /* QueuedAdViewController.m */; };
 		9AC709182AC2060E00406EF6 /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC709172AC2060E00406EF6 /* AdType.swift */; };
 		9ACCFA0B2BB24C1900CD89B7 /* QueuedAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCFA0A2BB24C1900CD89B7 /* QueuedAdViewController.swift */; };
 		9ACCFA0E2BB253A900CD89B7 /* Queued.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ACCFA0D2BB253A900CD89B7 /* Queued.storyboard */; };
@@ -146,6 +148,9 @@
 		9A100C0C2AC0F69E00A7E6E1 /* FullscreenAdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenAdController.swift; sourceTree = "<group>"; };
 		9A100C0E2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenAdViewController.swift; sourceTree = "<group>"; };
 		9A6E9C242BB5F43A00A4BE3F /* QueuedAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueuedAdView.swift; sourceTree = "<group>"; };
+		9A6E9C262BB7822900A4BE3F /* Queued.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Queued.storyboard; path = ChartboostMediationDemo/Demo_ObjC/Queued/Queued.storyboard; sourceTree = SOURCE_ROOT; };
+		9A6E9C2B2BB782DF00A4BE3F /* QueuedAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueuedAdViewController.h; path = ChartboostMediationDemo/Demo_ObjC/Queued/QueuedAdViewController.h; sourceTree = SOURCE_ROOT; };
+		9A6E9C2C2BB783BC00A4BE3F /* QueuedAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueuedAdViewController.m; path = ChartboostMediationDemo/Demo_ObjC/Queued/QueuedAdViewController.m; sourceTree = SOURCE_ROOT; };
 		9AC709172AC2060E00406EF6 /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
 		9ACCFA0A2BB24C1900CD89B7 /* QueuedAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueuedAdViewController.swift; sourceTree = "<group>"; };
 		9ACCFA0D2BB253A900CD89B7 /* Queued.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Queued.storyboard; path = ChartboostMediationDemo/Demo_UIKit/Queued/Queued.storyboard; sourceTree = SOURCE_ROOT; };
@@ -310,6 +315,16 @@
 				9A100C0E2AC0F6C900A7E6E1 /* FullscreenAdViewController.swift */,
 			);
 			path = Fullscreen;
+			sourceTree = "<group>";
+		};
+		9A6E9C2A2BB7829A00A4BE3F /* Queued */ = {
+			isa = PBXGroup;
+			children = (
+				9A6E9C262BB7822900A4BE3F /* Queued.storyboard */,
+				9A6E9C2B2BB782DF00A4BE3F /* QueuedAdViewController.h */,
+				9A6E9C2C2BB783BC00A4BE3F /* QueuedAdViewController.m */,
+			);
+			path = Queued;
 			sourceTree = "<group>";
 		};
 		9ACCFA0C2BB24C2600CD89B7 /* Queued */ = {
@@ -503,6 +518,7 @@
 				E6A1D5302B98E47F00FCB3F3 /* Fullscreen */,
 				E6A1D5272B98D7F100FCB3F3 /* Initialization */,
 				E6F0F3572B97FF52009BD50D /* Main.storyboard */,
+				9A6E9C2A2BB7829A00A4BE3F /* Queued */,
 				E6A1D5502B991C0700FCB3F3 /* Utility */,
 			);
 			path = Demo_ObjC;
@@ -711,6 +727,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6F0F3652B97FF8D009BD50D /* Assets.xcassets in Resources */,
+				9A6E9C272BB7822900A4BE3F /* Queued.storyboard in Resources */,
 				E6F0F3662B980242009BD50D /* Launch Screen.storyboard in Resources */,
 				E6A1D52F2B98D88E00FCB3F3 /* Banner.storyboard in Resources */,
 				E6A1D5522B991C1A00FCB3F3 /* Busy.storyboard in Resources */,
@@ -885,6 +902,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6A1D5212B98D11300FCB3F3 /* AdTypeSelectionViewController.m in Sources */,
+				9A6E9C2D2BB783BC00A4BE3F /* QueuedAdViewController.m in Sources */,
 				E6F0F3502B97FF52009BD50D /* AppDelegate.m in Sources */,
 				E6A1D5552B991D0600FCB3F3 /* UIViewController+ActivityDelegate.m in Sources */,
 				E6A1D5362B98E4A800FCB3F3 /* FullscreenAdViewController.m in Sources */,

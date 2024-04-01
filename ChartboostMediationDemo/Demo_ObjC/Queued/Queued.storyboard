@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -11,7 +11,7 @@
         <!--Queued-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="Queued" title="Queued" id="Y6W-OH-hqX" customClass="QueuedAdViewController" customModule="ChartboostMediationDemo_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Queued" title="Queued" id="Y6W-OH-hqX" customClass="QueuedAdViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,11 +130,11 @@
                     <connections>
                         <outlet property="runButton" destination="Eid-VV-iRP" id="TL3-fC-tRk"/>
                         <outlet property="showButton" destination="BJN-QZ-zsJ" id="kQc-a2-Li5"/>
-                        <outletCollection property="adSlots" destination="tv0-3l-d6S" collectionClass="NSMutableArray" id="jfF-QW-eMJ"/>
-                        <outletCollection property="adSlots" destination="80H-6b-3pV" collectionClass="NSMutableArray" id="sAb-EF-7v7"/>
-                        <outletCollection property="adSlots" destination="Fa7-yc-lAq" collectionClass="NSMutableArray" id="o1X-hR-wfb"/>
-                        <outletCollection property="adSlots" destination="fa9-Fs-3Px" collectionClass="NSMutableArray" id="9hc-x4-O8f"/>
-                        <outletCollection property="adSlots" destination="LId-My-Fxg" collectionClass="NSMutableArray" id="6UV-Yi-ih6"/>
+                        <outletCollection property="adSlots" destination="tv0-3l-d6S" id="jfF-QW-eMJ"/>
+                        <outletCollection property="adSlots" destination="80H-6b-3pV" id="sAb-EF-7v7"/>
+                        <outletCollection property="adSlots" destination="Fa7-yc-lAq" id="o1X-hR-wfb"/>
+                        <outletCollection property="adSlots" destination="fa9-Fs-3Px" id="9hc-x4-O8f"/>
+                        <outletCollection property="adSlots" destination="LId-My-Fxg" id="6UV-Yi-ih6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

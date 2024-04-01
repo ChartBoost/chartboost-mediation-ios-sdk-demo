@@ -9,7 +9,8 @@
 typedef enum AdType {
     AdTypeBanner,
     AdTypeInterstitial,
-    AdTypeRewarded
+    AdTypeRewarded,
+    AdTypeQueued
 } AdType;
 
 #endif /* AdType_h */

@@ -47,14 +47,18 @@
         case AdTypeRewarded:
             title = @"Rewarded";
             break;
+        case AdTypeQueued:
+            title = @"Queued";
+            break;
     }
 
     // Since we're using the fullscreen API, we need to set the ad type for Rewarded & Interstitial
     switch (adType) {
         case AdTypeBanner:
-            // For banner, we do exactly the same thing as in the non-useFullscreeenAPI case
+        case AdTypeQueued:
             return [[UIStoryboard storyboardWithName:title bundle:nil] instantiateViewControllerWithIdentifier:title];
-        default: {
+        case AdTypeRewarded:
+        case AdTypeInterstitial: {
             // A cast to FullscreenAdViewController is necessary so we can set .adType
             FullscreenAdViewController *fullScreenAdViewController = [[UIStoryboard storyboardWithName:@"Fullscreen" bundle:nil] instantiateViewControllerWithIdentifier:@"Fullscreen"];
             fullScreenAdViewController.adType = adType;
@@ -76,6 +80,9 @@
         case 2:
             adType = AdTypeRewarded;
             break;
+        case 3:
+            adType = AdTypeQueued;
+            break;
         default:
             adType = AdTypeBanner;
             break;
@@ -85,7 +92,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -101,6 +108,11 @@
         adType = AdTypeRewarded;
         cellTitle = @"Rewarded";
         cellImage = [UIImage imageNamed:@"Rewarded"];
+    }
+    else if (indexPath.row == 3) {
+        adType = AdTypeQueued;
+        cellTitle = @"Queued";
+        cellImage = [UIImage imageNamed:@"Queued"];
     }
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AdTypeSelectionCell" forIndexPath:indexPath];
     cell.imageView.image = cellImage;

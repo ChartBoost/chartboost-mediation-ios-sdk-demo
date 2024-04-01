@@ -40,6 +40,11 @@
     [self setCcpa:self.ccpa];
 
     // * Optional *
+    // Enable test mode to make test ads available.
+    // Do not enable test mode in production builds.
+    Helium.isTestModeEnabled = TRUE;
+
+    // * Optional *
     // Register for impression level revenue data notifications. The Chartboost Mediation SDK publishes this data on the `default`
     // instances of the NotificationCenter. In this demo, the method `didReceiveImpressionLevelTrackingData` receives
     // this data, parses it, and logs it to the console.
