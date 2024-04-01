@@ -92,16 +92,12 @@ class QueueDelegate: ObservableObject, FullscreenAdQueueDelegate {
     }
 
     func fullscreenAdQueue(_ adQueue: FullscreenAdQueue, didFinishLoadingWithResult: ChartboostMediationAdLoadResult, numberOfAdsReady: Int) {
-        DispatchQueue.main.async {
-            self.viewModel.numberOfAdsReady = numberOfAdsReady
-        }
+        self.viewModel.numberOfAdsReady = numberOfAdsReady
     }
 
     func fullscreenAdQueueDidRemoveExpiredAd(_ adQueue: FullscreenAdQueue, numberOfAdsReady: Int) {
         print("Expired ad removed from queue, \(numberOfAdsReady) loaded ads remaining.")
-        DispatchQueue.main.async {
-            self.viewModel.numberOfAdsReady = numberOfAdsReady
-        }
+        self.viewModel.numberOfAdsReady = numberOfAdsReady
     }
 }
 

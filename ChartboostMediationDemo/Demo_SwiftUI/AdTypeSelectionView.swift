@@ -17,7 +17,7 @@ import ChartboostMediationSDK
 /// navigate to a view that can be used to load and show that type of advertisement.
 struct AdTypeSelectionView: View {
     @State private var useFullscreenApi = true
-    private let adQueueViewModel: AdQueueViewModel = AdQueueViewModel()
+    @StateObject private var adQueueViewModel: AdQueueViewModel = AdQueueViewModel()
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
