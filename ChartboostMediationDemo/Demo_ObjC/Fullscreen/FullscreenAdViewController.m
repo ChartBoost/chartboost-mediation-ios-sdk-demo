@@ -22,6 +22,8 @@
         case AdTypeBanner:
             self.title = @"Fullscreen Ad"; // Well, this shouldn't really occur...
             break;
+        case AdTypeQueued:
+            self.title = @"Queued [ERROR]"; // This DEFINITELY shouldn't occur.
         case AdTypeInterstitial:
             self.title = @"Interstitial";
             break;

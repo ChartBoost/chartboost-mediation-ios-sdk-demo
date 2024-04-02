@@ -35,6 +35,11 @@ class AdTypeSelectionViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
     @IBOutlet var apiToggle: UISwitch!
 
+    @IBAction func apiToggleDidChange(_ sender: UISwitch) {
+        // The "queued" option should be hidden when not using the Fullscreen API
+        tableView.reloadData()
+    }
+
     // MARK: - Lifecycle
 
     /// Make an instace of this view controller.
@@ -81,6 +86,10 @@ class AdTypeSelectionViewController: UIViewController {
                     .instantiateViewController(withIdentifier: "Fullscreen") as? FullscreenAdViewController
                 rewardedViewController?.adType = adType
                 return rewardedViewController
+            case .queued:
+                let queuedAdViewController = UIStoryboard(name: "Queued", bundle: nil)
+                    .instantiateViewController(withIdentifier: "Queued") as? QueuedAdViewController
+                return queuedAdViewController
             }
         } else {
             return UIStoryboard(name: title, bundle: nil).instantiateViewController(withIdentifier: title)
@@ -105,7 +114,12 @@ extension AdTypeSelectionViewController: UITableViewDelegate {
 
 extension AdTypeSelectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        AdType.allCases.count
+        // If we're not using the Fullscreen API, hide the final AdType (which we expect to be "queued")
+        if apiToggle.isOn {
+            return AdType.allCases.count
+        } else {
+            return AdType.allCases.count - 1
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

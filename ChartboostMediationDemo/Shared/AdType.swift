@@ -13,6 +13,7 @@ enum AdType: String, CaseIterable {
     case banner
     case interstitial
     case rewarded
+    case queued
 
     var title: String {
         rawValue.capitalized
