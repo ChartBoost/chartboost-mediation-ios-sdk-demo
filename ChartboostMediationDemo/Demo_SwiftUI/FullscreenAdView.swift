@@ -1,17 +1,10 @@
-// Copyright 2022-2024 Chartboost, Inc.
+// Copyright 2018-2024 Chartboost, Inc.
 //
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
-//
-//  FullscreenAdView.swift
-//  ChartboostMediationDemo
-//
-//  Copyright © 2023-2024 Chartboost. All rights reserved.
-//
-
-import UIKit
 import SwiftUI
+import UIKit
 
 /// A view that demonstrates the loading and showing of a Chartboost Mediation SDK fullscreen advertisement.
 struct FullscreenAdView: View {
@@ -66,7 +59,7 @@ struct FullscreenAdView: View {
                 .padding(.horizontal, 32)
             }
 
-            if let failureMessage = failureMessage {
+            if let failureMessage {
                 Text(failureMessage)
                     .foregroundColor(.red)
                     .multilineTextAlignment(.center)

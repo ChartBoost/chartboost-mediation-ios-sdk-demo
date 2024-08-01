@@ -1,21 +1,13 @@
-// Copyright 2022-2024 Chartboost, Inc.
-// 
+// Copyright 2018-2024 Chartboost, Inc.
+//
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
-
-//
-//  ChartboostMediationInititializationViewController.swift
-//  ChartboostMediationDemo
-//
-//  Copyright © 2023-2024 Chartboost. All rights reserved.
-//
 
 import UIKit
 
 /// This demo uses a view controller as a means to demonstrate the initialization of the Chartboost Mediation SDK.
 /// There is no requirement that a view controller must be used, but it is convenient for this demo to do so.
 class ChartboostMediationInititializationViewController: UIViewController {
-
     @IBOutlet private var contentView: UIView!
     @IBOutlet private var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet private var progressLabel: UILabel!

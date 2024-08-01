@@ -1,18 +1,11 @@
-// Copyright 2022-2023 Chartboost, Inc.
+// Copyright 2018-2024 Chartboost, Inc.
 //
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
-//
-//  FullscreenAdView.swift
-//  ChartboostMediationDemo
-//
-//  Copyright © 2023 Chartboost. All rights reserved.
-//
-
-import UIKit
-import SwiftUI
 import ChartboostMediationSDK
+import SwiftUI
+import UIKit
 
 /// A view that demonstrates the loading and showing of a Chartboost Mediation SDK fullscreen advertisement.
 struct QueuedAdView: View {
@@ -57,8 +50,7 @@ struct QueuedAdView: View {
                         ad.show(with: topViewController) { result in
                             if let error = result.error {
                                 print("[Error] showing fullscreen advertisement (name: \(error.chartboostMediationCode.name), code: \(error.code))")
-                            }
-                            else {
+                            } else {
                                 print("[Success] did show fullscreen advertisement for placement")
                             }
                         }
@@ -77,43 +69,16 @@ struct QueuedAdView: View {
 
             Spacer()
         }
-        .onAppear {
-            viewModel.setDelegate()
-        }
-    }
-}
-
-// A FullscreenAdQueueDelegate can be used to receive updates about queue events.
-class QueueDelegate: ObservableObject, FullscreenAdQueueDelegate {
-    var viewModel: AdQueueViewModel
-
-    init(viewModel: AdQueueViewModel) {
-        self.viewModel = viewModel
-    }
-
-    func fullscreenAdQueue(_ adQueue: FullscreenAdQueue, didFinishLoadingWithResult: ChartboostMediationAdLoadResult, numberOfAdsReady: Int) {
-        self.viewModel.numberOfAdsReady = numberOfAdsReady
-    }
-
-    func fullscreenAdQueueDidRemoveExpiredAd(_ adQueue: FullscreenAdQueue, numberOfAdsReady: Int) {
-        print("Expired ad removed from queue, \(numberOfAdsReady) loaded ads remaining.")
-        self.viewModel.numberOfAdsReady = numberOfAdsReady
     }
 }
 
 class AdQueueViewModel: ObservableObject {
     @Published var numberOfAdsReady: Int = 0
     @Published var runButtonText = "Start"
-    let queue: FullscreenAdQueue = FullscreenAdQueue.queue(forPlacement: "CBInterstitial")
-    var delegate: QueueDelegate?
+    let queue = FullscreenAdQueue.queue(forPlacement: "CBInterstitial")
 
-    func setDelegate() {
-        // If this function is called repeatedly, we don't want to keep recreating the QueueDelegate
-        guard delegate == nil else {
-            return
-        }
-        self.delegate = QueueDelegate(viewModel: self)
-        queue.delegate = self.delegate
+    init() {
+        queue.delegate = self
     }
 
     func toggleRunningState() {
@@ -126,9 +91,21 @@ class AdQueueViewModel: ObservableObject {
         }
     }
 
-    func getNextAd() -> ChartboostMediationFullscreenAd? {
+    func getNextAd() -> FullscreenAd? {
         let ad = queue.getNextAd()
         numberOfAdsReady = queue.numberOfAdsReady
         return ad
+    }
+}
+
+// A FullscreenAdQueueDelegate can be used to receive updates about queue events.
+extension AdQueueViewModel: FullscreenAdQueueDelegate {
+    func fullscreenAdQueue(_ adQueue: FullscreenAdQueue, didFinishLoadingWithResult result: AdLoadResult, numberOfAdsReady: Int) {
+        self.numberOfAdsReady = numberOfAdsReady
+    }
+
+    func fullscreenAdQueueDidRemoveExpiredAd(_ adQueue: FullscreenAdQueue, numberOfAdsReady: Int) {
+        print("Expired ad removed from queue, \(numberOfAdsReady) loaded ads remaining.")
+        self.numberOfAdsReady = numberOfAdsReady
     }
 }

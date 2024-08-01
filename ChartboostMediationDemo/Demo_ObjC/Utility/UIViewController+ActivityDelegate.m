@@ -1,4 +1,4 @@
-// Copyright 2023-2024 Chartboost, Inc.
+// Copyright 2018-2024 Chartboost, Inc.
 //
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
@@ -6,7 +6,7 @@
 #import "UIViewController+ActivityDelegate.h"
 #import <objc/runtime.h>
 #import "BusyViewController.h"
-#import <ChartboostMediationSDK/ChartboostMediationSDK.h>
+#import <ChartboostMediationSDK/ChartboostMediationSDK-Swift.h>
 
 static char kAssociatedObjectKey;
 
@@ -45,7 +45,7 @@ static char kAssociatedObjectKey;
 }
 
 - (void)presentAlertWithMessage:(NSString *)message error:(NSError * _Nullable)error {
-    ChartboostMediationError *chartboostError = (ChartboostMediationError *)error;
+    CBMError *chartboostError = (CBMError *)error;
     NSString *alertMessage;
     if (chartboostError) {
         alertMessage = [NSString stringWithFormat:@"%@\n\n%@", message, chartboostError.localizedFailureReason];

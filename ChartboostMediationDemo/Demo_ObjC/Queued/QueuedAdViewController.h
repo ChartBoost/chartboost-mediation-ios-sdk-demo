@@ -1,9 +1,9 @@
-// Copyright 2023-2024 Chartboost, Inc.
+// Copyright 2018-2024 Chartboost, Inc.
 //
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
-#import <ChartboostMediationSDK/ChartboostMediationSDK.h>
+#import <ChartboostMediationSDK/ChartboostMediationSDK-Swift.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "AdType.h"

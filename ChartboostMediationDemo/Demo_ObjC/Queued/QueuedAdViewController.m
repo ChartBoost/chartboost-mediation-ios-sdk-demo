@@ -1,14 +1,14 @@
-// Copyright 2023-2024 Chartboost, Inc.
+// Copyright 2018-2024 Chartboost, Inc.
 //
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
 #import "QueuedAdViewController.h"
-#import <ChartboostMediationSDK/ChartboostMediationSDK.h>
+#import <ChartboostMediationSDK/ChartboostMediationSDK-Swift.h>
 
-@interface QueuedAdViewController () <NSObject, ChartboostMediationFullscreenAdQueueDelegate>
+@interface QueuedAdViewController () <NSObject, CBMFullscreenAdQueueDelegate>
 
-@property (nonatomic, strong) ChartboostMediationFullscreenAdQueue *queue;
+@property (nonatomic, strong) CBMFullscreenAdQueue *queue;
 @property (nonatomic, weak) IBOutlet UIButton *runButton;
 @property (nonatomic, weak) IBOutlet UIButton *showButton;
 @property (nonatomic, strong) IBOutletCollection(UILabel) NSArray *adSlots;
@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.queue = [ChartboostMediationFullscreenAdQueue queueForPlacement:@"CBInterstitial"];
+    self.queue = [CBMFullscreenAdQueue queueForPlacement:@"CBInterstitial"];
     // Set self as the delegate so we can react to completed ad loads.
     self.queue.delegate = self;
     [self updateUI];
@@ -48,7 +48,7 @@
     if (ad) {
         // If ad was nil, there would have been no reason to update the UI because no ad was removed from the queue.
         [self updateUI];
-        [ad showWith:self completion:^(ChartboostMediationAdShowResult * _Nonnull result) {
+        [ad showWith:self completion:^(CBMAdShowResult * _Nonnull result) {
             [self logAction:@"show" error:result.error];
         }];
     }
@@ -73,7 +73,7 @@
     self.showButton.enabled = self.queue.hasNextAd;
 }
 
-- (void)logAction:(NSString *)action error:(ChartboostMediationError *)error {
+- (void)logAction:(NSString *)action error:(CBMError *)error {
     if (error) {
         NSLog(@"[Error] did %@ fullscreen advertisement: '%@' (code: %li)", action, error.localizedDescription, error.code);
     }
@@ -85,12 +85,12 @@
 #pragma mark - ChartboostMediationFullscreenAdQueueDelegate
 // A FullscreenAdQueueDelegate can be used to receive updates about queue events.
 
-- (void)fullscreenAdQueue:(ChartboostMediationFullscreenAdQueue *)adQueue didFinishLoadingWithResult:(ChartboostMediationAdLoadResult*)result numberOfAdsReady:(NSInteger)numberOfAdsReady {
+- (void)fullscreenAdQueue:(CBMFullscreenAdQueue *)adQueue didFinishLoadingWithResult:(CBMAdLoadResult*)result numberOfAdsReady:(NSInteger)numberOfAdsReady {
     // Update the UI to show that there's one more ad in the queue.
     [self updateUI];
 }
 
-- (void)fullscreenAdQueueDidRemoveExpiredAd:(ChartboostMediationFullscreenAdQueue *)adQueue numberOfAdsReady:(NSInteger)numberOfAdsReady {
+- (void)fullscreenAdQueueDidRemoveExpiredAd:(CBMFullscreenAdQueue *)adQueue numberOfAdsReady:(NSInteger)numberOfAdsReady {
     // Update the UI to show that there's one less ad in the queue.
     [self updateUI];
 }

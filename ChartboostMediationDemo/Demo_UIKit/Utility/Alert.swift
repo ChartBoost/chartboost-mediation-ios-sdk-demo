@@ -1,17 +1,10 @@
-// Copyright 2022-2024 Chartboost, Inc.
-// 
+// Copyright 2018-2024 Chartboost, Inc.
+//
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
-//
-//  Alert.swift
-//  ChartboostMediationDemo
-//
-//  Copyright © 2023-2024 Chartboost. All rights reserved.
-//
-
-import UIKit
 import ChartboostMediationSDK
+import UIKit
 
 /// An extenstion that is relevant for this demo only. It is not applicable to anything specific to the Chartboost Mediation SDK.
 extension UIViewController {
@@ -19,8 +12,7 @@ extension UIViewController {
         let alertMessage: String
         if let chartboostMediationError = error as? ChartboostMediationError {
             alertMessage = "\(message)\n\n\(chartboostMediationError.localizedFailureReason ?? "Reason unspecified.")\n\n\(chartboostMediationError.chartboostMediationCode.name)"
-        }
-        else {
+        } else {
             alertMessage = "\(message)\n\n\(String(describing: error))"
         }
         let alert = UIAlertController(title: "Error", message: alertMessage, preferredStyle: .alert)

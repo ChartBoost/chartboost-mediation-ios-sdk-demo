@@ -1,4 +1,4 @@
-// Copyright 2022-2024 Chartboost, Inc.
+// Copyright 2018-2024 Chartboost, Inc.
 //
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
@@ -17,11 +17,10 @@ struct ChartboostMediationDemoApp: App {
                     .tint(Color.chartboost)
             } else {
                 ChartboostMediationInititializationView()
-                    .onAppear {
+                    .task {
                         chartboostMediationController.startChartboostMediation { result in
                             if case .success = result {
                                 Task {
-                                    try await Task.sleep(nanoseconds: .nanoseconds(1))
                                     await MainActor.run {
                                         withAnimation {
                                             chartboostMediationIsInitialized = true

@@ -1,28 +1,20 @@
-// Copyright 2022-2024 Chartboost, Inc.
+// Copyright 2018-2024 Chartboost, Inc.
 //
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
-//
-//  BannerAdController.swift
-//  ChartboostMediationDemo
-//
-//  Copyright © 2023-2024 Chartboost. All rights reserved.
-//
-
-import UIKit
 import ChartboostMediationSDK
+import UIKit
 
-/// A basic implementation of a controller for Chartboost Mediation banner ads.  It is capable of loading and showing a banner ad
-/// for a single placement.  This controller is also its own `HeliumBannerAdDelegate` so that it is in full control
+/// A basic implementation of a controller for Chartboost Mediation banner ads. It is capable of loading and showing a banner ad
+/// for a single placement. This controller is also its own `BannerAdViewDelegate` so that it is in full control
 /// of the ad's lifecycle.
 class BannerAdController: NSObject, ObservableObject {
-
     /// The placement that is controller is for.
     private let placementName: String
 
     /// An instance of the banner ad that this class controls the lifecycle of.
-    @Published private(set) var bannerAd: ChartboostMediationBannerView?
+    @Published private(set) var bannerAd: BannerAdView?
 
     /// A state for demo purposes only so that long activity processes can be communicated to a view.
     @Published private(set) var activityState: ActivityState = .idle
@@ -32,7 +24,8 @@ class BannerAdController: NSObject, ObservableObject {
 
     /// Initializer for the view model.
     /// - Parameter placementName: Placement to use.
-    /// - Parameter activityDelegate: A delegate to communicate the start and end of asyncronous activity to.  This is applicable only for this demo.
+    /// - Parameter activityDelegate: A delegate to communicate the start and end of asyncronous activity to. 
+    /// This is applicable only for this demo.
     init(placementName: String, activityDelegate: ActivityDelegate?) {
         self.placementName = placementName
         self.activityDelegate = activityDelegate
@@ -49,15 +42,15 @@ class BannerAdController: NSObject, ObservableObject {
             return
         }
 
-        bannerAd = ChartboostMediationBannerView()
+        bannerAd = BannerAdView()
         bannerAd?.delegate = self
 
         // In this demo, we will load a 6x1 banner with the max width of the screen.
         // If you are instead loading a fixed size banner placement, you can do that with:
         // ChartboostMediationBannerSize.standard, ChartboostMediationBannerSize.medium, or
         // ChartboostMediationBannerSize.leaderboard.
-        let size = ChartboostMediationBannerSize.adaptive6x1(width: width)
-        let request = ChartboostMediationBannerLoadRequest(
+        let size = BannerSize.adaptive6x1(width: width)
+        let request = BannerAdLoadRequest(
             placement: placementName,
             size: size
         )
@@ -84,8 +77,7 @@ class BannerAdController: NSObject, ObservableObject {
                 // Notify the demo UI
                 self.activityDelegate?.activityDidEnd(message: "Failed to load the banner advertisement.", error: error)
                 self.activityState = .failed(message: "Failed to load the banner advertisement.", error: error)
-            }
-            else {
+            } else {
                 // Notify the demo UI
                 self.activityDelegate?.activityDidEnd()
                 self.activityState = .idle
@@ -97,9 +89,8 @@ class BannerAdController: NSObject, ObservableObject {
 // MARK: - Lifecycle Delegate
 
 /// Implementation of the Chartboost Mediation banner view delegate.
-extension BannerAdController: ChartboostMediationBannerViewDelegate {
-
-    func willAppear(bannerView: ChartboostMediationBannerView) {
+extension BannerAdController: BannerAdViewDelegate {
+    func willAppear(bannerView: BannerAdView) {
         // Called when a new ad is about to appear inside of `bannerView`. This method can be used
         // to manually size `bannerView` if desired:
         // if let size = bannerView.size?.size {
@@ -111,16 +102,15 @@ extension BannerAdController: ChartboostMediationBannerViewDelegate {
 
 // MARK: - Utility
 
-private extension BannerAdController {
+extension BannerAdController {
     /// Log lifecycle information to the console for the banner advertisement.
     /// - Parameter action: What action is being logged
     /// - Parameter placementName: The placement name for the banner advertisement
     /// - Parameter error: An option error that occurred
-    func log(action: String, placementName: String, error: ChartboostMediationError?) {
-        if let error = error {
+    private func log(action: String, placementName: String, error: ChartboostMediationError?) {
+        if let error {
             print("[Error] did \(action) banner advertisement for placement '\(placementName)': '\(error.localizedDescription)' (name: \(error.chartboostMediationCode.name), code: \(error.code))")
-        }
-        else {
+        } else {
             print("[Success] did \(action) banner advertisement for placement '\(placementName)'")
         }
     }

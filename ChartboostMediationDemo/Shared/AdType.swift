@@ -1,10 +1,7 @@
+// Copyright 2018-2024 Chartboost, Inc.
 //
-//  AdType.swift
-//  ChartboostMediationDemo
-//
-//  Created by Alexander Rice on 9/25/23.
-//  Copyright © 2023-2024 Chartboost. All rights reserved.
-//
+// Use of this source code is governed by an MIT-style
+// license that can be found in the LICENSE file.
 
 import UIKit
 

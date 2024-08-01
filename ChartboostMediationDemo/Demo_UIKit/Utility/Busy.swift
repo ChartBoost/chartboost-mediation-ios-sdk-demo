@@ -1,21 +1,13 @@
-// Copyright 2022-2024 Chartboost, Inc.
-// 
+// Copyright 2018-2024 Chartboost, Inc.
+//
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
-
-//
-//  Busy.swift
-//  ChartboostMediationDemo
-//
-//  Copyright © 2023-2024 Chartboost. All rights reserved.
-//
 
 import UIKit
 
 /// Functionality that is relevant for this demo only. It is not applicable to anything specific to the Chartboost Mediation SDK.
 
 class BusyViewController: UIViewController {
-
     class func present(over parent: UIViewController) -> UIViewController {
         let storyboard = UIStoryboard(name: "Busy", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Busy")
@@ -47,15 +39,14 @@ extension UIViewController: ActivityDelegate {
     }
 
     func activityDidEnd(message: String, error: Error?) {
-        if let busy = busy {
+        if let busy {
             busy.dismiss(animated: true, completion: {
                 self.busy = nil
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     self.presentAlert(message: message, error: error)
                 }
             })
-        }
-        else {
+        } else {
             presentAlert(message: message, error: error)
         }
     }

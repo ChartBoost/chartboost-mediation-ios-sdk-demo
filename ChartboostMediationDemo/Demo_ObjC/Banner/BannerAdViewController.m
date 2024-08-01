@@ -1,4 +1,4 @@
-// Copyright 2023-2024 Chartboost, Inc.
+// Copyright 2018-2024 Chartboost, Inc.
 //
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
@@ -35,7 +35,7 @@
 }
 
 - (IBAction)showButtonPushed:(id)sender {
-    ChartboostMediationBannerView *bannerAd = self.controller.bannerAd;
+    CBMBannerAdView *bannerAd = self.controller.bannerAd;
 
     // Attempt to show an ad only if it has been loaded.
     if (bannerAd == nil) {

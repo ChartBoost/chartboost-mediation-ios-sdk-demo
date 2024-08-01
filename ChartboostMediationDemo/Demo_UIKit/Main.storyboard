@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,7 +27,7 @@
                                         <rect key="frame" x="186.66666666666666" y="411.66666666666663" width="20" height="20"/>
                                         <color key="color" red="0.4823529412" green="0.74509803919999995" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initializing the Helium SDK..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eng-7D-APF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initializing the Mediation SDK..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eng-7D-APF">
                                         <rect key="frame" x="32" y="451.66666666666663" width="329" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
@@ -101,27 +100,8 @@
                                             <constraint firstAttribute="height" constant="64" id="0zi-GD-mKg"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtY-aE-2iB">
-                                        <rect key="frame" x="0.0" y="96" width="393" height="36.333333333333343"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Fullscreen API" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTa-qC-YuQ">
-                                                <rect key="frame" x="16" y="7.9999999999999982" width="312" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="Use Fullscreen API" translatesAutoresizingMaskIntoConstraints="NO" id="4KD-8X-JIf">
-                                                <rect key="frame" x="328" y="7.9999999999999982" width="51" height="20.333333333333329"/>
-                                                <color key="onTintColor" name="Accent"/>
-                                                <connections>
-                                                    <action selector="apiToggleDidChange:" destination="oek-vc-sYl" eventType="valueChanged" id="rkE-eG-6yq"/>
-                                                </connections>
-                                            </switch>
-                                        </subviews>
-                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="16" bottom="8" trailing="16"/>
-                                    </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="120" sectionHeaderHeight="28" estimatedSectionHeaderHeight="28" sectionFooterHeight="28" estimatedSectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sR3-CA-tj4">
-                                        <rect key="frame" x="0.0" y="164.33333333333331" width="393" height="578.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="96" width="393" height="647"/>
                                         <connections>
                                             <outlet property="dataSource" destination="oek-vc-sYl" id="e2G-sf-Nlm"/>
                                             <outlet property="delegate" destination="oek-vc-sYl" id="Z0D-Su-PMW"/>
@@ -141,7 +121,6 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="232-W3-tTv"/>
                     <connections>
-                        <outlet property="apiToggle" destination="4KD-8X-JIf" id="08d-Lk-WRz"/>
                         <outlet property="tableView" destination="sR3-CA-tj4" id="mQf-aL-qR3"/>
                     </connections>
                 </viewController>
@@ -152,9 +131,6 @@
     </scenes>
     <resources>
         <image name="Logo" width="722" height="200"/>
-        <namedColor name="Accent">
-            <color red="0.4823529411764706" green="0.74509803921568629" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

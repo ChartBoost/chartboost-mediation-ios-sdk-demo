@@ -1,19 +1,12 @@
-// Copyright 2022-2024 Chartboost, Inc.
-// 
+// Copyright 2018-2024 Chartboost, Inc.
+//
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
-
-//
-//  AdTypeSelectionViewController.swift
-//  ChartboostMediationDemo
-//
-//  Copyright © 2023-2024 Chartboost. All rights reserved.
-//
 
 import UIKit
 
 /// This demo uses this view controller as the entry point for selecting the different advertisement types that the
-/// Chartboost Mediation SDK provides.  These include:
+/// Chartboost Mediation SDK provides. These include:
 /// - Banners
 /// - Full screen interstitials
 /// - Full screen rewarded videos
@@ -22,23 +15,12 @@ import UIKit
 /// - `BannerAdController`
 /// - `BannerAdViewController`
 ///
-/// To see how to utilize interstitial advertisements, look at the following classes:
-/// - `InterstitialAdController`
-/// - `InterstitialAdViewController`
+/// To see how to utilize fullscreen advertisements, look at the following classes:
+/// - `FullscreenAdController`
+/// - `FullscreenAdViewController`
 ///
-/// To see how to utilize rewarded advertisemetns, look at the following classes:
-/// - `RewardedAdController`
-/// - `RewardedAdViewController`
-/// 
 class AdTypeSelectionViewController: UIViewController {
-
     @IBOutlet private var tableView: UITableView!
-    @IBOutlet var apiToggle: UISwitch!
-
-    @IBAction func apiToggleDidChange(_ sender: UISwitch) {
-        // The "queued" option should be hidden when not using the Fullscreen API
-        tableView.reloadData()
-    }
 
     // MARK: - Lifecycle
 
@@ -67,32 +49,21 @@ class AdTypeSelectionViewController: UIViewController {
 
     func adView(forAdType adType: AdType) -> UIViewController? {
         let title = adType.title
-        if apiToggle.isOn {
-            // If we're using the fullscreen API, we need to set the ad type for Rewarded & Interstitial
-            switch adType {
-            case .banner:
-                // For banner, we do exactly the same thing as in the non-useFullscreeenAPI case
-                return UIStoryboard(name: title, bundle: nil).instantiateViewController(withIdentifier: title)
-            // The FullscreenAd API is used for both interstitial and rewarded ads
-            case .interstitial:
-                // A cast to FullscreenAdViewController is necessary so we can set .adType
-                let interstitialViewController = UIStoryboard(name: "Fullscreen", bundle: nil)
-                    .instantiateViewController(withIdentifier: "Fullscreen") as? FullscreenAdViewController
-                interstitialViewController?.adType = adType
-                return interstitialViewController
-            case .rewarded:
-                // A cast to FullscreenAdViewController is necessary so we can set .adType
-                let rewardedViewController = UIStoryboard(name: "Fullscreen", bundle: nil)
-                    .instantiateViewController(withIdentifier: "Fullscreen") as? FullscreenAdViewController
-                rewardedViewController?.adType = adType
-                return rewardedViewController
-            case .queued:
-                let queuedAdViewController = UIStoryboard(name: "Queued", bundle: nil)
-                    .instantiateViewController(withIdentifier: "Queued") as? QueuedAdViewController
-                return queuedAdViewController
-            }
-        } else {
+        switch adType {
+        case .banner:
             return UIStoryboard(name: title, bundle: nil).instantiateViewController(withIdentifier: title)
+        // The FullscreenAd API is used for both interstitial and rewarded ads
+        case .interstitial,
+        .rewarded:
+            // A cast to FullscreenAdViewController is necessary so we can set .adType
+            let fullscreenViewController = UIStoryboard(name: "Fullscreen", bundle: nil)
+                .instantiateViewController(withIdentifier: "Fullscreen") as? FullscreenAdViewController
+            fullscreenViewController?.adType = adType
+            return fullscreenViewController
+        case .queued:
+            let queuedAdViewController = UIStoryboard(name: "Queued", bundle: nil)
+                .instantiateViewController(withIdentifier: "Queued") as? QueuedAdViewController
+            return queuedAdViewController
         }
     }
 }
@@ -114,12 +85,7 @@ extension AdTypeSelectionViewController: UITableViewDelegate {
 
 extension AdTypeSelectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // If we're not using the Fullscreen API, hide the final AdType (which we expect to be "queued")
-        if apiToggle.isOn {
-            return AdType.allCases.count
-        } else {
-            return AdType.allCases.count - 1
-        }
+        AdType.allCases.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -133,8 +99,8 @@ extension AdTypeSelectionViewController: UITableViewDataSource {
     }
 }
 
-private extension AdType {
-    var icon: UIImage? {
+extension AdType {
+    fileprivate var icon: UIImage? {
         UIImage(named: title)
     }
 }

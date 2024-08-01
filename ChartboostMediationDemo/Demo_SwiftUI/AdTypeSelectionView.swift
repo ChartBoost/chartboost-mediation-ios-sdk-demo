@@ -1,22 +1,14 @@
-// Copyright 2022-2024 Chartboost, Inc.
+// Copyright 2018-2024 Chartboost, Inc.
 //
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
-//
-//  AdTypeSelectionView.swift
-//  ChartboostMediationDemo
-//
-//  Copyright © 2023-2024 Chartboost. All rights reserved.
-//
-
-import SwiftUI
 import ChartboostMediationSDK
+import SwiftUI
 
 /// A view that lists the different Chartboost Mediation SDK advertisement types. Selecting one will
 /// navigate to a view that can be used to load and show that type of advertisement.
 struct AdTypeSelectionView: View {
-    @State private var useFullscreenApi = true
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
@@ -30,13 +22,8 @@ struct AdTypeSelectionView: View {
                             .padding(.vertical, 8)
                         Spacer()
                     }
-                    Toggle("Use Fullscreen API", isOn: $useFullscreenApi)
-                        .padding(.horizontal)
                     List {
-                        ForEach(AdType.allCases.filter({ adType in
-                            // Don't show queueing as an option if we're not using the Fullscreen API
-                            !(adType == .queued && !useFullscreenApi)
-                        }), id: \.self) { adType in
+                        ForEach(AdType.allCases, id: \.self) { adType in
                             NavigationLink(destination: adView(forAdType: adType)) {
                                 HStack {
                                     adType.icon
@@ -58,20 +45,14 @@ struct AdTypeSelectionView: View {
         GeometryReader { geometry in
             ScrollView {
                 Group {
-                    switch (adType, useFullscreenApi) {
-                    case (.banner, _):
-                        BannerAdView(placementName: "CBAdaptiveBanner")
-                    case (.interstitial, false):
-                        InterstitialAdView(placementName: "CBInterstitial")
-                    case (.interstitial, true):
+                    switch adType {
+                    case .banner:
+                        BannerView(placementName: "CBAdaptiveBanner")
+                    case .interstitial:
                         FullscreenAdView(adType: adType, placementName: "CBInterstitial")
-                    case (.rewarded, false):
-                        RewardedAdView(placementName: "CBRewarded")
-                    case (.rewarded, true):
+                    case .rewarded:
                         FullscreenAdView(adType: adType, placementName: "CBRewarded")
-                    case (.queued, false):
-                        EmptyView()
-                    case (.queued, true):
+                    case .queued:
                         QueuedAdView()
                     }
                 }
@@ -84,10 +65,9 @@ struct AdTypeSelectionView: View {
     }
 }
 
-private extension AdType {
-
+extension AdType {
     /// An icon that represents the ad type.
-    var icon: Image {
+    fileprivate var icon: Image {
         Image(title)
     }
 }
