@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-Demo-ChartboostMediationDemo-UIKit/Pods-Demo-ChartboostMediationDemo-UIKit-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/ChartboostCoreSDK/ChartboostCoreSDK.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/ChartboostMediationAdapterChartboost/ChartboostMediationAdapterChartboost.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/ChartboostMediationSDK/ChartboostMediationSDK.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/ChartboostSDK/ChartboostSDK.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/ChartboostSDK/ChartboostSDKResources.bundle

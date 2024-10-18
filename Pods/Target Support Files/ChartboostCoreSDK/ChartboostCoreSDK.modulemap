@@ -1,0 +1,6 @@
+framework module ChartboostCoreSDK {
+  umbrella header "ChartboostCoreSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

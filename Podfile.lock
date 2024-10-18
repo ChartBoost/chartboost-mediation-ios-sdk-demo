@@ -1,0 +1,34 @@
+PODS:
+  - ChartboostCoreSDK (1.0.0)
+  - ChartboostMediationAdapterChartboost (5.9.8.0.0):
+    - ChartboostMediationSDK (~> 5.0)
+    - ChartboostSDK (~> 9.8.0)
+  - ChartboostMediationSDK (5.1.0):
+    - ChartboostCoreSDK (~> 1.0)
+  - ChartboostSDK (9.8.0)
+
+DEPENDENCIES:
+  - ChartboostCoreSDK (from `../../Core`)
+  - ChartboostMediationAdapterChartboost (from `../Adapter/chartboost-mediation-ios-adapter-chartboost`)
+  - ChartboostMediationSDK (from `../`)
+  - ChartboostSDK (from `../../Monetization`)
+
+EXTERNAL SOURCES:
+  ChartboostCoreSDK:
+    :path: "../../Core"
+  ChartboostMediationAdapterChartboost:
+    :path: "../Adapter/chartboost-mediation-ios-adapter-chartboost"
+  ChartboostMediationSDK:
+    :path: "../"
+  ChartboostSDK:
+    :path: "../../Monetization"
+
+SPEC CHECKSUMS:
+  ChartboostCoreSDK: 21d0c549da6e8118bb9079164d4339a16c1e84c7
+  ChartboostMediationAdapterChartboost: ff52ab4bfc4e0e55d555de18634d2f94b585b477
+  ChartboostMediationSDK: 8f5ae199ea2a597241d1558b9fc47c5713c15193
+  ChartboostSDK: 87330d0765a106fe79368012680ca4019e75b44f
+
+PODFILE CHECKSUM: 81291ff9400148aaec648f054b9afef54b2127af
+
+COCOAPODS: 1.15.2

@@ -1,0 +1,6 @@
+framework module ChartboostMediationAdapterChartboost {
+  umbrella header "ChartboostMediationAdapterChartboost-umbrella.h"
+
+  export *
+  module * { export * }
+}
