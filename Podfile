@@ -13,7 +13,7 @@ abstract_target 'Demo' do
   else
     # Production pod dependencies for general use
     pod 'ChartboostCoreSDK', '~> 1.0'
-    pod 'ChartboostMediationSDK', '~> 5.3'
+    pod 'ChartboostMediationSDK', '~> 5.4'
     pod 'ChartboostSDK'
     # Uncomment any of the following lines to use provider
     # *** Remember to add your GADApplicationIdentifier to Info.plist if you use AdMob ***
